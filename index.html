@@ -3,33 +3,60 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Meowdoku Garden</title>
-    <meta name="description" content="A cozy cat logic puzzle inspired by region-placement classics.">
+    <title>Meowdoku Garden - Play the Cat Logic Puzzle Online</title>
+    <meta name="description" content="Play Meowdoku Garden online: a cozy cat sudoku and Queens-style logic puzzle with daily boards, hints, multilingual rules, and no download.">
+    <meta name="keywords" content="meowdoku, meow doku, meowdoku game, cat sudoku, cat queens puzzle, queens puzzle, logic puzzle, color region puzzle, 猫咪数独, 猫咪逻辑谜题">
+    <link rel="canonical" href="https://www.meowdoku.xyz/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Meowdoku Garden - Play the Cat Logic Puzzle Online">
+    <meta property="og:description" content="A cute cat logic puzzle where every room, row, and column needs exactly one cozy cat.">
+    <meta property="og:url" content="https://www.meowdoku.xyz/">
+    <meta property="og:image" content="https://www.meowdoku.xyz/assets/cat-token.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" href="/assets/cat-token.png">
+    <link rel="apple-touch-icon" href="/assets/cat-token.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Meowdoku Garden",
+        "url": "https://www.meowdoku.xyz/",
+        "applicationCategory": "Game",
+        "genre": ["Logic puzzle", "Sudoku-like puzzle", "Queens puzzle"],
+        "operatingSystem": "Web browser",
+        "description": "A cozy cat logic puzzle inspired by color-region placement games. Place one cat in every room without sharing rows, columns, or touching diagonally.",
+        "inLanguage": ["en", "zh-CN", "zh-Hant", "ja", "ko", "es", "fr", "de", "pt", "ru", "ar", "hi", "id", "vi", "tr", "it", "th", "pl", "nl", "uk"],
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      }
+    </script>
   </head>
   <body>
-    <main class="app-shell">
+    <header class="site-header">
+      <a class="site-brand" href="/" aria-label="Meowdoku Garden home">
+        <img src="assets/cat-token.png" alt="" class="brand-mark">
+        <span>Meowdoku Garden</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/how-to-play/">How to Play</a>
+        <a href="/tips/">Tips</a>
+        <a href="/levels/">Levels</a>
+        <a href="/faq/">FAQ</a>
+      </nav>
+    </header>
+
+    <main>
+    <section class="app-shell" id="play">
       <section class="game-stage" aria-label="Meowdoku Garden game">
         <div class="topbar">
-          <div class="brand">
-            <img src="assets/cat-medallion.png" alt="" class="brand-mark">
-            <div>
-              <p class="eyebrow" data-i18n="eyebrow">logic puzzle</p>
-              <h1>Meowdoku Garden</h1>
-            </div>
-          </div>
           <div class="pill-row" aria-label="Game stats">
             <span class="stat-pill heart-pill" id="mistakes" aria-label="Hearts"></span>
             <span class="stat-pill" id="timer">00:00</span>
             <span class="stat-pill" id="bestTime">Best --</span>
             <label class="language-control">
               <span class="panel-label" data-i18n="language">language</span>
-              <select id="languageSelect" aria-label="Language">
-                <option value="en">English</option>
-                <option value="zh">&#20013;&#25991;</option>
-                <option value="ja">&#26085;&#26412;&#35486;</option>
-                <option value="ko">&#54620;&#44397;&#50612;</option>
-              </select>
+              <select id="languageSelect" aria-label="Language"></select>
             </label>
           </div>
         </div>
@@ -51,18 +78,16 @@
             </div>
 
             <div class="controls" aria-label="Controls">
-              <button class="mode-button active" id="placeMode" type="button">
-                <span class="icon-cat" aria-hidden="true"></span>
-                <span data-i18n="place">Place</span>
-              </button>
-              <button class="mode-button" id="markMode" type="button">
-                <span class="icon-dot" aria-hidden="true"></span>
-                <span data-i18n="mark">Mark</span>
-              </button>
-              <button class="mode-button assist-button" id="assistMode" type="button">
-                <span class="icon-dot hollow" aria-hidden="true"></span>
-                <span data-i18n="assist">Assist</span>
-              </button>
+              <div class="placement-row" role="group" aria-label="Placement mode">
+                <button class="mode-button active" id="placeMode" type="button">
+                  <span class="icon-cat" aria-hidden="true"></span>
+                  <span data-i18n="place">Place</span>
+                </button>
+                <button class="mode-button" id="markMode" type="button">
+                  <span class="icon-dot" aria-hidden="true"></span>
+                  <span data-i18n="mark">Mark</span>
+                </button>
+              </div>
             </div>
 
             <div class="tool-grid">
@@ -93,13 +118,70 @@
                 <p class="panel-label" data-i18n="board">board</p>
                 <h2 id="statusText">Find every cat nap spot.</h2>
               </div>
-              <span id="modeBadge">Place mode</span>
+              <button id="assistMode" class="assist-toggle" type="button">Default mode</button>
             </div>
             <div id="board" class="board" role="grid" aria-label="Puzzle board"></div>
           </section>
         </div>
       </section>
+    </section>
+
+    <section class="seo-section" aria-labelledby="what-is-meowdoku">
+      <div class="content-grid">
+        <div>
+          <p class="eyebrow">cat logic puzzle</p>
+          <h2 id="what-is-meowdoku">What Is Meowdoku?</h2>
+          <p>Meowdoku is a cat-themed placement puzzle for players who like Sudoku, Queens, Star Battle, and color-region logic games. The goal is simple to read and satisfying to solve: place one cat in every colored room while keeping every row, column, and neighbor space calm.</p>
+          <p>People search for it as <strong>Meowdoku</strong>, <strong>Meow Doku</strong>, <strong>meow sudoku</strong>, <strong>cat sudoku</strong>, <strong>cat queens puzzle</strong>, and even misspellings like <strong>meowdokou</strong>. This web version is built so you can play instantly in the browser.</p>
+        </div>
+        <div class="seo-card">
+          <h3>Quick Rules</h3>
+          <ol>
+            <li>Each colored room gets exactly one cat.</li>
+            <li>No two cats can share a row or column.</li>
+            <li>Cats cannot touch, including diagonally.</li>
+          </ol>
+          <a href="/how-to-play/" class="text-link">Read the full guide</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="seo-section alt" aria-labelledby="strategy">
+      <div class="content-grid three">
+        <article>
+          <h2 id="strategy">Meowdoku Strategy</h2>
+          <p>Meowdoku gets easier when you start with rooms that have only a few possible cells, then use row and column pressure to remove choices. Assist mode shows the quiet exclusion dots around placed cats, which is useful while learning.</p>
+          <a href="/tips/" class="text-link">See solving tips</a>
+        </article>
+        <article>
+          <h2>Meowdoku Levels</h2>
+          <p>Meowdoku easy boards are 6x6, normal boards are 7x7, and hard boards are 8x8. Every difficulty keeps three hearts so the challenge comes from logic, not punishment.</p>
+          <a href="/levels/" class="text-link">Compare levels</a>
+        </article>
+        <article>
+          <h2>Play Worldwide</h2>
+          <p>The game detects your browser language and offers major world languages for the interface, making Meowdoku easier to discover and share across regions.</p>
+          <a href="/languages/" class="text-link">Language pages</a>
+        </article>
+      </div>
+    </section>
     </main>
+
+    <footer class="site-footer">
+      <div>
+        <img src="assets/cat-token.png" alt="" class="footer-mark">
+        <strong>Meowdoku Garden</strong>
+        <p>Free online cat sudoku, Meow Doku, and Queens-style logic puzzles.</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <a href="/">Play</a>
+        <a href="/how-to-play/">How to Play</a>
+        <a href="/tips/">Tips</a>
+        <a href="/levels/">Levels</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/sitemap.xml">Sitemap</a>
+      </nav>
+    </footer>
 
     <div class="modal hidden" id="resultModal" role="dialog" aria-modal="true" aria-labelledby="resultTitle">
       <div class="modal-card">
