@@ -1,0 +1,11 @@
+{
+  "name": "meowdoku-web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node server.mjs",
+    "pages:build": "node scripts/build-pages.mjs"
+  }
+}
