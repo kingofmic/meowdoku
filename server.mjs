@@ -4,12 +4,15 @@ import { extname, join, normalize } from "node:path";
 
 const port = Number(process.env.PORT || 3005);
 const root = process.cwd();
+const buildRoot = join(root, "out");
 
 const types = {
   ".html": "text/html; charset=utf-8",
   ".css": "text/css; charset=utf-8",
   ".js": "text/javascript; charset=utf-8",
   ".json": "application/json; charset=utf-8",
+  ".xml": "application/xml; charset=utf-8",
+  ".txt": "text/plain; charset=utf-8",
   ".png": "image/png",
   ".webp": "image/webp",
   ".ico": "image/x-icon"
@@ -18,18 +21,27 @@ const types = {
 createServer(async (req, res) => {
   try {
     const url = new URL(req.url || "/", `http://localhost:${port}`);
-    const pathname = url.pathname === "/" ? "/index.html" : decodeURIComponent(url.pathname);
+    const decoded = decodeURIComponent(url.pathname);
+    const pathname = decoded === "/" ? "/index.html" : decoded.endsWith("/") ? `${decoded}index.html` : decoded;
     const filePath = normalize(join(root, pathname));
+    const buildFilePath = normalize(join(buildRoot, pathname));
 
-    if (!filePath.startsWith(root)) {
+    if (!filePath.startsWith(root) || !buildFilePath.startsWith(buildRoot)) {
       res.writeHead(403);
       res.end("Forbidden");
       return;
     }
 
-    const body = await readFile(filePath);
+    let body;
+    let servedPath = filePath;
+    try {
+      body = await readFile(filePath);
+    } catch {
+      body = await readFile(buildFilePath);
+      servedPath = buildFilePath;
+    }
     res.writeHead(200, {
-      "Content-Type": types[extname(filePath)] || "application/octet-stream",
+      "Content-Type": types[extname(servedPath)] || "application/octet-stream",
       "Cache-Control": "no-store"
     });
     res.end(body);
