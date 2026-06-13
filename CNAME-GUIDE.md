@@ -20,3 +20,5 @@ Current project:
 
 - Pages project: `meowdoku`
 - Pages subdomain: `meowdoku-twp.pages.dev`
+- Pages custom domains: `www.meowdoku.xyz`, `meowdoku.xyz`
+- Redirect: `meowdoku.xyz/*` -> `www.meowdoku.xyz/*`
