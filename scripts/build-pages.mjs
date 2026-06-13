@@ -3,7 +3,7 @@ import path from "node:path";
 
 const root = process.cwd();
 const out = path.join(root, "out");
-const entries = ["index.html", "styles.css", "game.js", "assets"];
+const entries = ["index.html", "styles.css", "game.js", "assets", "_redirects"];
 
 async function copyEntry(source, target) {
   const stat = await fs.stat(source);
