@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Meowdoku Garden</title>
+    <meta name="description" content="A cozy cat logic puzzle inspired by region-placement classics.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="game-stage" aria-label="Meowdoku Garden game">
+        <div class="topbar">
+          <div class="brand">
+            <img src="assets/cat-medallion.png" alt="" class="brand-mark">
+            <div>
+              <p class="eyebrow" data-i18n="eyebrow">logic puzzle</p>
+              <h1>Meowdoku Garden</h1>
+            </div>
+          </div>
+          <div class="pill-row" aria-label="Game stats">
+            <span class="stat-pill heart-pill" id="mistakes" aria-label="Hearts"></span>
+            <span class="stat-pill" id="timer">00:00</span>
+            <span class="stat-pill" id="bestTime">Best --</span>
+            <label class="language-control">
+              <span class="panel-label" data-i18n="language">language</span>
+              <select id="languageSelect" aria-label="Language">
+                <option value="en">English</option>
+                <option value="zh">&#20013;&#25991;</option>
+                <option value="ja">&#26085;&#26412;&#35486;</option>
+                <option value="ko">&#54620;&#44397;&#50612;</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="layout">
+          <aside class="side-panel">
+            <div class="level-card">
+              <p class="panel-label" data-i18n="todaysPuzzle">today's puzzle</p>
+              <h2 id="levelTitle">Sunbeam Studio</h2>
+              <p id="levelMeta">6 rooms, 6 cats</p>
+              <div class="progress-track" aria-label="Puzzle progress">
+                <span id="progressBar"></span>
+              </div>
+            </div>
+
+            <div class="cat-counter-card">
+              <p class="panel-label" data-i18n="catsLeft">cats left</p>
+              <div class="cat-counter" id="catCounter" aria-label="Cats left"></div>
+            </div>
+
+            <div class="controls" aria-label="Controls">
+              <button class="mode-button active" id="placeMode" type="button">
+                <span class="icon-cat" aria-hidden="true"></span>
+                <span data-i18n="place">Place</span>
+              </button>
+              <button class="mode-button" id="markMode" type="button">
+                <span class="icon-dot" aria-hidden="true"></span>
+                <span data-i18n="mark">Mark</span>
+              </button>
+              <button class="mode-button assist-button" id="assistMode" type="button">
+                <span class="icon-dot hollow" aria-hidden="true"></span>
+                <span data-i18n="assist">Assist</span>
+              </button>
+            </div>
+
+            <div class="tool-grid">
+              <button id="undoBtn" type="button" data-i18n="undo">Undo</button>
+              <button id="hintBtn" type="button" data-i18n="hint">Hint</button>
+              <button id="resetBtn" type="button" data-i18n="reset">Reset</button>
+              <button id="nextBtn" type="button" data-i18n="next">Next</button>
+            </div>
+
+            <div class="rule-card">
+              <p class="panel-label" data-i18n="rules">rules</p>
+              <ul>
+                <li data-i18n="ruleOne">One cat in every colored room.</li>
+                <li data-i18n="ruleTwo">No two cats share a row or column.</li>
+                <li data-i18n="ruleThree">Cats cannot touch, even diagonally.</li>
+              </ul>
+            </div>
+          </aside>
+
+          <section class="board-wrap">
+            <div class="difficulty-tabs" id="difficultyTabs" aria-label="Difficulty">
+              <button type="button" data-difficulty="easy">Easy</button>
+              <button type="button" data-difficulty="normal">Normal</button>
+              <button type="button" data-difficulty="hard">Hard</button>
+            </div>
+            <div class="board-header">
+              <div>
+                <p class="panel-label" data-i18n="board">board</p>
+                <h2 id="statusText">Find every cat nap spot.</h2>
+              </div>
+              <span id="modeBadge">Place mode</span>
+            </div>
+            <div id="board" class="board" role="grid" aria-label="Puzzle board"></div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal hidden" id="resultModal" role="dialog" aria-modal="true" aria-labelledby="resultTitle">
+      <div class="modal-card">
+        <img src="assets/victory-cats.png" alt="" class="victory-art">
+        <p class="eyebrow" data-i18n="puzzleComplete">puzzle complete</p>
+        <h2 id="resultTitle">Perfect little parade.</h2>
+        <p id="resultCopy">Every cat found a cozy room.</p>
+        <div class="modal-actions">
+          <button id="modalNext" type="button" data-i18n="nextPuzzle">Next puzzle</button>
+          <button id="modalClose" type="button" data-i18n="stayHere">Stay here</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="celebration-layer" id="celebrationLayer" aria-hidden="true"></div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
