@@ -54,6 +54,8 @@ const i18n = {
     language: "language",
     catsLeft: "cats left",
     assist: "Assist",
+    defaultMode: "Default mode",
+    assistMode: "Assist mode",
     place: "Place",
     mark: "Mark",
     undo: "Undo",
@@ -99,6 +101,8 @@ const i18n = {
     language: "语言",
     catsLeft: "剩余猫咪",
     assist: "辅助",
+    defaultMode: "默认模式",
+    assistMode: "辅助模式",
     place: "放猫",
     mark: "标记",
     undo: "撤销",
@@ -144,6 +148,8 @@ const i18n = {
     language: "言語",
     catsLeft: "残りの猫",
     assist: "補助",
+    defaultMode: "通常モード",
+    assistMode: "補助モード",
     place: "置く",
     mark: "マーク",
     undo: "戻す",
@@ -189,6 +195,8 @@ const i18n = {
     language: "언어",
     catsLeft: "남은 고양이",
     assist: "도움",
+    defaultMode: "기본 모드",
+    assistMode: "도움 모드",
     place: "놓기",
     mark: "표시",
     undo: "되돌리기",
@@ -229,6 +237,95 @@ const i18n = {
   }
 };
 
+i18n["zh-Hant"] = {
+  ...i18n.zh,
+  todaysPuzzle: "今日關卡",
+  language: "語言",
+  catsLeft: "剩餘貓咪",
+  defaultMode: "預設模式",
+  assistMode: "輔助模式",
+  undo: "復原",
+  reset: "重開",
+  next: "下一關",
+  ruleOne: "每個彩色房間放一隻貓。",
+  ruleTwo: "任意兩隻貓不能在同一行或同一列。",
+  ruleThree: "貓不能相鄰，斜角也不行。",
+  roomsCats: "{rooms} 個房間，{cats} 隻貓",
+  statusMarked: "已標記為不可能。",
+  statusUnmarked: "標記已取消。",
+  statusPicked: "把貓抱回來了。",
+  statusNoHearts: "紅心用完，重新來一局。",
+  statusUndo: "已復原上一步。",
+  resultCopy: "用時 {time}，剩餘 {hearts} 顆紅心。",
+  normal: "普通"
+};
+
+const languageCatalog = [
+  ["ar", "العربية"],
+  ["bn", "বাংলা"],
+  ["zh", "简体中文"],
+  ["zh-Hant", "繁體中文"],
+  ["cs", "Čeština"],
+  ["nl", "Nederlands"],
+  ["en", "English"],
+  ["fil", "Filipino"],
+  ["fr", "Français"],
+  ["de", "Deutsch"],
+  ["el", "Ελληνικά"],
+  ["gu", "ગુજરાતી"],
+  ["ha", "Hausa"],
+  ["he", "עברית"],
+  ["hi", "हिन्दी"],
+  ["hu", "Magyar"],
+  ["id", "Bahasa Indonesia"],
+  ["it", "Italiano"],
+  ["ja", "日本語"],
+  ["jv", "Basa Jawa"],
+  ["ko", "한국어"],
+  ["ms", "Bahasa Melayu"],
+  ["mr", "मराठी"],
+  ["pa", "ਪੰਜਾਬੀ"],
+  ["fa", "فارسی"],
+  ["pl", "Polski"],
+  ["pt", "Português"],
+  ["ro", "Română"],
+  ["ru", "Русский"],
+  ["es", "Español"],
+  ["sw", "Kiswahili"],
+  ["sv", "Svenska"],
+  ["ta", "தமிழ்"],
+  ["te", "తెలుగు"],
+  ["th", "ไทย"],
+  ["tr", "Türkçe"],
+  ["uk", "Українська"],
+  ["ur", "اردو"],
+  ["vi", "Tiếng Việt"]
+];
+
+const shortUiTranslations = {
+  hi: { language: "भाषा", catsLeft: "बिल्लियाँ", place: "बिल्ली", mark: "चिह्न", assist: "सहायता", defaultMode: "सामान्य", assistMode: "सहायता", easy: "आसान", normal: "सामान्य", hard: "कठिन" },
+  es: { language: "idioma", catsLeft: "gatos", place: "Gato", mark: "Marca", assist: "Ayuda", defaultMode: "Normal", assistMode: "Ayuda", easy: "Fácil", normal: "Normal", hard: "Difícil" },
+  fr: { language: "langue", catsLeft: "chats", place: "Chat", mark: "Marquer", assist: "Aide", defaultMode: "Normal", assistMode: "Aide", easy: "Facile", normal: "Normal", hard: "Difficile" },
+  ar: { language: "اللغة", catsLeft: "القطط", place: "قط", mark: "علامة", assist: "مساعدة", defaultMode: "عادي", assistMode: "مساعدة", easy: "سهل", normal: "عادي", hard: "صعب" },
+  bn: { language: "ভাষা", catsLeft: "বিড়াল", place: "বিড়াল", mark: "চিহ্ন", assist: "সহায়তা", defaultMode: "স্বাভাবিক", assistMode: "সহায়তা", easy: "সহজ", normal: "সাধারণ", hard: "কঠিন" },
+  pt: { language: "idioma", catsLeft: "gatos", place: "Gato", mark: "Marca", assist: "Ajuda", defaultMode: "Normal", assistMode: "Ajuda", easy: "Fácil", normal: "Normal", hard: "Difícil" },
+  ru: { language: "язык", catsLeft: "коты", place: "Кот", mark: "Метка", assist: "Помощь", defaultMode: "Обычный", assistMode: "Помощь", easy: "Легко", normal: "Норма", hard: "Сложно" },
+  ur: { language: "زبان", catsLeft: "بلیاں", place: "بلی", mark: "نشان", assist: "مدد", defaultMode: "عام", assistMode: "مدد", easy: "آسان", normal: "عام", hard: "مشکل" },
+  id: { language: "bahasa", catsLeft: "kucing", place: "Kucing", mark: "Tanda", assist: "Bantu", defaultMode: "Normal", assistMode: "Bantu", easy: "Mudah", normal: "Normal", hard: "Sulit" },
+  de: { language: "sprache", catsLeft: "katzen", place: "Katze", mark: "Marke", assist: "Hilfe", defaultMode: "Normal", assistMode: "Hilfe", easy: "Leicht", normal: "Normal", hard: "Schwer" },
+  tr: { language: "dil", catsLeft: "kediler", place: "Kedi", mark: "İşaret", assist: "Yardım", defaultMode: "Normal", assistMode: "Yardım", easy: "Kolay", normal: "Normal", hard: "Zor" },
+  vi: { language: "ngôn ngữ", catsLeft: "mèo", place: "Mèo", mark: "Đánh dấu", assist: "Trợ giúp", defaultMode: "Thường", assistMode: "Trợ giúp", easy: "Dễ", normal: "Vừa", hard: "Khó" },
+  it: { language: "lingua", catsLeft: "gatti", place: "Gatto", mark: "Segna", assist: "Aiuto", defaultMode: "Normale", assistMode: "Aiuto", easy: "Facile", normal: "Normale", hard: "Difficile" },
+  th: { language: "ภาษา", catsLeft: "แมว", place: "แมว", mark: "ทำเครื่องหมาย", assist: "ช่วย", defaultMode: "ปกติ", assistMode: "ช่วย", easy: "ง่าย", normal: "ปกติ", hard: "ยาก" },
+  pl: { language: "język", catsLeft: "koty", place: "Kot", mark: "Znacznik", assist: "Pomoc", defaultMode: "Normalny", assistMode: "Pomoc", easy: "Łatwy", normal: "Normalny", hard: "Trudny" },
+  uk: { language: "мова", catsLeft: "коти", place: "Кіт", mark: "Мітка", assist: "Допомога", defaultMode: "Звичайний", assistMode: "Допомога", easy: "Легко", normal: "Норма", hard: "Важко" },
+  nl: { language: "taal", catsLeft: "katten", place: "Kat", mark: "Markeer", assist: "Hulp", defaultMode: "Normaal", assistMode: "Hulp", easy: "Makkelijk", normal: "Normaal", hard: "Moeilijk" }
+};
+
+for (const [code] of languageCatalog) {
+  if (!i18n[code]) i18n[code] = { ...i18n.en, ...(shortUiTranslations[code] || {}) };
+}
+
 const palette = ["#ffd6b8", "#f7c9d4", "#c9e8df", "#f7e39a", "#c7d9ff", "#d9c8f7", "#bfe3a7", "#f0c2a8"];
 const board = document.querySelector("#board");
 const levelTitle = document.querySelector("#levelTitle");
@@ -238,7 +335,7 @@ const mistakesEl = document.querySelector("#mistakes");
 const timerEl = document.querySelector("#timer");
 const bestTimeEl = document.querySelector("#bestTime");
 const progressBar = document.querySelector("#progressBar");
-const modeBadge = document.querySelector("#modeBadge");
+const assistToggle = document.querySelector("#assistMode");
 const resultModal = document.querySelector("#resultModal");
 const resultTitle = document.querySelector("#resultTitle");
 const resultCopy = document.querySelector("#resultCopy");
@@ -248,7 +345,7 @@ const celebrationLayer = document.querySelector("#celebrationLayer");
 const catCounter = document.querySelector("#catCounter");
 
 let difficulty = localStorage.getItem("meowdoku-difficulty") || "normal";
-let lang = localStorage.getItem("meowdoku-language") || "en";
+let lang = localStorage.getItem("meowdoku-language") || detectLanguage();
 let puzzleIndex = 0;
 let mode = "place";
 let assistMode = localStorage.getItem("meowdoku-assist") === "on";
@@ -277,6 +374,18 @@ function key(row, col) {
 
 function currentPack() {
   return puzzlePacks[difficulty] || puzzlePacks.normal;
+}
+
+function detectLanguage() {
+  const supported = new Set(languageCatalog.map(([code]) => code));
+  const browserLanguages = navigator.languages?.length ? navigator.languages : [navigator.language || "en"];
+  for (const candidate of browserLanguages) {
+    const normalized = candidate.toLowerCase();
+    if (normalized === "zh-hant" || normalized.includes("zh-tw") || normalized.includes("zh-hk") || normalized.includes("zh-mo")) return "zh-Hant";
+    const code = normalized.split("-")[0];
+    if (supported.has(code)) return code;
+  }
+  return "en";
 }
 
 function currentPuzzle() {
@@ -404,16 +513,17 @@ function renderHearts() {
 
 function renderCatCounter(placed, total) {
   catCounter.innerHTML = "";
-  catCounter.style.gridTemplateColumns = `repeat(${Math.min(total, 5)}, 34px)`;
+  catCounter.style.gridTemplateColumns = `repeat(${Math.min(total, 4)}, 1fr)`;
   for (let i = 0; i < total; i += 1) {
     const slot = document.createElement("span");
-    slot.className = `cat-slot ${i < placed ? "used" : ""}`;
+    slot.className = `cat-slot ${i >= total - placed ? "used" : ""}`;
     catCounter.appendChild(slot);
   }
 }
 
 function applyLanguage() {
   document.documentElement.lang = lang === "zh" ? "zh-CN" : lang;
+  document.documentElement.dir = ["ar", "fa", "he", "ur"].includes(lang) ? "rtl" : "ltr";
   document.querySelectorAll("[data-i18n]").forEach((node) => {
     node.textContent = t(node.dataset.i18n);
   });
@@ -433,16 +543,17 @@ function render() {
   const best = localStorage.getItem(bestKey());
 
   applyLanguage();
-  levelTitle.textContent = puzzle.title[lang] || puzzle.title.en;
+  levelTitle.textContent = puzzle.title[lang] || (lang === "zh-Hant" ? puzzle.title.zh : "") || puzzle.title.en;
   levelMeta.textContent = t("roomsCats", { rooms: total, cats: total });
   renderHearts();
   renderCatCounter(placed, total);
   bestTimeEl.textContent = best ? t("best", { time: formatTime(Number(best)) }) : t("bestEmpty");
   progressBar.style.width = `${Math.round((placed / total) * 100)}%`;
-  modeBadge.textContent = mode === "place" ? t("placeMode") : t("markMode");
+  assistToggle.textContent = assistMode ? t("assistMode") : t("defaultMode");
+  assistToggle.setAttribute("aria-pressed", String(assistMode));
   document.querySelector("#placeMode").classList.toggle("active", mode === "place");
   document.querySelector("#markMode").classList.toggle("active", mode === "mark");
-  document.querySelector("#assistMode").classList.toggle("active", assistMode);
+  assistToggle.classList.toggle("active", assistMode);
 
   board.style.gridTemplateColumns = `repeat(${puzzle.size}, 1fr)`;
   board.innerHTML = "";
@@ -656,5 +767,12 @@ window.setInterval(() => {
   timer = Date.now() - startedAt;
   timerEl.textContent = formatTime(timer);
 }, 250);
+
+for (const [code, label] of languageCatalog) {
+  const option = document.createElement("option");
+  option.value = code;
+  option.textContent = label;
+  languageSelect.appendChild(option);
+}
 
 resetPuzzle();
