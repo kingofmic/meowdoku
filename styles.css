@@ -40,9 +40,9 @@ a {
   position: sticky;
   top: 0;
   z-index: 12;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
-  justify-content: space-between;
   gap: 18px;
   padding: 10px max(16px, calc((100vw - 1180px) / 2));
   background: rgba(255, 250, 241, 0.82);
@@ -294,6 +294,11 @@ h2 {
   gap: 3px;
 }
 
+.header-language {
+  justify-self: end;
+  min-width: 176px;
+}
+
 .language-control .panel-label {
   margin: 0;
 }
@@ -309,6 +314,57 @@ h2 {
   box-shadow: inset 0 0 0 1px rgba(31, 42, 46, 0.1), 0 8px 16px rgba(68, 46, 28, 0.08);
   font: inherit;
   font-weight: 850;
+}
+
+.seo-hero {
+  padding: 68px max(18px, calc((100vw - 1120px) / 2)) 48px;
+  background:
+    linear-gradient(120deg, rgba(255, 250, 241, 0.94), rgba(225, 244, 239, 0.86)),
+    url("assets/cozy-game-bg.png") center / cover;
+}
+
+.seo-hero-inner {
+  max-width: 860px;
+}
+
+.seo-hero h1 {
+  max-width: 760px;
+  margin-bottom: 18px;
+  font-size: clamp(2.4rem, 6vw, 4.8rem);
+  line-height: 0.96;
+}
+
+.seo-lede {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 1.14rem;
+  line-height: 1.7;
+}
+
+.seo-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.seo-button {
+  display: inline-grid;
+  min-height: 42px;
+  place-items: center;
+  padding: 0 16px;
+  border-radius: 999px;
+  background: #243438;
+  color: #fff;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0 12px 24px rgba(36, 52, 56, 0.2);
+}
+
+.seo-button.secondary {
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--ink);
+  box-shadow: inset 0 0 0 1px rgba(31, 42, 46, 0.12), 0 10px 20px rgba(68, 46, 28, 0.08);
 }
 
 .difficulty-tabs {
@@ -653,6 +709,50 @@ h2 {
   box-shadow: 0 12px 28px rgba(68, 46, 28, 0.08);
 }
 
+.seo-card h2,
+.seo-card h3,
+.content-grid article h2,
+.content-grid article h3 {
+  line-height: 1.12;
+}
+
+.answer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.answer-card {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.66);
+}
+
+.answer-card p:last-child,
+.seo-card p:last-child,
+.content-grid article p:last-child {
+  margin-bottom: 0;
+}
+
+.keyword-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.keyword-cloud a,
+.keyword-cloud span {
+  padding: 8px 11px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.74);
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 850;
+  text-decoration: none;
+  box-shadow: inset 0 0 0 1px rgba(31, 42, 46, 0.1);
+}
+
 .text-link {
   color: var(--teal);
 }
@@ -698,7 +798,12 @@ h2 {
 
   .site-header,
   .site-footer {
+    grid-template-columns: 1fr;
     align-items: flex-start;
+  }
+
+  .header-language {
+    justify-self: start;
   }
 
   .content-grid,
@@ -742,6 +847,10 @@ h2 {
   .site-nav {
     font-size: 0.9rem;
     justify-content: flex-start;
+  }
+
+  .answer-grid {
+    grid-template-columns: 1fr;
   }
 
   h1 {
