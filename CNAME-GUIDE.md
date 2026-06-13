@@ -1,15 +1,22 @@
 # meowdoku.xyz Cloudflare CNAME Guide
 
-Use this when connecting `meowdoku.xyz` to the Cloudflare Pages project.
+Use this when pointing `meowdoku.xyz` at the Cloudflare Pages project from your DNS provider.
 
-1. In Cloudflare, open the `meowdoku.xyz` zone.
-2. Add or confirm this DNS record:
-   - Type: `CNAME`
-   - Name: `@`
-   - Target: `<your-cloudflare-pages-project>.pages.dev`
-   - Proxy status: Proxied
-3. In Cloudflare Pages, open the Meowdoku Pages project.
-4. Go to `Custom domains` and add `meowdoku.xyz`.
-5. Wait for Cloudflare to show the custom domain as active.
+## CNAME Record
 
-Cloudflare supports CNAME flattening at the apex, so `meowdoku.xyz` can point to a Pages `.pages.dev` hostname.
+If your DNS provider supports CNAME flattening, ALIAS, or ANAME at the apex/root domain, set:
+
+- Type: `CNAME` / `ALIAS` / `ANAME`
+- Name/Host: `@`
+- Target/Value: `meowdoku-twp.pages.dev`
+
+If your DNS provider does not support CNAME-style records at the apex/root domain, use `www` instead:
+
+- Type: `CNAME`
+- Name/Host: `www`
+- Target/Value: `meowdoku-twp.pages.dev`
+
+Current project:
+
+- Pages project: `meowdoku`
+- Pages subdomain: `meowdoku-twp.pages.dev`
