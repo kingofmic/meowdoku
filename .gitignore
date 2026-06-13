@@ -1,4 +1,11 @@
 .secrets/
 node_modules/
+out/
+.wrangler/
+.wrangler-config/
+.env
+.env.*
+!.env.example
+*.log
 .DS_Store
 Thumbs.db
