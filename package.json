@@ -6,6 +6,10 @@
   "scripts": {
     "start": "node server.mjs",
     "dev": "node server.mjs",
+    "local:start": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/local-server.ps1 start",
+    "local:stop": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/local-server.ps1 stop",
+    "local:restart": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/local-server.ps1 restart",
+    "local:status": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/local-server.ps1 status",
     "pages:build": "node scripts/build-pages.mjs"
   }
 }
