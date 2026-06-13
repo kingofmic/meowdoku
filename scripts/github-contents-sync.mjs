@@ -3,7 +3,7 @@ import path from "node:path";
 
 const root = process.cwd();
 const excludedDirs = new Set([".git", ".github", ".secrets", "node_modules", "out", ".wrangler"]);
-const excludedFiles = new Set([]);
+const excludedFiles = new Set([".local-server.pid", ".local-server.log", ".local-server.err.log"]);
 
 function loadEnv(text) {
   const env = {};
