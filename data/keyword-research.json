@@ -17,23 +17,66 @@
   "globalKeywordClusters": [
     {
       "cluster": "brand and exact name",
-      "terms": ["meowdoku", "meowdoku game", "meowdoku online", "play meowdoku", "meowdoku web", "meowdoku garden"]
+      "terms": [
+        "meowdoku",
+        "meowdoku game",
+        "meowdoku online",
+        "play meowdoku",
+        "meowdoku web",
+        "meowdoku garden"
+      ]
     },
     {
       "cluster": "spacing and spelling variants",
-      "terms": ["meow doku", "meow-doku", "meow dokou", "meowdokou", "meawdoku", "meodoku", "miaodoku", "miao doku"]
+      "terms": [
+        "meow doku",
+        "meow-doku",
+        "meow dokou",
+        "meowdokou",
+        "meawdoku",
+        "meodoku",
+        "miaodoku",
+        "miao doku"
+      ]
     },
     {
       "cluster": "cat-name variants",
-      "terms": ["catdoku", "cat doku", "kittydoku", "kitty doku", "meow sudoku", "cat sudoku", "cat sudoku online", "cute sudoku"]
+      "terms": [
+        "catdoku",
+        "cat doku",
+        "kittydoku",
+        "kitty doku",
+        "meow sudoku",
+        "cat sudoku",
+        "cat sudoku online",
+        "cute sudoku"
+      ]
     },
     {
       "cluster": "puzzle category terms",
-      "terms": ["cat queens puzzle", "queens puzzle online", "region logic puzzle", "color region puzzle", "colored room puzzle", "no-touch puzzle", "daily cat puzzle", "8x8 cat puzzle"]
+      "terms": [
+        "cat queens puzzle",
+        "queens puzzle online",
+        "region logic puzzle",
+        "color region puzzle",
+        "colored room puzzle",
+        "no-touch puzzle",
+        "daily cat puzzle",
+        "8x8 cat puzzle"
+      ]
     },
     {
       "cluster": "rule and help questions",
-      "terms": ["how to play meowdoku", "meowdoku rules", "meowdoku strategy", "meowdoku tips", "meowdoku hints", "meowdoku no touch rule", "meowdoku diagonal rule", "meowdoku hearts"]
+      "terms": [
+        "how to play meowdoku",
+        "meowdoku rules",
+        "meowdoku strategy",
+        "meowdoku tips",
+        "meowdoku hints",
+        "meowdoku no touch rule",
+        "meowdoku diagonal rule",
+        "meowdoku hearts"
+      ]
     }
   ],
   "questionClusters": [
@@ -50,84 +93,1159 @@
   ],
   "languageClusters": {
     "en": {
-      "terms": ["meowdoku", "meow doku", "cat sudoku", "kittydoku", "catdoku", "cat queens puzzle"],
-      "questions": ["How do I play Meowdoku?", "What are the rules?", "Can cats touch diagonally?"]
+      "terms": [
+        "meowdoku",
+        "meow doku",
+        "cat sudoku",
+        "kittydoku",
+        "catdoku",
+        "cat queens puzzle",
+        "cat logic puzzle",
+        "queens puzzle",
+        "color region puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku"
+      ],
+      "questions": [
+        "How do I play Meowdoku?",
+        "What are the rules?",
+        "Can cats touch diagonally?",
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ],
+      "label": "English"
     },
     "zh": {
-      "terms": ["Meowdoku", "猫咪数独", "猫数独", "猫咪逻辑谜题", "猫咪 Queens 谜题", "彩色区域谜题"],
-      "questions": ["Meowdoku 怎么玩？", "Meow Doku 和 Meowdoku 是同一个游戏吗？", "猫可以斜着相邻吗？"]
+      "terms": [
+        "Meowdoku",
+        "猫咪数独",
+        "猫数独",
+        "猫咪逻辑谜题",
+        "猫咪 Queens 谜题",
+        "彩色区域谜题",
+        "meowdoku",
+        "meow doku",
+        "cat sudoku",
+        "cat logic puzzle",
+        "queens puzzle",
+        "color region puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku",
+        "catdoku",
+        "kittydoku"
+      ],
+      "questions": [
+        "Meowdoku 怎么玩？",
+        "Meow Doku 和 Meowdoku 是同一个游戏吗？",
+        "猫可以斜着相邻吗？",
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ],
+      "label": "Simplified Chinese"
     },
     "zh-Hant": {
-      "terms": ["Meowdoku", "貓咪數獨", "貓數獨", "貓咪邏輯謎題", "貓咪 Queens 謎題", "彩色區域謎題"],
-      "questions": ["Meowdoku 怎麼玩？", "Meow Doku 和 Meowdoku 是同一個遊戲嗎？", "貓可以斜角相鄰嗎？"]
+      "terms": [
+        "Meowdoku",
+        "貓咪數獨",
+        "貓數獨",
+        "貓咪邏輯謎題",
+        "貓咪 Queens 謎題",
+        "彩色區域謎題",
+        "meowdoku",
+        "meow doku",
+        "cat sudoku",
+        "cat logic puzzle",
+        "queens puzzle",
+        "color region puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku",
+        "catdoku",
+        "kittydoku"
+      ],
+      "questions": [
+        "Meowdoku 怎麼玩？",
+        "Meow Doku 和 Meowdoku 是同一個遊戲嗎？",
+        "貓可以斜角相鄰嗎？",
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ],
+      "label": "Traditional Chinese"
     },
     "ja": {
-      "terms": ["Meowdoku", "Meow Doku", "猫数独", "猫ロジックパズル", "Queens パズル", "色分け領域パズル"],
-      "questions": ["Meowdoku の遊び方は？", "猫は斜めに隣接できますか？", "初心者はどの難易度から始めるべきですか？"]
+      "terms": [
+        "Meowdoku",
+        "Meow Doku",
+        "猫数独",
+        "猫ロジックパズル",
+        "Queens パズル",
+        "色分け領域パズル",
+        "meowdoku",
+        "meow doku",
+        "cat sudoku",
+        "cat logic puzzle",
+        "queens puzzle",
+        "color region puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku",
+        "catdoku",
+        "kittydoku"
+      ],
+      "questions": [
+        "Meowdoku の遊び方は？",
+        "猫は斜めに隣接できますか？",
+        "初心者はどの難易度から始めるべきですか？",
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ],
+      "label": "Japanese"
     },
     "ko": {
-      "terms": ["Meowdoku", "Meow Doku", "고양이 스도쿠", "고양이 논리 퍼즐", "Queens 퍼즐", "색 영역 퍼즐"],
-      "questions": ["Meowdoku는 어떻게 하나요?", "고양이는 대각선으로 닿을 수 있나요?", "쉬운 모드와 어려운 모드는 무엇이 다른가요?"]
+      "terms": [
+        "Meowdoku",
+        "Meow Doku",
+        "고양이 스도쿠",
+        "고양이 논리 퍼즐",
+        "Queens 퍼즐",
+        "색 영역 퍼즐",
+        "meowdoku",
+        "meow doku",
+        "cat sudoku",
+        "cat logic puzzle",
+        "queens puzzle",
+        "color region puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku",
+        "catdoku",
+        "kittydoku"
+      ],
+      "questions": [
+        "Meowdoku는 어떻게 하나요?",
+        "고양이는 대각선으로 닿을 수 있나요?",
+        "쉬운 모드와 어려운 모드는 무엇이 다른가요?",
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ],
+      "label": "Korean"
     },
     "es": {
-      "terms": ["meowdoku", "meow doku", "sudoku de gatos", "puzzle de gatos", "puzzle Queens", "regiones de color"],
-      "questions": ["Como se juega Meowdoku?", "Los gatos pueden tocarse en diagonal?", "Meowdoku es como sudoku?"]
+      "terms": [
+        "meowdoku",
+        "meow doku",
+        "sudoku de gatos",
+        "puzzle de gatos",
+        "puzzle Queens",
+        "regiones de color",
+        "cat sudoku",
+        "cat logic puzzle",
+        "queens puzzle",
+        "color region puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku",
+        "catdoku",
+        "kittydoku"
+      ],
+      "questions": [
+        "Como se juega Meowdoku?",
+        "Los gatos pueden tocarse en diagonal?",
+        "Meowdoku es como sudoku?",
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ],
+      "label": "Spanish"
     },
     "fr": {
-      "terms": ["meowdoku", "meow doku", "sudoku chat", "puzzle de chats", "puzzle Queens", "regions colorees"],
-      "questions": ["Comment jouer a Meowdoku?", "Les chats peuvent-ils se toucher en diagonale?", "Meowdoku ressemble-t-il au sudoku?"]
+      "terms": [
+        "meowdoku",
+        "meow doku",
+        "sudoku chat",
+        "puzzle de chats",
+        "puzzle Queens",
+        "regions colorees",
+        "cat sudoku",
+        "cat logic puzzle",
+        "queens puzzle",
+        "color region puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku",
+        "catdoku",
+        "kittydoku"
+      ],
+      "questions": [
+        "Comment jouer a Meowdoku?",
+        "Les chats peuvent-ils se toucher en diagonale?",
+        "Meowdoku ressemble-t-il au sudoku?",
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ],
+      "label": "French"
     },
     "de": {
-      "terms": ["meowdoku", "meow doku", "katzen sudoku", "katzen logikraetsel", "queens raetsel", "farben region raetsel"],
-      "questions": ["Wie spielt man Meowdoku?", "Duerfen Katzen diagonal beruehren?", "Ist Meowdoku wie Sudoku?"]
+      "terms": [
+        "meowdoku",
+        "meow doku",
+        "katzen sudoku",
+        "katzen logikraetsel",
+        "queens raetsel",
+        "farben region raetsel",
+        "cat sudoku",
+        "cat logic puzzle",
+        "queens puzzle",
+        "color region puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku",
+        "catdoku",
+        "kittydoku"
+      ],
+      "questions": [
+        "Wie spielt man Meowdoku?",
+        "Duerfen Katzen diagonal beruehren?",
+        "Ist Meowdoku wie Sudoku?",
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ],
+      "label": "German"
     },
     "pt": {
-      "terms": ["meowdoku", "meow doku", "sudoku de gatos", "puzzle de gatos", "puzzle Queens", "regioes coloridas"],
-      "questions": ["Como jogar Meowdoku?", "Gatos podem tocar na diagonal?", "Meowdoku e parecido com sudoku?"]
+      "terms": [
+        "meowdoku",
+        "meow doku",
+        "sudoku de gatos",
+        "puzzle de gatos",
+        "puzzle Queens",
+        "regioes coloridas",
+        "cat sudoku",
+        "cat logic puzzle",
+        "queens puzzle",
+        "color region puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku",
+        "catdoku",
+        "kittydoku"
+      ],
+      "questions": [
+        "Como jogar Meowdoku?",
+        "Gatos podem tocar na diagonal?",
+        "Meowdoku e parecido com sudoku?",
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ],
+      "label": "Portuguese"
     },
     "ru": {
-      "terms": ["meowdoku", "meow doku", "судоку с кошками", "логическая головоломка с кошками", "головоломка Queens", "цветные регионы"],
-      "questions": ["Как играть в Meowdoku?", "Могут ли кошки соприкасаться по диагонали?", "Meowdoku похоже на судоку?"]
+      "terms": [
+        "meowdoku",
+        "meow doku",
+        "судоку с кошками",
+        "логическая головоломка с кошками",
+        "головоломка Queens",
+        "цветные регионы",
+        "cat sudoku",
+        "cat logic puzzle",
+        "queens puzzle",
+        "color region puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku",
+        "catdoku",
+        "kittydoku"
+      ],
+      "questions": [
+        "Как играть в Meowdoku?",
+        "Могут ли кошки соприкасаться по диагонали?",
+        "Meowdoku похоже на судоку?",
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ],
+      "label": "Russian"
     },
     "ar": {
-      "terms": ["meowdoku", "meow doku", "سودوكو القطط", "لغز قطط منطقي", "لغز Queens", "مناطق ملونة"],
-      "questions": ["كيف تلعب Meowdoku؟", "هل يمكن للقطط أن تتلامس قطريا؟", "هل Meowdoku مثل Sudoku؟"]
+      "terms": [
+        "meowdoku",
+        "meow doku",
+        "سودوكو القطط",
+        "لغز قطط منطقي",
+        "لغز Queens",
+        "مناطق ملونة",
+        "cat sudoku",
+        "cat logic puzzle",
+        "queens puzzle",
+        "color region puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku",
+        "catdoku",
+        "kittydoku"
+      ],
+      "questions": [
+        "كيف تلعب Meowdoku؟",
+        "هل يمكن للقطط أن تتلامس قطريا؟",
+        "هل Meowdoku مثل Sudoku؟",
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ],
+      "label": "Arabic"
     },
     "hi": {
-      "terms": ["meowdoku", "meow doku", "cat sudoku", "बिल्ली पहेली", "logic puzzle", "queens puzzle"],
-      "questions": ["Meowdoku कैसे खेलें?", "क्या बिल्लियां तिरछे छू सकती हैं?", "क्या Meowdoku Sudoku जैसा है?"]
+      "terms": [
+        "meowdoku",
+        "meow doku",
+        "cat sudoku",
+        "बिल्ली पहेली",
+        "logic puzzle",
+        "queens puzzle",
+        "cat logic puzzle",
+        "color region puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku",
+        "catdoku",
+        "kittydoku"
+      ],
+      "questions": [
+        "Meowdoku कैसे खेलें?",
+        "क्या बिल्लियां तिरछे छू सकती हैं?",
+        "क्या Meowdoku Sudoku जैसा है?",
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ],
+      "label": "Hindi"
     },
     "id": {
-      "terms": ["meowdoku", "meow doku", "sudoku kucing", "puzzle kucing", "puzzle Queens", "wilayah warna"],
-      "questions": ["Bagaimana cara bermain Meowdoku?", "Apakah kucing boleh bersentuhan diagonal?", "Apakah Meowdoku seperti Sudoku?"]
+      "terms": [
+        "meowdoku",
+        "meow doku",
+        "sudoku kucing",
+        "puzzle kucing",
+        "puzzle Queens",
+        "wilayah warna",
+        "cat sudoku",
+        "cat logic puzzle",
+        "queens puzzle",
+        "color region puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku",
+        "catdoku",
+        "kittydoku"
+      ],
+      "questions": [
+        "Bagaimana cara bermain Meowdoku?",
+        "Apakah kucing boleh bersentuhan diagonal?",
+        "Apakah Meowdoku seperti Sudoku?",
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ],
+      "label": "Indonesian"
     },
     "vi": {
-      "terms": ["meowdoku", "meow doku", "sudoku meo", "cau do meo", "puzzle Queens", "vung mau"],
-      "questions": ["Cach choi Meowdoku?", "Meo co duoc cham cheo khong?", "Meowdoku co giong Sudoku khong?"]
+      "terms": [
+        "meowdoku",
+        "meow doku",
+        "sudoku meo",
+        "cau do meo",
+        "puzzle Queens",
+        "vung mau",
+        "cat sudoku",
+        "cat logic puzzle",
+        "queens puzzle",
+        "color region puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku",
+        "catdoku",
+        "kittydoku"
+      ],
+      "questions": [
+        "Cach choi Meowdoku?",
+        "Meo co duoc cham cheo khong?",
+        "Meowdoku co giong Sudoku khong?",
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ],
+      "label": "Vietnamese"
     },
     "tr": {
-      "terms": ["meowdoku", "meow doku", "kedi sudoku", "kedi bulmaca", "Queens bulmaca", "renkli bolge bulmacasi"],
-      "questions": ["Meowdoku nasil oynanir?", "Kediler capraz temas edebilir mi?", "Meowdoku Sudoku gibi mi?"]
+      "terms": [
+        "meowdoku",
+        "meow doku",
+        "kedi sudoku",
+        "kedi bulmaca",
+        "Queens bulmaca",
+        "renkli bolge bulmacasi",
+        "cat sudoku",
+        "cat logic puzzle",
+        "queens puzzle",
+        "color region puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku",
+        "catdoku",
+        "kittydoku"
+      ],
+      "questions": [
+        "Meowdoku nasil oynanir?",
+        "Kediler capraz temas edebilir mi?",
+        "Meowdoku Sudoku gibi mi?",
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ],
+      "label": "Turkish"
     },
     "it": {
-      "terms": ["meowdoku", "meow doku", "sudoku gatti", "puzzle gatti", "puzzle Queens", "regioni colorate"],
-      "questions": ["Come si gioca a Meowdoku?", "I gatti possono toccarsi in diagonale?", "Meowdoku e simile al Sudoku?"]
+      "terms": [
+        "meowdoku",
+        "meow doku",
+        "sudoku gatti",
+        "puzzle gatti",
+        "puzzle Queens",
+        "regioni colorate",
+        "cat sudoku",
+        "cat logic puzzle",
+        "queens puzzle",
+        "color region puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku",
+        "catdoku",
+        "kittydoku"
+      ],
+      "questions": [
+        "Come si gioca a Meowdoku?",
+        "I gatti possono toccarsi in diagonale?",
+        "Meowdoku e simile al Sudoku?",
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ],
+      "label": "Italian"
     },
     "th": {
-      "terms": ["meowdoku", "meow doku", "sudoku cat", "puzzle cat", "queens puzzle", "color region puzzle"],
-      "questions": ["Meowdoku เล่นอย่างไร?", "แมวแตะกันแนวทแยงได้ไหม?", "Meowdoku เหมือน Sudoku ไหม?"]
+      "terms": [
+        "meowdoku",
+        "meow doku",
+        "sudoku cat",
+        "puzzle cat",
+        "queens puzzle",
+        "color region puzzle",
+        "cat sudoku",
+        "cat logic puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku",
+        "catdoku",
+        "kittydoku"
+      ],
+      "questions": [
+        "Meowdoku เล่นอย่างไร?",
+        "แมวแตะกันแนวทแยงได้ไหม?",
+        "Meowdoku เหมือน Sudoku ไหม?",
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ],
+      "label": "Thai"
     },
     "pl": {
-      "terms": ["meowdoku", "meow doku", "sudoku koty", "lamiglowka z kotami", "Queens puzzle", "kolorowe regiony"],
-      "questions": ["Jak grac w Meowdoku?", "Czy koty moga dotykac sie po przekatnej?", "Czy Meowdoku jest podobne do Sudoku?"]
+      "terms": [
+        "meowdoku",
+        "meow doku",
+        "sudoku koty",
+        "lamiglowka z kotami",
+        "Queens puzzle",
+        "kolorowe regiony",
+        "cat sudoku",
+        "cat logic puzzle",
+        "queens puzzle",
+        "color region puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku",
+        "catdoku",
+        "kittydoku"
+      ],
+      "questions": [
+        "Jak grac w Meowdoku?",
+        "Czy koty moga dotykac sie po przekatnej?",
+        "Czy Meowdoku jest podobne do Sudoku?",
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ],
+      "label": "Polish"
     },
     "nl": {
-      "terms": ["meowdoku", "meow doku", "katten sudoku", "katten puzzel", "Queens puzzel", "kleurregio puzzel"],
-      "questions": ["Hoe speel je Meowdoku?", "Mogen katten elkaar diagonaal raken?", "Lijkt Meowdoku op Sudoku?"]
+      "terms": [
+        "meowdoku",
+        "meow doku",
+        "katten sudoku",
+        "katten puzzel",
+        "Queens puzzel",
+        "kleurregio puzzel",
+        "cat sudoku",
+        "cat logic puzzle",
+        "queens puzzle",
+        "color region puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku",
+        "catdoku",
+        "kittydoku"
+      ],
+      "questions": [
+        "Hoe speel je Meowdoku?",
+        "Mogen katten elkaar diagonaal raken?",
+        "Lijkt Meowdoku op Sudoku?",
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ],
+      "label": "Dutch"
     },
     "uk": {
-      "terms": ["meowdoku", "meow doku", "судоку з котами", "логічна головоломка з котами", "Queens puzzle", "кольорові регіони"],
-      "questions": ["Як грати в Meowdoku?", "Чи можуть коти торкатися по діагоналі?", "Чи схожа Meowdoku на Sudoku?"]
+      "terms": [
+        "meowdoku",
+        "meow doku",
+        "судоку з котами",
+        "логічна головоломка з котами",
+        "Queens puzzle",
+        "кольорові регіони",
+        "cat sudoku",
+        "cat logic puzzle",
+        "queens puzzle",
+        "color region puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku",
+        "catdoku",
+        "kittydoku"
+      ],
+      "questions": [
+        "Як грати в Meowdoku?",
+        "Чи можуть коти торкатися по діагоналі?",
+        "Чи схожа Meowdoku на Sudoku?",
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ],
+      "label": "Ukrainian"
+    },
+    "bn": {
+      "label": "Bengali",
+      "terms": [
+        "meowdoku",
+        "meow doku",
+        "cat sudoku",
+        "cat logic puzzle",
+        "queens puzzle",
+        "color region puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku",
+        "catdoku",
+        "kittydoku"
+      ],
+      "questions": [
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ]
+    },
+    "cs": {
+      "label": "Czech",
+      "terms": [
+        "meowdoku",
+        "meow doku",
+        "cat sudoku",
+        "cat logic puzzle",
+        "queens puzzle",
+        "color region puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku",
+        "catdoku",
+        "kittydoku"
+      ],
+      "questions": [
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ]
+    },
+    "fil": {
+      "label": "Filipino",
+      "terms": [
+        "meowdoku",
+        "meow doku",
+        "cat sudoku",
+        "cat logic puzzle",
+        "queens puzzle",
+        "color region puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku",
+        "catdoku",
+        "kittydoku"
+      ],
+      "questions": [
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ]
+    },
+    "el": {
+      "label": "Greek",
+      "terms": [
+        "meowdoku",
+        "meow doku",
+        "cat sudoku",
+        "cat logic puzzle",
+        "queens puzzle",
+        "color region puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku",
+        "catdoku",
+        "kittydoku"
+      ],
+      "questions": [
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ]
+    },
+    "gu": {
+      "label": "Gujarati",
+      "terms": [
+        "meowdoku",
+        "meow doku",
+        "cat sudoku",
+        "cat logic puzzle",
+        "queens puzzle",
+        "color region puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku",
+        "catdoku",
+        "kittydoku"
+      ],
+      "questions": [
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ]
+    },
+    "ha": {
+      "label": "Hausa",
+      "terms": [
+        "meowdoku",
+        "meow doku",
+        "cat sudoku",
+        "cat logic puzzle",
+        "queens puzzle",
+        "color region puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku",
+        "catdoku",
+        "kittydoku"
+      ],
+      "questions": [
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ]
+    },
+    "he": {
+      "label": "Hebrew",
+      "terms": [
+        "meowdoku",
+        "meow doku",
+        "cat sudoku",
+        "cat logic puzzle",
+        "queens puzzle",
+        "color region puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku",
+        "catdoku",
+        "kittydoku"
+      ],
+      "questions": [
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ]
+    },
+    "hu": {
+      "label": "Hungarian",
+      "terms": [
+        "meowdoku",
+        "meow doku",
+        "cat sudoku",
+        "cat logic puzzle",
+        "queens puzzle",
+        "color region puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku",
+        "catdoku",
+        "kittydoku"
+      ],
+      "questions": [
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ]
+    },
+    "jv": {
+      "label": "Javanese",
+      "terms": [
+        "meowdoku",
+        "meow doku",
+        "cat sudoku",
+        "cat logic puzzle",
+        "queens puzzle",
+        "color region puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku",
+        "catdoku",
+        "kittydoku"
+      ],
+      "questions": [
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ]
+    },
+    "ms": {
+      "label": "Malay",
+      "terms": [
+        "meowdoku",
+        "meow doku",
+        "cat sudoku",
+        "cat logic puzzle",
+        "queens puzzle",
+        "color region puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku",
+        "catdoku",
+        "kittydoku"
+      ],
+      "questions": [
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ]
+    },
+    "mr": {
+      "label": "Marathi",
+      "terms": [
+        "meowdoku",
+        "meow doku",
+        "cat sudoku",
+        "cat logic puzzle",
+        "queens puzzle",
+        "color region puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku",
+        "catdoku",
+        "kittydoku"
+      ],
+      "questions": [
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ]
+    },
+    "pa": {
+      "label": "Punjabi",
+      "terms": [
+        "meowdoku",
+        "meow doku",
+        "cat sudoku",
+        "cat logic puzzle",
+        "queens puzzle",
+        "color region puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku",
+        "catdoku",
+        "kittydoku"
+      ],
+      "questions": [
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ]
+    },
+    "fa": {
+      "label": "Persian",
+      "terms": [
+        "meowdoku",
+        "meow doku",
+        "cat sudoku",
+        "cat logic puzzle",
+        "queens puzzle",
+        "color region puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku",
+        "catdoku",
+        "kittydoku"
+      ],
+      "questions": [
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ]
+    },
+    "ro": {
+      "label": "Romanian",
+      "terms": [
+        "meowdoku",
+        "meow doku",
+        "cat sudoku",
+        "cat logic puzzle",
+        "queens puzzle",
+        "color region puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku",
+        "catdoku",
+        "kittydoku"
+      ],
+      "questions": [
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ]
+    },
+    "sw": {
+      "label": "Swahili",
+      "terms": [
+        "meowdoku",
+        "meow doku",
+        "cat sudoku",
+        "cat logic puzzle",
+        "queens puzzle",
+        "color region puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku",
+        "catdoku",
+        "kittydoku"
+      ],
+      "questions": [
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ]
+    },
+    "sv": {
+      "label": "Swedish",
+      "terms": [
+        "meowdoku",
+        "meow doku",
+        "cat sudoku",
+        "cat logic puzzle",
+        "queens puzzle",
+        "color region puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku",
+        "catdoku",
+        "kittydoku"
+      ],
+      "questions": [
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ]
+    },
+    "ta": {
+      "label": "Tamil",
+      "terms": [
+        "meowdoku",
+        "meow doku",
+        "cat sudoku",
+        "cat logic puzzle",
+        "queens puzzle",
+        "color region puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku",
+        "catdoku",
+        "kittydoku"
+      ],
+      "questions": [
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ]
+    },
+    "te": {
+      "label": "Telugu",
+      "terms": [
+        "meowdoku",
+        "meow doku",
+        "cat sudoku",
+        "cat logic puzzle",
+        "queens puzzle",
+        "color region puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku",
+        "catdoku",
+        "kittydoku"
+      ],
+      "questions": [
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ]
+    },
+    "ur": {
+      "label": "Urdu",
+      "terms": [
+        "meowdoku",
+        "meow doku",
+        "cat sudoku",
+        "cat logic puzzle",
+        "queens puzzle",
+        "color region puzzle",
+        "no touch puzzle",
+        "daily meowdoku",
+        "miaodoku",
+        "catdoku",
+        "kittydoku"
+      ],
+      "questions": [
+        "Can cats touch diagonally in Meowdoku?",
+        "What is the best beginner strategy for Meowdoku?",
+        "How does assist mode work in Meowdoku?",
+        "Which Meowdoku difficulty should I choose?",
+        "Can I play Meowdoku online without downloading an app?",
+        "What is Meowdoku?",
+        "How do you play Meowdoku?",
+        "Is Meowdoku like cat sudoku?"
+      ]
     }
   },
   "contentRules": [
@@ -135,6 +1253,8 @@
     "Use Meowdoku prominently in titles and headings, but keep body copy readable.",
     "Each page should link to play, rules, strategy, levels, related names, and language pages where relevant.",
     "Question headings should sound like real player questions.",
-    "Variant pages should explain alternate names as helpful navigation, not as keyword targeting."
+    "Variant pages should explain alternate names as helpful navigation, not as keyword targeting.",
+    "Every supported language must have saved keyword terms and ChatGPT-style question clusters before page generation.",
+    "Generated localized pages should include the saved terms and questions for that language, not only translated generic page text."
   ]
 }
