@@ -19,6 +19,7 @@
 body {
   min-height: 100vh;
   margin: 0;
+  overflow-x: hidden;
   color: var(--ink);
   background:
     linear-gradient(120deg, rgba(255, 249, 232, 0.78), rgba(225, 244, 239, 0.7)),
@@ -782,13 +783,24 @@ h2 {
 }
 
 @media (max-width: 860px) {
+  :root {
+    --board-size: min(92vw, 560px);
+  }
+
   .app-shell {
-    padding: 8px;
+    min-height: calc(100vh - 52px);
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+    padding: 6px 8px 10px;
   }
 
   .game-stage {
-    padding: 10px;
-    border-radius: 18px;
+    width: 100%;
+    max-width: calc(100vw - 16px);
+    overflow: hidden;
+    padding: 8px;
+    border-radius: 16px;
   }
 
   .topbar,
@@ -796,14 +808,52 @@ h2 {
     flex-direction: column;
   }
 
-  .site-header,
+  .layout {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .site-header {
+    grid-template-columns: auto 1fr;
+    gap: 8px;
+    min-height: 52px;
+    padding: 6px 8px;
+  }
+
   .site-footer {
     grid-template-columns: 1fr;
     align-items: flex-start;
   }
 
+  .site-brand {
+    min-width: 0;
+  }
+
+  .site-brand span {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .site-nav {
+    display: none;
+  }
+
   .header-language {
-    justify-self: start;
+    justify-self: end;
+    min-width: 138px;
+  }
+
+  .header-language .panel-label {
+    display: none;
+  }
+
+  .language-control select {
+    height: 34px;
+    padding-left: 10px;
+    font-size: 0.86rem;
   }
 
   .content-grid,
@@ -813,27 +863,61 @@ h2 {
 
   .topbar {
     align-items: stretch;
+    margin-bottom: 6px;
   }
 
   .pill-row {
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .stat-pill {
+    min-height: 30px;
+    padding: 0 10px;
+    font-size: 0.82rem;
+  }
+
+  #bestTime {
+    display: none;
+  }
+
+  .heart-pill {
+    min-width: 88px;
+    gap: 5px;
+  }
+
+  .heart {
+    width: 18px;
+    height: 18px;
+    flex-basis: 18px;
+    font-size: 1.05rem;
   }
 
   .side-panel {
     width: 100%;
+    min-width: 0;
   }
 
   .side-panel {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 8px;
   }
 
   .rule-card {
     grid-column: 1 / -1;
   }
 
+  .board-wrap {
+    width: 100%;
+    min-width: 0;
+  }
+
   .board {
-    --board-size: min(92vw, 560px);
+    width: min(var(--board-size), 100%);
     border-width: 4px;
     border-radius: 14px;
   }
@@ -841,12 +925,12 @@ h2 {
 
 @media (max-width: 540px) {
   .site-header {
-    position: static;
+    position: sticky;
   }
 
-  .site-nav {
-    font-size: 0.9rem;
-    justify-content: flex-start;
+  .brand-mark {
+    width: 34px;
+    height: 34px;
   }
 
   .answer-grid {
@@ -857,37 +941,228 @@ h2 {
     font-size: 2rem;
   }
 
-  .brand-mark {
-    width: 48px;
-    height: 48px;
+  .game-stage {
     border-radius: 14px;
+    box-shadow: 0 12px 28px rgba(50, 33, 17, 0.16);
   }
 
   .side-panel {
     grid-template-columns: 1fr;
+    margin-bottom: 6px;
+    padding: 8px;
   }
 
-  .rule-card {
+  .rule-card,
+  .cat-counter-card,
+  .level-card .panel-label,
+  .cat-counter-card .panel-label {
     display: none;
   }
 
+  .level-card,
+  .cat-counter-card {
+    min-width: 0;
+    overflow: hidden;
+    padding: 8px;
+    border-radius: 12px;
+  }
+
+  .level-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .level-card h2 {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.05;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  #levelMeta {
+    margin: 0;
+    font-size: 0.72rem;
+    font-weight: 850;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .progress-track {
+    height: 7px;
+  }
+
+  .controls,
+  .tool-grid {
+    grid-column: 1 / -1;
+  }
+
   .language-control {
-    width: min(100%, 190px);
+    width: min(100%, 150px);
   }
 
   .board-wrap {
-    padding: 12px;
+    padding: 8px;
+    border-radius: 14px;
   }
 
   .board-header {
-    align-items: flex-start;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+
+  .board-header .panel-label {
+    display: none;
   }
 
   #statusText {
-    font-size: 1.05rem;
+    margin: 0;
+    font-size: 0.88rem;
+    line-height: 1.15;
+  }
+
+  .difficulty-tabs {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 6px;
+    padding: 3px;
+    border-radius: 13px;
+  }
+
+  .difficulty-tabs button {
+    min-width: 0;
+    min-height: 28px;
+    border-radius: 10px;
+    font-size: 0.78rem;
+  }
+
+  .assist-toggle {
+    min-height: 30px;
+    padding: 0 10px;
+    font-size: 0.78rem;
+  }
+
+  .placement-row {
+    gap: 5px;
+  }
+
+  .mode-button,
+  .tool-grid button {
+    min-height: 32px;
+    border-radius: 10px;
+    padding: 0 8px;
+    font-size: 0.78rem;
+  }
+
+  .tool-grid {
+    min-width: 0;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 5px;
+  }
+
+  .tool-grid button {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    color: transparent;
+    font-size: 0;
+  }
+
+  .tool-grid button::before {
+    color: var(--ink);
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  #undoBtn::before {
+    content: "↶";
+  }
+
+  #hintBtn::before {
+    content: "?";
+  }
+
+  #resetBtn::before {
+    content: "↻";
+  }
+
+  #nextBtn::before {
+    content: ">";
+  }
+
+  .board {
+    border-width: 3px;
+    border-radius: 12px;
+  }
+
+  .cell.cat::before {
+    width: 112%;
+    height: 112%;
   }
 
   .guide-section {
     padding-block: 38px;
+  }
+}
+
+@media (max-width: 380px) {
+  .site-brand span {
+    display: none;
+  }
+
+  .header-language {
+    min-width: 130px;
+  }
+
+  .mode-button span[data-i18n] {
+    display: none;
+  }
+
+  .mode-button {
+    padding: 0;
+  }
+
+  .icon-cat,
+  .icon-dot {
+    margin-right: 0;
+  }
+
+  .board {
+    --board-size: min(92vw, 560px);
+  }
+}
+
+@media (max-width: 540px) {
+  main,
+  .app-shell,
+  .game-stage,
+  .layout,
+  .board-wrap,
+  .difficulty-tabs,
+  .side-panel,
+  .level-card,
+  .cat-counter-card {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .game-stage {
+    max-width: calc(100vw - 16px);
+  }
+
+  .difficulty-tabs,
+  .placement-row,
+  .tool-grid,
+  .cat-counter {
+    width: 100%;
+  }
+
+  .cat-counter {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
