@@ -1,0 +1,140 @@
+{
+  "project": "Meowdoku Garden",
+  "updated": "2026-06-14",
+  "purpose": "Internal content research map for natural Meowdoku pages. Do not expose SEO/GEO language in player-facing copy.",
+  "primaryEntity": {
+    "name": "Meowdoku",
+    "category": "cat-themed logic puzzle",
+    "relatedPuzzleFamilies": [
+      "cat sudoku",
+      "Queens puzzle",
+      "Star Battle",
+      "color-region puzzle",
+      "no-touch puzzle",
+      "daily logic puzzle"
+    ]
+  },
+  "globalKeywordClusters": [
+    {
+      "cluster": "brand and exact name",
+      "terms": ["meowdoku", "meowdoku game", "meowdoku online", "play meowdoku", "meowdoku web", "meowdoku garden"]
+    },
+    {
+      "cluster": "spacing and spelling variants",
+      "terms": ["meow doku", "meow-doku", "meow dokou", "meowdokou", "meawdoku", "meodoku", "miaodoku", "miao doku"]
+    },
+    {
+      "cluster": "cat-name variants",
+      "terms": ["catdoku", "cat doku", "kittydoku", "kitty doku", "meow sudoku", "cat sudoku", "cat sudoku online", "cute sudoku"]
+    },
+    {
+      "cluster": "puzzle category terms",
+      "terms": ["cat queens puzzle", "queens puzzle online", "region logic puzzle", "color region puzzle", "colored room puzzle", "no-touch puzzle", "daily cat puzzle", "8x8 cat puzzle"]
+    },
+    {
+      "cluster": "rule and help questions",
+      "terms": ["how to play meowdoku", "meowdoku rules", "meowdoku strategy", "meowdoku tips", "meowdoku hints", "meowdoku no touch rule", "meowdoku diagonal rule", "meowdoku hearts"]
+    }
+  ],
+  "questionClusters": [
+    "What is Meowdoku?",
+    "How do you play Meowdoku?",
+    "Is Meowdoku the same as cat sudoku?",
+    "Is Meow Doku the same as Meowdoku?",
+    "Can cats touch diagonally in Meowdoku?",
+    "What is the best beginner strategy for Meowdoku?",
+    "How do hints and assist mode work?",
+    "What is the difference between Easy, Normal, and Hard?",
+    "Can I play Meowdoku on mobile?",
+    "Do I need to download an app to play Meowdoku?"
+  ],
+  "languageClusters": {
+    "en": {
+      "terms": ["meowdoku", "meow doku", "cat sudoku", "kittydoku", "catdoku", "cat queens puzzle"],
+      "questions": ["How do I play Meowdoku?", "What are the rules?", "Can cats touch diagonally?"]
+    },
+    "zh": {
+      "terms": ["Meowdoku", "猫咪数独", "猫数独", "猫咪逻辑谜题", "猫咪 Queens 谜题", "彩色区域谜题"],
+      "questions": ["Meowdoku 怎么玩？", "Meow Doku 和 Meowdoku 是同一个游戏吗？", "猫可以斜着相邻吗？"]
+    },
+    "zh-Hant": {
+      "terms": ["Meowdoku", "貓咪數獨", "貓數獨", "貓咪邏輯謎題", "貓咪 Queens 謎題", "彩色區域謎題"],
+      "questions": ["Meowdoku 怎麼玩？", "Meow Doku 和 Meowdoku 是同一個遊戲嗎？", "貓可以斜角相鄰嗎？"]
+    },
+    "ja": {
+      "terms": ["Meowdoku", "Meow Doku", "猫数独", "猫ロジックパズル", "Queens パズル", "色分け領域パズル"],
+      "questions": ["Meowdoku の遊び方は？", "猫は斜めに隣接できますか？", "初心者はどの難易度から始めるべきですか？"]
+    },
+    "ko": {
+      "terms": ["Meowdoku", "Meow Doku", "고양이 스도쿠", "고양이 논리 퍼즐", "Queens 퍼즐", "색 영역 퍼즐"],
+      "questions": ["Meowdoku는 어떻게 하나요?", "고양이는 대각선으로 닿을 수 있나요?", "쉬운 모드와 어려운 모드는 무엇이 다른가요?"]
+    },
+    "es": {
+      "terms": ["meowdoku", "meow doku", "sudoku de gatos", "puzzle de gatos", "puzzle Queens", "regiones de color"],
+      "questions": ["Como se juega Meowdoku?", "Los gatos pueden tocarse en diagonal?", "Meowdoku es como sudoku?"]
+    },
+    "fr": {
+      "terms": ["meowdoku", "meow doku", "sudoku chat", "puzzle de chats", "puzzle Queens", "regions colorees"],
+      "questions": ["Comment jouer a Meowdoku?", "Les chats peuvent-ils se toucher en diagonale?", "Meowdoku ressemble-t-il au sudoku?"]
+    },
+    "de": {
+      "terms": ["meowdoku", "meow doku", "katzen sudoku", "katzen logikraetsel", "queens raetsel", "farben region raetsel"],
+      "questions": ["Wie spielt man Meowdoku?", "Duerfen Katzen diagonal beruehren?", "Ist Meowdoku wie Sudoku?"]
+    },
+    "pt": {
+      "terms": ["meowdoku", "meow doku", "sudoku de gatos", "puzzle de gatos", "puzzle Queens", "regioes coloridas"],
+      "questions": ["Como jogar Meowdoku?", "Gatos podem tocar na diagonal?", "Meowdoku e parecido com sudoku?"]
+    },
+    "ru": {
+      "terms": ["meowdoku", "meow doku", "судоку с кошками", "логическая головоломка с кошками", "головоломка Queens", "цветные регионы"],
+      "questions": ["Как играть в Meowdoku?", "Могут ли кошки соприкасаться по диагонали?", "Meowdoku похоже на судоку?"]
+    },
+    "ar": {
+      "terms": ["meowdoku", "meow doku", "سودوكو القطط", "لغز قطط منطقي", "لغز Queens", "مناطق ملونة"],
+      "questions": ["كيف تلعب Meowdoku؟", "هل يمكن للقطط أن تتلامس قطريا؟", "هل Meowdoku مثل Sudoku؟"]
+    },
+    "hi": {
+      "terms": ["meowdoku", "meow doku", "cat sudoku", "बिल्ली पहेली", "logic puzzle", "queens puzzle"],
+      "questions": ["Meowdoku कैसे खेलें?", "क्या बिल्लियां तिरछे छू सकती हैं?", "क्या Meowdoku Sudoku जैसा है?"]
+    },
+    "id": {
+      "terms": ["meowdoku", "meow doku", "sudoku kucing", "puzzle kucing", "puzzle Queens", "wilayah warna"],
+      "questions": ["Bagaimana cara bermain Meowdoku?", "Apakah kucing boleh bersentuhan diagonal?", "Apakah Meowdoku seperti Sudoku?"]
+    },
+    "vi": {
+      "terms": ["meowdoku", "meow doku", "sudoku meo", "cau do meo", "puzzle Queens", "vung mau"],
+      "questions": ["Cach choi Meowdoku?", "Meo co duoc cham cheo khong?", "Meowdoku co giong Sudoku khong?"]
+    },
+    "tr": {
+      "terms": ["meowdoku", "meow doku", "kedi sudoku", "kedi bulmaca", "Queens bulmaca", "renkli bolge bulmacasi"],
+      "questions": ["Meowdoku nasil oynanir?", "Kediler capraz temas edebilir mi?", "Meowdoku Sudoku gibi mi?"]
+    },
+    "it": {
+      "terms": ["meowdoku", "meow doku", "sudoku gatti", "puzzle gatti", "puzzle Queens", "regioni colorate"],
+      "questions": ["Come si gioca a Meowdoku?", "I gatti possono toccarsi in diagonale?", "Meowdoku e simile al Sudoku?"]
+    },
+    "th": {
+      "terms": ["meowdoku", "meow doku", "sudoku cat", "puzzle cat", "queens puzzle", "color region puzzle"],
+      "questions": ["Meowdoku เล่นอย่างไร?", "แมวแตะกันแนวทแยงได้ไหม?", "Meowdoku เหมือน Sudoku ไหม?"]
+    },
+    "pl": {
+      "terms": ["meowdoku", "meow doku", "sudoku koty", "lamiglowka z kotami", "Queens puzzle", "kolorowe regiony"],
+      "questions": ["Jak grac w Meowdoku?", "Czy koty moga dotykac sie po przekatnej?", "Czy Meowdoku jest podobne do Sudoku?"]
+    },
+    "nl": {
+      "terms": ["meowdoku", "meow doku", "katten sudoku", "katten puzzel", "Queens puzzel", "kleurregio puzzel"],
+      "questions": ["Hoe speel je Meowdoku?", "Mogen katten elkaar diagonaal raken?", "Lijkt Meowdoku op Sudoku?"]
+    },
+    "uk": {
+      "terms": ["meowdoku", "meow doku", "судоку з котами", "логічна головоломка з котами", "Queens puzzle", "кольорові регіони"],
+      "questions": ["Як грати в Meowdoku?", "Чи можуть коти торкатися по діагоналі?", "Чи схожа Meowdoku на Sudoku?"]
+    }
+  },
+  "contentRules": [
+    "Player-facing pages should answer the query naturally without saying SEO, GEO, search intent, or keyword strategy.",
+    "Use Meowdoku prominently in titles and headings, but keep body copy readable.",
+    "Each page should link to play, rules, strategy, levels, related names, and language pages where relevant.",
+    "Question headings should sound like real player questions.",
+    "Variant pages should explain alternate names as helpful navigation, not as keyword targeting."
+  ]
+}
