@@ -454,6 +454,135 @@ const topics = [
   }
 ];
 
+const topicNames = {
+  "how-to-play": { zh: "Meowdoku 玩法指南", "zh-Hant": "Meowdoku 玩法指南", ja: "Meowdoku の遊び方", ko: "Meowdoku 플레이 방법", es: "Cómo jugar Meowdoku", fr: "Comment jouer à Meowdoku", de: "Meowdoku spielen", pt: "Como jogar Meowdoku", ru: "Как играть в Meowdoku" },
+  rules: { zh: "Meowdoku 规则", "zh-Hant": "Meowdoku 規則", ja: "Meowdoku ルール", ko: "Meowdoku 규칙", es: "Reglas de Meowdoku", fr: "Règles de Meowdoku", de: "Meowdoku-Regeln", pt: "Regras do Meowdoku", ru: "Правила Meowdoku" },
+  tips: { zh: "Meowdoku 技巧", "zh-Hant": "Meowdoku 技巧", ja: "Meowdoku のコツ", ko: "Meowdoku 팁", es: "Consejos de Meowdoku", fr: "Astuces Meowdoku", de: "Meowdoku-Tipps", pt: "Dicas de Meowdoku", ru: "Советы Meowdoku" },
+  strategy: { zh: "Meowdoku 策略", "zh-Hant": "Meowdoku 策略", ja: "Meowdoku 戦略", ko: "Meowdoku 전략", es: "Estrategia de Meowdoku", fr: "Stratégie Meowdoku", de: "Meowdoku-Strategie", pt: "Estratégia de Meowdoku", ru: "Стратегия Meowdoku" },
+  levels: { zh: "Meowdoku 难度", "zh-Hant": "Meowdoku 難度", ja: "Meowdoku 難易度", ko: "Meowdoku 난이도", es: "Niveles de Meowdoku", fr: "Niveaux Meowdoku", de: "Meowdoku-Level", pt: "Níveis de Meowdoku", ru: "Уровни Meowdoku" },
+  daily: { zh: "每日 Meowdoku", "zh-Hant": "每日 Meowdoku", ja: "毎日の Meowdoku", ko: "데일리 Meowdoku", es: "Meowdoku diario", fr: "Meowdoku quotidien", de: "Tägliches Meowdoku", pt: "Meowdoku diário", ru: "Ежедневный Meowdoku" },
+  "beginner-guide": { zh: "Meowdoku 新手指南", "zh-Hant": "Meowdoku 新手指南", ja: "Meowdoku 初心者ガイド", ko: "Meowdoku 초보자 가이드", es: "Guía para principiantes", fr: "Guide débutant", de: "Einsteigerleitfaden", pt: "Guia iniciante", ru: "Гайд для новичков" },
+  "hard-puzzles": { zh: "Meowdoku 困难题", "zh-Hant": "Meowdoku 困難題", ja: "難しい Meowdoku", ko: "어려운 Meowdoku", es: "Meowdoku difícil", fr: "Meowdoku difficile", de: "Schwere Meowdoku", pt: "Meowdoku difícil", ru: "Сложные Meowdoku" },
+  "queens-puzzle": { zh: "Meowdoku 与 Queens 谜题", "zh-Hant": "Meowdoku 與 Queens 謎題", ja: "Meowdoku と Queens パズル", ko: "Meowdoku와 Queens 퍼즐", es: "Meowdoku y Queens", fr: "Meowdoku et Queens", de: "Meowdoku und Queens", pt: "Meowdoku e Queens", ru: "Meowdoku и Queens" },
+  "cat-sudoku": { zh: "Meowdoku 猫咪数独", "zh-Hant": "Meowdoku 貓咪數獨", ja: "Meowdoku 猫数独", ko: "Meowdoku 고양이 스도쿠", es: "Sudoku de gatos Meowdoku", fr: "Sudoku chat Meowdoku", de: "Meowdoku Katzen-Sudoku", pt: "Sudoku de gatos Meowdoku", ru: "Кошачье судоку Meowdoku" },
+  "color-region-puzzle": { zh: "Meowdoku 彩色区域谜题", "zh-Hant": "Meowdoku 彩色區域謎題", ja: "Meowdoku 色分け領域パズル", ko: "Meowdoku 색 영역 퍼즐", es: "Regiones de color", fr: "Régions colorées", de: "Farbbereiche", pt: "Regiões coloridas", ru: "Цветные регионы" },
+  "no-touch-rule": { zh: "Meowdoku 不相邻规则", "zh-Hant": "Meowdoku 不相鄰規則", ja: "Meowdoku 非接触ルール", ko: "Meowdoku 비접촉 규칙", es: "Regla de no tocarse", fr: "Règle sans contact", de: "Nicht-berühren-Regel", pt: "Regra sem toque", ru: "Правило без касаний" },
+  hints: { zh: "Meowdoku 提示", "zh-Hant": "Meowdoku 提示", ja: "Meowdoku ヒント", ko: "Meowdoku 힌트", es: "Pistas de Meowdoku", fr: "Indices Meowdoku", de: "Meowdoku-Hinweise", pt: "Dicas de ajuda", ru: "Подсказки Meowdoku" },
+  mistakes: { zh: "Meowdoku 常见错误", "zh-Hant": "Meowdoku 常見錯誤", ja: "Meowdoku よくあるミス", ko: "Meowdoku 흔한 실수", es: "Errores comunes", fr: "Erreurs fréquentes", de: "Häufige Fehler", pt: "Erros comuns", ru: "Частые ошибки" },
+  "meow-doku": { zh: "Meow Doku 在线", "zh-Hant": "Meow Doku 線上版", ja: "Meow Doku オンライン", ko: "Meow Doku 온라인", es: "Meow Doku online", fr: "Meow Doku en ligne", de: "Meow Doku online", pt: "Meow Doku online", ru: "Meow Doku онлайн" },
+  variants: { zh: "Meowdoku 搜索变体", "zh-Hant": "Meowdoku 搜尋變體", ja: "Meowdoku 検索バリエーション", ko: "Meowdoku 검색 변형", es: "Variantes de búsqueda", fr: "Variantes de recherche", de: "Suchvarianten", pt: "Variações de busca", ru: "Варианты поиска" },
+  mobile: { zh: "Meowdoku 手机版", "zh-Hant": "Meowdoku 手機版", ja: "Meowdoku モバイル", ko: "Meowdoku 모바일", es: "Meowdoku móvil", fr: "Meowdoku mobile", de: "Meowdoku mobil", pt: "Meowdoku mobile", ru: "Meowdoku на телефоне" },
+  faq: { zh: "Meowdoku 常见问题", "zh-Hant": "Meowdoku 常見問題", ja: "Meowdoku FAQ", ko: "Meowdoku FAQ", es: "Preguntas frecuentes", fr: "FAQ Meowdoku", de: "Meowdoku FAQ", pt: "FAQ Meowdoku", ru: "FAQ Meowdoku" },
+  glossary: { zh: "Meowdoku 术语表", "zh-Hant": "Meowdoku 術語表", ja: "Meowdoku 用語集", ko: "Meowdoku 용어집", es: "Glosario Meowdoku", fr: "Glossaire Meowdoku", de: "Meowdoku-Glossar", pt: "Glossário Meowdoku", ru: "Глоссарий Meowdoku" }
+};
+
+const localePacks = {
+  zh: {
+    titleSuffix: "在线猫咪逻辑谜题指南",
+    play: "开始玩 Meowdoku",
+    learn: "学习规则",
+    quick: "快速答案",
+    signals: "Meowdoku 重点",
+    questions: "玩家常问的 Meowdoku 问题",
+    related: "相关 Meowdoku 指南",
+    terms: "覆盖的搜索词",
+    note: "这个页面围绕 Meowdoku 的真实搜索意图组织内容：玩法、规则、策略、难度、变体关键词和每日游玩入口都互相连接。",
+    summary: ["Meowdoku 是一个猫咪主题的区域放置逻辑谜题。", "每个彩色房间、每一行、每一列都只能有一只猫。", "猫不能相邻，斜角也不可以。"],
+    sections: [
+      ["核心规则", "先观察彩色区域，再结合行、列和不相邻规则排除不可能的格子。不要靠猜，先标记，再放猫。"],
+      ["解题思路", "优先找被限制最多的房间。一个房间如果只剩一行或一列可用，就会形成很强的 Meowdoku 锁定。"],
+      ["为什么这个页面有价值", "搜索 Meowdoku 的人可能想知道怎么玩、是否像数独、困难题怎么解、或者 Meow Doku 是否是同一个游戏。本页直接回答这些意图。"],
+      ["适合谁玩", "如果你喜欢 Sudoku、Queens、Star Battle、Nonogram 或每日逻辑题，Meowdoku 会很容易上手。"],
+      ["下一步", "读完本页后可以回到首页从简单模式开始，也可以继续查看规则、策略、困难题和搜索变体页面。"]
+    ],
+    faqs: [["Meowdoku 是什么？", "Meowdoku 是一个猫咪主题的逻辑谜题，需要在每个彩色区域放一只猫。"], ["需要猜吗？", "不需要。好的 Meowdoku 题目可以通过排除和锁定推理完成。"], ["和数独一样吗？", "它有行列限制，像数独；但彩色区域和不相邻规则更接近 Queens 类谜题。"]]
+  },
+  "zh-Hant": {
+    titleSuffix: "線上貓咪邏輯謎題指南",
+    play: "開始玩 Meowdoku",
+    learn: "學習規則",
+    quick: "快速答案",
+    signals: "Meowdoku 重點",
+    questions: "玩家常問的 Meowdoku 問題",
+    related: "相關 Meowdoku 指南",
+    terms: "涵蓋的搜尋詞",
+    note: "這個頁面圍繞 Meowdoku 的真實搜尋意圖整理內容：玩法、規則、策略、難度、變體關鍵字和每日遊玩入口都彼此連結。",
+    summary: ["Meowdoku 是一個貓咪主題的區域放置邏輯謎題。", "每個彩色房間、每一行、每一列都只能有一隻貓。", "貓不能相鄰，斜角也不可以。"],
+    sections: [
+      ["核心規則", "先觀察彩色區域，再結合行、列和不相鄰規則排除不可能的格子。不要靠猜，先標記，再放貓。"],
+      ["解題思路", "優先找被限制最多的房間。房間如果只剩一行或一列可用，就會形成很強的 Meowdoku 鎖定。"],
+      ["為什麼這個頁面有價值", "搜尋 Meowdoku 的人可能想知道怎麼玩、是否像數獨、困難題怎麼解，或 Meow Doku 是否是同一個遊戲。本頁直接回答這些意圖。"],
+      ["適合誰玩", "如果你喜歡 Sudoku、Queens、Star Battle、Nonogram 或每日邏輯題，Meowdoku 會很容易上手。"],
+      ["下一步", "讀完本頁後可以回到首頁從簡單模式開始，也可以繼續查看規則、策略、困難題和搜尋變體頁面。"]
+    ],
+    faqs: [["Meowdoku 是什麼？", "Meowdoku 是一個貓咪主題的邏輯謎題，需要在每個彩色區域放一隻貓。"], ["需要猜嗎？", "不需要。好的 Meowdoku 題目可以透過排除和鎖定推理完成。"], ["和數獨一樣嗎？", "它有行列限制，像數獨；但彩色區域和不相鄰規則更接近 Queens 類謎題。"]]
+  },
+  ja: {
+    titleSuffix: "オンライン猫ロジックパズルガイド",
+    play: "Meowdoku を遊ぶ",
+    learn: "ルールを見る",
+    quick: "要点",
+    signals: "Meowdoku のポイント",
+    questions: "Meowdoku のよくある質問",
+    related: "関連 Meowdoku ガイド",
+    terms: "対応する検索語",
+    note: "このページは Meowdoku の検索意図に合わせて、遊び方、ルール、戦略、難易度、別名検索、毎日のプレイ入口を整理しています。",
+    summary: ["Meowdoku は猫を置く色分け領域ロジックパズルです。", "各色の部屋、各行、各列に猫は一匹だけ置けます。", "猫は上下左右だけでなく斜めにも隣接できません。"],
+    sections: [["基本ルール", "色の部屋を見て、行・列・隣接禁止の条件で置けないマスを消していきます。"], ["解き方", "制約が強い部屋から始めると、行や列のロックが見つかります。"], ["検索意図", "Meowdoku、Meow Doku、猫数独、Queens パズルを探す人に役立つ説明をまとめています。"], ["向いている人", "Sudoku、Queens、Star Battle、毎日のロジックパズルが好きな人に向いています。"], ["次の一手", "ホームで簡単モードを遊ぶか、戦略や難問ガイドへ進んでください。"]],
+    faqs: [["Meowdoku とは？", "猫を色の部屋に置くロジックパズルです。"], ["推測は必要？", "いいえ。排除とロックで解けます。"], ["数独と同じ？", "行と列は似ていますが、色の部屋と隣接禁止が特徴です。"]]
+  },
+  ko: {
+    titleSuffix: "온라인 고양이 논리 퍼즐 가이드",
+    play: "Meowdoku 플레이",
+    learn: "규칙 보기",
+    quick: "빠른 답변",
+    signals: "Meowdoku 핵심",
+    questions: "Meowdoku 자주 묻는 질문",
+    related: "관련 Meowdoku 가이드",
+    terms: "포함된 검색어",
+    note: "이 페이지는 Meowdoku 검색 의도에 맞춰 규칙, 전략, 난이도, 검색 변형, 매일 플레이入口를 연결합니다.",
+    summary: ["Meowdoku는 고양이를 배치하는 색 영역 논리 퍼즐입니다.", "각 색 방, 각 행, 각 열에는 고양이 한 마리만 놓을 수 있습니다.", "고양이는 대각선을 포함해 서로 닿을 수 없습니다."],
+    sections: [["기본 규칙", "색 영역을 먼저 보고 행, 열, 인접 금지 규칙으로 불가능한 칸을 지웁니다."], ["풀이 방법", "제약이 강한 방부터 보면 행 또는 열 잠금이 생깁니다."], ["검색 의도", "Meowdoku, Meow Doku, 고양이 스도쿠, Queens 퍼즐을 찾는 사람에게 필요한 설명을 제공합니다."], ["추천 대상", "Sudoku, Queens, Star Battle, 매일 논리 퍼즐을 좋아한다면 잘 맞습니다."], ["다음 단계", "홈에서 쉬운 모드로 시작하거나 전략/어려운 퍼즐 가이드를 보세요."]],
+    faqs: [["Meowdoku란 무엇인가요?", "고양이를 색 영역에 배치하는 논리 퍼즐입니다."], ["추측이 필요한가요?", "아니요. 제거와 잠금 추론으로 풀 수 있습니다."], ["스도쿠와 같은가요?", "행과 열 제약은 비슷하지만 색 영역과 인접 금지 규칙이 다릅니다."]]
+  }
+};
+
+const genericLocalePacks = {
+  es: ["Guía de rompecabezas lógico de gatos", "Jugar Meowdoku", "Ver reglas", "Respuesta rápida", "Puntos clave de Meowdoku", "Preguntas frecuentes sobre Meowdoku", "Guías relacionadas", "Términos de búsqueda cubiertos", "Meowdoku es un rompecabezas lógico de regiones con gatos. Cada región de color, fila y columna necesita un solo gato. Los gatos no pueden tocarse, ni siquiera en diagonal."],
+  fr: ["Guide du puzzle logique de chats", "Jouer à Meowdoku", "Voir les règles", "Réponse rapide", "Points clés de Meowdoku", "Questions fréquentes sur Meowdoku", "Guides liés", "Termes de recherche couverts", "Meowdoku est un puzzle logique à régions avec des chats. Chaque région colorée, ligne et colonne doit contenir un seul chat. Les chats ne peuvent pas se toucher, même en diagonale."],
+  de: ["Leitfaden für Katzen-Logikrätsel", "Meowdoku spielen", "Regeln ansehen", "Kurzantwort", "Meowdoku-Kernpunkte", "Häufige Fragen zu Meowdoku", "Verwandte Leitfäden", "Abgedeckte Suchbegriffe", "Meowdoku ist ein Logikrätsel mit farbigen Regionen und Katzen. Jede Region, Reihe und Spalte braucht genau eine Katze. Katzen dürfen sich auch diagonal nicht berühren."],
+  pt: ["Guia do puzzle lógico de gatos", "Jogar Meowdoku", "Ver regras", "Resposta rápida", "Pontos-chave de Meowdoku", "Perguntas frequentes sobre Meowdoku", "Guias relacionados", "Termos de busca cobertos", "Meowdoku é um puzzle lógico de regiões com gatos. Cada região colorida, linha e coluna precisa de um gato. Gatos não podem se tocar, nem na diagonal."],
+  ru: ["Гид по кошачьей логической головоломке", "Играть в Meowdoku", "Правила", "Краткий ответ", "Ключевые идеи Meowdoku", "Вопросы о Meowdoku", "Похожие руководства", "Охваченные поисковые запросы", "Meowdoku — логическая головоломка с цветными регионами и кошками. В каждом регионе, строке и столбце должна быть одна кошка. Кошки не могут соприкасаться, даже по диагонали."],
+  ar: ["دليل لغز القطط المنطقي", "العب Meowdoku", "اعرض القواعد", "إجابة سريعة", "نقاط Meowdoku الأساسية", "أسئلة شائعة عن Meowdoku", "أدلة مرتبطة", "مصطلحات البحث المغطاة", "Meowdoku لغز منطقي بمناطق ملوّنة وقطط. كل منطقة وصف وعمود يحتاج إلى قط واحد فقط. لا يمكن للقطط أن تتلامس حتى قطرياً."],
+  hi: ["बिल्ली लॉजिक पज़ल गाइड", "Meowdoku खेलें", "नियम देखें", "त्वरित उत्तर", "Meowdoku के मुख्य संकेत", "Meowdoku प्रश्न", "संबंधित गाइड", "कवर किए गए खोज शब्द", "Meowdoku रंगीन क्षेत्रों और बिल्लियों वाला लॉजिक पज़ल है। हर रंगीन क्षेत्र, पंक्ति और स्तंभ में केवल एक बिल्ली होनी चाहिए। बिल्लियाँ तिरछे भी नहीं छू सकतीं।"],
+  id: ["Panduan puzzle logika kucing", "Main Meowdoku", "Lihat aturan", "Jawaban cepat", "Poin penting Meowdoku", "Pertanyaan tentang Meowdoku", "Panduan terkait", "Istilah pencarian tercakup", "Meowdoku adalah puzzle logika wilayah berwarna dengan kucing. Setiap wilayah, baris, dan kolom membutuhkan satu kucing. Kucing tidak boleh bersentuhan, termasuk diagonal."],
+  vi: ["Hướng dẫn câu đố logic mèo", "Chơi Meowdoku", "Xem luật", "Trả lời nhanh", "Điểm chính của Meowdoku", "Câu hỏi về Meowdoku", "Hướng dẫn liên quan", "Từ khóa đã bao phủ", "Meowdoku là câu đố logic theo vùng màu với mèo. Mỗi vùng màu, hàng và cột chỉ có một mèo. Mèo không được chạm nhau, kể cả đường chéo."],
+  tr: ["Kedi mantık bulmacası rehberi", "Meowdoku oyna", "Kuralları gör", "Kısa cevap", "Meowdoku temel noktaları", "Meowdoku soruları", "İlgili rehberler", "Kapsanan arama terimleri", "Meowdoku renkli bölgeler ve kedilerle oynanan bir mantık bulmacasıdır. Her bölge, satır ve sütunda bir kedi olmalıdır. Kediler çaprazda bile temas edemez."],
+  it: ["Guida al puzzle logico con gatti", "Gioca a Meowdoku", "Vedi le regole", "Risposta rapida", "Punti chiave di Meowdoku", "Domande su Meowdoku", "Guide correlate", "Termini di ricerca coperti", "Meowdoku è un puzzle logico a regioni colorate con gatti. Ogni regione, riga e colonna richiede un solo gatto. I gatti non possono toccarsi, nemmeno in diagonale."],
+  th: ["คู่มือปริศนาตรรกะแมว", "เล่น Meowdoku", "ดูกติกา", "คำตอบสั้น", "จุดสำคัญของ Meowdoku", "คำถามเกี่ยวกับ Meowdoku", "คู่มือที่เกี่ยวข้อง", "คำค้นหาที่ครอบคลุม", "Meowdoku เป็นปริศนาตรรกะพื้นที่สีพร้อมแมว แต่ละพื้นที่ แถว และคอลัมน์ต้องมีแมวหนึ่งตัว แมวห้ามแตะกันแม้แนวทแยง"],
+  pl: ["Przewodnik po kociej łamigłówce logicznej", "Graj w Meowdoku", "Zobacz zasady", "Krótka odpowiedź", "Najważniejsze punkty Meowdoku", "Pytania o Meowdoku", "Powiązane poradniki", "Uwzględnione wyszukiwane hasła", "Meowdoku to logiczna łamigłówka z kolorowymi regionami i kotami. Każdy region, rząd i kolumna potrzebuje jednego kota. Koty nie mogą się stykać, także po przekątnej."],
+  nl: ["Gids voor kattenlogicapuzzel", "Speel Meowdoku", "Bekijk regels", "Kort antwoord", "Belangrijke Meowdoku-punten", "Vragen over Meowdoku", "Gerelateerde gidsen", "Gedekte zoektermen", "Meowdoku is een logicapuzzel met gekleurde gebieden en katten. Elk gebied, elke rij en elke kolom heeft één kat nodig. Katten mogen elkaar niet raken, ook niet diagonaal."],
+  uk: ["Гід з котячої логічної головоломки", "Грати в Meowdoku", "Правила", "Коротка відповідь", "Ключові моменти Meowdoku", "Питання про Meowdoku", "Пов'язані гайди", "Охоплені пошукові запити", "Meowdoku — логічна головоломка з кольоровими регіонами та котами. У кожному регіоні, рядку й стовпці має бути один кіт. Коти не можуть торкатися навіть по діагоналі."]
+};
+
+for (const [code, values] of Object.entries(genericLocalePacks)) {
+  if (localePacks[code]) continue;
+  localePacks[code] = {
+    titleSuffix: values[0],
+    play: values[1],
+    learn: values[2],
+    quick: values[3],
+    signals: values[4],
+    questions: values[5],
+    related: values[6],
+    terms: values[7],
+    note: values[8],
+    summary: [values[8], "Meowdoku / Meow Doku / cat sudoku.", "Rules, strategy, hints and variants are connected here."],
+    sections: [["Meowdoku", values[8]], ["Rules", "Use rows, columns, colored regions and the no-touch rule to remove impossible cells."], ["Strategy", "Start with constrained regions, mark impossible cells, and place a cat only when the logic is certain."], ["Search intent", "This page connects Meowdoku with cat sudoku, Queens puzzle, daily puzzle and spelling variants."], ["Next step", "Open the game, start with Easy mode, then read the related guides."]],
+    faqs: [["What is Meowdoku?", values[8]], ["Do I need to guess?", "No. Meowdoku can be solved with elimination and placement logic."], ["Where should I start?", "Start with the rules page, then play Easy mode."]]
+  };
+}
+
 function loadEnv(text) {
   const env = {};
   for (const rawLine of text.split(/\r?\n/)) {
@@ -497,28 +626,30 @@ function languageLabel(code) {
 }
 
 function headerHtml(lang = "en") {
+  const labels = navLabels(lang);
   return `<header class="site-header">
       <a class="site-brand" href="/"><img src="/assets/cat-token.png" alt="" class="brand-mark"><span>Meowdoku Garden</span></a>
       <nav class="site-nav" aria-label="Main navigation">
-        <a href="/#play">Play</a>
-        <a href="${routeFor("how-to-play", lang)}">How to Play</a>
-        <a href="${routeFor("rules", lang)}">Rules</a>
-        <a href="${routeFor("strategy", lang)}">Strategy</a>
-        <a href="${routeFor("daily", lang)}">Daily</a>
-        <a href="${lang === "en" ? "/languages/" : routeFor("", lang)}">Languages</a>
+        <a href="/#play">${escapeHtml(labels.play)}</a>
+        <a href="${routeFor("how-to-play", lang)}">${escapeHtml(labels.how)}</a>
+        <a href="${routeFor("rules", lang)}">${escapeHtml(labels.rules)}</a>
+        <a href="${routeFor("strategy", lang)}">${escapeHtml(labels.strategy)}</a>
+        <a href="${routeFor("daily", lang)}">${escapeHtml(labels.daily)}</a>
+        <a href="${lang === "en" ? "/languages/" : routeFor("", lang)}">${escapeHtml(labels.languages)}</a>
       </nav>
       <label class="language-control header-language">
-        <span class="panel-label">language</span>
+        <span class="panel-label">${escapeHtml(labels.language)}</span>
         <select id="languageSelect" aria-label="Language"></select>
       </label>
     </header>`;
 }
 
 function footerHtml(lang = "en") {
+  const labels = navLabels(lang);
   const links = ["how-to-play", "rules", "tips", "strategy", "levels", "daily", "queens-puzzle", "cat-sudoku", "variants", "faq"];
   return `<footer class="site-footer">
       <div><img src="/assets/cat-token.png" alt="" class="footer-mark"><strong>Meowdoku Garden</strong><p>Free online Meowdoku, cat sudoku, Meow Doku, and Queens-style logic puzzles.</p></div>
-      <nav aria-label="Footer navigation"><a href="/">Play</a>${links.map((slug) => `<a href="${routeFor(slug, lang)}">${titleCase(slug)}</a>`).join("")}<a href="${lang === "en" ? "/languages/" : routeFor("", lang)}">Languages</a><a href="/sitemap.xml">Sitemap</a></nav>
+      <nav aria-label="Footer navigation"><a href="/">${escapeHtml(labels.play)}</a>${links.map((slug) => `<a href="${routeFor(slug, lang)}">${escapeHtml(localTopicName(slug, lang))}</a>`).join("")}<a href="${lang === "en" ? "/languages/" : routeFor("", lang)}">${escapeHtml(labels.languages)}</a><a href="/sitemap.xml">Sitemap</a></nav>
     </footer>`;
 }
 
@@ -526,33 +657,107 @@ function titleCase(slug) {
   return slug.split("-").map((part) => part.charAt(0).toUpperCase() + part.slice(1)).join(" ");
 }
 
+function localTopicName(slug, lang) {
+  return topicNames[slug]?.[lang] || (lang === "en" ? (topics.find((item) => item.slug === slug)?.h1 || titleCase(slug)) : `Meowdoku ${languageLabel(lang)}`);
+}
+
+function navLabels(lang) {
+  const labels = {
+    en: { play: "Play", how: "How to Play", rules: "Rules", strategy: "Strategy", daily: "Daily", languages: "Languages", language: "language", open: "Open" },
+    zh: { play: "开始玩", how: "玩法", rules: "规则", strategy: "策略", daily: "每日", languages: "语言", language: "语言", open: "打开" },
+    "zh-Hant": { play: "開始玩", how: "玩法", rules: "規則", strategy: "策略", daily: "每日", languages: "語言", language: "語言", open: "打開" },
+    ja: { play: "遊ぶ", how: "遊び方", rules: "ルール", strategy: "戦略", daily: "毎日", languages: "言語", language: "言語", open: "開く" },
+    ko: { play: "플레이", how: "방법", rules: "규칙", strategy: "전략", daily: "데일리", languages: "언어", language: "언어", open: "열기" },
+    es: { play: "Jugar", how: "Cómo jugar", rules: "Reglas", strategy: "Estrategia", daily: "Diario", languages: "Idiomas", language: "idioma", open: "Abrir" },
+    fr: { play: "Jouer", how: "Comment jouer", rules: "Règles", strategy: "Stratégie", daily: "Quotidien", languages: "Langues", language: "langue", open: "Ouvrir" },
+    de: { play: "Spielen", how: "Anleitung", rules: "Regeln", strategy: "Strategie", daily: "Täglich", languages: "Sprachen", language: "sprache", open: "Öffnen" },
+    pt: { play: "Jogar", how: "Como jogar", rules: "Regras", strategy: "Estratégia", daily: "Diário", languages: "Idiomas", language: "idioma", open: "Abrir" },
+    ru: { play: "Играть", how: "Как играть", rules: "Правила", strategy: "Стратегия", daily: "Ежедневно", languages: "Языки", language: "язык", open: "Открыть" }
+  };
+  return labels[lang] || { play: "Meowdoku", how: "Meowdoku", rules: "Meowdoku", strategy: "Meowdoku", daily: "Meowdoku", languages: languageLabel(lang), language: languageLabel(lang), open: "Meowdoku" };
+}
+
 function enrichForLanguage(topic, lang) {
   if (lang === "en") return topic;
   const label = languageLabel(lang);
   const introLine = languages.find(([code]) => code === lang)?.[2] || `Play Meowdoku in ${label}`;
+  const pack = localePacks[lang] || fallbackPack(lang);
+  const localName = topicNames[topic.slug]?.[lang] || `${topic.h1} - ${label}`;
   return {
     ...topic,
-    title: `${introLine} - ${topic.h1}`,
-    h1: `${topic.h1} - ${label}`,
-    description: `${introLine}. ${topic.description}`,
-    summary: [introLine, ...topic.summary.slice(0, 2)],
-    sections: [
-      [`Meowdoku for ${label} Players`, `${introLine}. This page gives ${label} searchers a clear entry into Meowdoku rules, strategy, and related cat sudoku terms.`],
-      ...topic.sections
-    ],
-    faqs: [
-      [`Can I play Meowdoku in ${label}?`, `Yes. Use the language selector in the header, then start the browser game from the homepage.`],
-      ...topic.faqs
-    ],
+    title: `${localName} - ${pack.titleSuffix}`,
+    h1: localName,
+    description: `${introLine}. ${pack.summary[0]} ${pack.summary[1]}`,
+    summary: pack.summary,
+    sections: pack.sections.map(([heading, copy]) => [
+      heading.includes("Meowdoku") ? heading : `${heading} - ${localName}`,
+      copy.replaceAll("Meowdoku", "Meowdoku")
+    ]),
+    faqs: pack.faqs,
     keywords: [...topic.keywords, `meowdoku ${label}`, `cat sudoku ${label}`]
   };
+}
+
+function uiText(lang) {
+  const pack = localePacks[lang] || fallbackPack(lang);
+  return {
+    play: pack.play || "Play Meowdoku",
+    learn: pack.learn || "Learn the rules",
+    quick: pack.quick || "Quick Answer",
+    signals: pack.signals || "Meowdoku Signals",
+    questions: pack.questions || "Questions People Ask About Meowdoku",
+    related: pack.related || "Related Meowdoku Guides",
+    terms: pack.terms || "Search Terms Covered",
+    note: pack.note || "Meowdoku is strongest as a search and GEO topic when pages answer both the exact query and the adjacent intent: rules, strategy, puzzle category, spelling variants, and daily play."
+  };
+}
+
+function fallbackPack(lang) {
+  const label = languageLabel(lang);
+  const introLine = languages.find(([code]) => code === lang)?.[2] || `Meowdoku ${label}`;
+  return {
+    titleSuffix: `Meowdoku ${label}`,
+    play: introLine,
+    learn: `Meowdoku ${label}`,
+    quick: `Meowdoku ${label}`,
+    signals: `Meowdoku ${label}`,
+    questions: `Meowdoku FAQ`,
+    related: `Meowdoku ${label}`,
+    terms: `Meowdoku`,
+    note: introLine,
+    summary: [introLine, `Meowdoku ${label}`, "Meowdoku"],
+    sections: [[`Meowdoku ${label}`, introLine], [`Meowdoku`, introLine], [`Meowdoku FAQ`, introLine], [`Meowdoku SEO`, introLine], [`Meowdoku GEO`, introLine]],
+    faqs: [[`Meowdoku ${label}?`, introLine], [`Meowdoku?`, introLine], [`Meow Doku?`, introLine]]
+  };
+}
+
+function keywordRoute(keyword, lang) {
+  const value = keyword.toLowerCase();
+  if (value.includes("how") || value.includes("guide") || value.includes("learn") || value.includes("beginner")) return routeFor(value.includes("beginner") ? "beginner-guide" : "how-to-play", lang);
+  if (value.includes("rule") || value.includes("touch") || value.includes("diagonal")) return routeFor(value.includes("touch") || value.includes("diagonal") ? "no-touch-rule" : "rules", lang);
+  if (value.includes("tip") || value.includes("hint") || value.includes("help")) return routeFor(value.includes("hint") || value.includes("help") ? "hints" : "tips", lang);
+  if (value.includes("strategy") || value.includes("advanced")) return routeFor("strategy", lang);
+  if (value.includes("hard") || value.includes("8x8")) return routeFor("hard-puzzles", lang);
+  if (value.includes("level") || value.includes("easy")) return routeFor("levels", lang);
+  if (value.includes("daily")) return routeFor("daily", lang);
+  if (value.includes("queen")) return routeFor("queens-puzzle", lang);
+  if (value.includes("cat sudoku") || value.includes("sudoku")) return routeFor("cat-sudoku", lang);
+  if (value.includes("region") || value.includes("room") || value.includes("color")) return routeFor("color-region-puzzle", lang);
+  if (value.includes("mistake") || value.includes("heart")) return routeFor("mistakes", lang);
+  if (value.includes("variant") || value.includes("meow doku") || value.includes("dokou") || value.includes("meow sudoku")) return routeFor("variants", lang);
+  if (value.includes("mobile") || value.includes("phone")) return routeFor("mobile", lang);
+  if (value.includes("faq") || value.includes("answer")) return routeFor("faq", lang);
+  return routeFor("glossary", lang);
+}
+
+function keywordLinks(keywords, lang) {
+  return keywords.slice(0, 14).map((keyword) => `<a href="${keywordRoute(keyword, lang)}">${escapeHtml(keyword)}</a>`).join("");
 }
 
 function relatedLinks(currentSlug, lang) {
   const priority = ["how-to-play", "rules", "tips", "strategy", "levels", "daily", "queens-puzzle", "cat-sudoku", "meow-doku", "variants", "faq", "glossary"];
   return priority.filter((slug) => slug !== currentSlug).slice(0, 7).map((slug) => {
-    const topic = topics.find((item) => item.slug === slug);
-    return `<a href="${routeFor(slug, lang)}">${escapeHtml(topic?.h1 || titleCase(slug))}</a>`;
+    return `<a href="${routeFor(slug, lang)}">${escapeHtml(localTopicName(slug, lang))}</a>`;
   }).join("");
 }
 
@@ -563,6 +768,7 @@ function hreflangLinks(slug) {
 
 function pageShell(topic, lang = "en") {
   const data = enrichForLanguage(topic, lang);
+  const ui = uiText(lang);
   const canonical = urlFor(topic.slug, lang);
   const faqJson = {
     "@context": "https://schema.org",
@@ -582,7 +788,7 @@ function pageShell(topic, lang = "en") {
     isPartOf: { "@type": "WebSite", name: "Meowdoku Garden", url: siteUrl },
     about: ["Meowdoku", "Meow Doku", "Cat Sudoku", "Queens Puzzle", data.intent, ...data.keywords]
   };
-  const sections = data.sections.map(([heading, copy]) => `<article><h2>${escapeHtml(heading)}</h2><p>${escapeHtml(copy)}</p></article>`).join("\n");
+  const sections = data.customSectionsHtml || data.sections.map(([heading, copy]) => `<article><h2>${escapeHtml(heading)}</h2><p>${escapeHtml(copy)}</p></article>`).join("\n");
   const faqs = data.faqs.map(([question, answer]) => `<div class="answer-card"><h3>${escapeHtml(question)}</h3><p>${escapeHtml(answer)}</p></div>`).join("\n");
   const keywords = ["Meowdoku", "Meow Doku", "cat sudoku", "cat queens puzzle", "color region puzzle", ...data.keywords];
 
@@ -616,18 +822,18 @@ function pageShell(topic, lang = "en") {
           <p class="eyebrow">Meowdoku ${escapeHtml(data.intent)}</p>
           <h1>${escapeHtml(data.h1)}</h1>
           <p class="seo-lede">${escapeHtml(data.description)}</p>
-          <div class="seo-actions"><a class="seo-button" href="/#play">Play Meowdoku</a><a class="seo-button secondary" href="${routeFor("how-to-play", lang)}">Learn the rules</a></div>
+          <div class="seo-actions"><a class="seo-button" href="/#play">${escapeHtml(ui.play)}</a><a class="seo-button secondary" href="${routeFor("how-to-play", lang)}">${escapeHtml(ui.learn)}</a></div>
         </div>
       </section>
       <section class="seo-section">
         <div class="content-grid">
           <div>
-            <h2>Quick Answer</h2>
+            <h2>${escapeHtml(ui.quick)}</h2>
             <p>${escapeHtml(data.summary.join(" "))}</p>
-            <p>Meowdoku is strongest as a search and GEO topic when pages answer both the exact query and the adjacent intent: rules, strategy, puzzle category, spelling variants, and daily play.</p>
+            <p>${escapeHtml(ui.note)}</p>
           </div>
           <div class="seo-card">
-            <h2>Meowdoku Signals</h2>
+            <h2>${escapeHtml(ui.signals)}</h2>
             <ul>${data.summary.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
           </div>
         </div>
@@ -636,18 +842,18 @@ function pageShell(topic, lang = "en") {
         <div class="content-grid three">${sections}</div>
       </section>
       <section class="seo-section">
-        <h2>Questions People Ask About Meowdoku</h2>
+        <h2>${escapeHtml(ui.questions)}</h2>
         <div class="answer-grid">${faqs}</div>
       </section>
       <section class="seo-section alt">
         <div class="content-grid">
           <div>
-            <h2>Related Meowdoku Guides</h2>
+            <h2>${escapeHtml(ui.related)}</h2>
             <div class="keyword-cloud">${relatedLinks(topic.slug, lang)}</div>
           </div>
           <div class="seo-card">
-            <h2>Search Terms Covered</h2>
-            <div class="keyword-cloud">${keywords.slice(0, 14).map((keyword) => `<span>${escapeHtml(keyword)}</span>`).join("")}</div>
+            <h2>${escapeHtml(ui.terms)}</h2>
+            <div class="keyword-cloud">${keywordLinks(keywords, lang)}</div>
           </div>
         </div>
       </section>
@@ -664,7 +870,9 @@ function pageShell(topic, lang = "en") {
 function languageHome(lang) {
   const label = languageLabel(lang);
   const introLine = languages.find(([code]) => code === lang)?.[2] || `Play Meowdoku in ${label}`;
-  const topicCards = topics.map((topic) => `<article><h2>${escapeHtml(topic.h1)}</h2><p>${escapeHtml(topic.description)}</p><a class="text-link" href="${routeFor(topic.slug, lang)}">Open ${escapeHtml(topic.h1)}</a></article>`).join("\n");
+  const pack = localePacks[lang] || fallbackPack(lang);
+  const labels = navLabels(lang);
+  const topicCards = topics.map((topic) => `<article><h2>${escapeHtml(localTopicName(topic.slug, lang))}</h2><p>${escapeHtml(pack.note)}</p><a class="text-link" href="${routeFor(topic.slug, lang)}">${escapeHtml(labels.open)} ${escapeHtml(localTopicName(topic.slug, lang))}</a></article>`).join("\n");
   const topic = {
     slug: "",
     title: `${introLine} - Meowdoku Garden`,
@@ -674,18 +882,22 @@ function languageHome(lang) {
     keywords: [`meowdoku ${label}`, `cat sudoku ${label}`, "meowdoku languages"],
     summary: [introLine, "All major Meowdoku guides are linked from this language hub.", "Use the header language selector to move between languages."],
     sections: [],
+    customSectionsHtml: topicCards,
     faqs: [
       [`Is Meowdoku available for ${label} players?`, "Yes. This language hub connects the game, rules, strategy pages, and SEO entry points."],
       ["Where do I start?", "Open How to Play, then return to the homepage and start Easy mode."],
       ["Does the game detect language automatically?", "Yes. The browser language is used when no saved language preference exists."]
     ]
   };
-  const base = pageShell(topic, lang);
-  return base.replace('<div class="content-grid three"></div>', `<div class="content-grid three">${topicCards}</div>`);
+  return pageShell(topic, lang);
 }
 
 function languagesPage() {
-  const cards = languages.map(([code, label, heading]) => `<article><h2>${escapeHtml(label)}</h2><p>${escapeHtml(heading)}. This language entry links Meowdoku rules, strategy, daily play, and related cat sudoku searches.</p><a class="text-link" href="${routeFor("", code)}">Open ${escapeHtml(label)}</a></article>`).join("\n");
+  const cards = languages.map(([code, label, heading]) => {
+    const pack = localePacks[code] || fallbackPack(code);
+    const open = navLabels(code).open || "Open";
+    return `<article><h2>${escapeHtml(label)}</h2><p>${escapeHtml(heading)}. ${escapeHtml(pack.note)}</p><a class="text-link" href="${routeFor("", code)}">${escapeHtml(open)} ${escapeHtml(label)}</a></article>`;
+  }).join("\n");
   const topic = {
     slug: "languages",
     title: "Meowdoku Languages - Global Cat Sudoku and GEO Entry Pages",
@@ -695,13 +907,14 @@ function languagesPage() {
     keywords: ["meowdoku languages", "global meowdoku", "cat sudoku languages", "multilingual puzzle"],
     summary: ["Meowdoku supports global discovery.", "Every major language has an entry path.", "Language pages help search engines and AI answers map the game."],
     sections: [],
+    customSectionsHtml: cards,
     faqs: [
       ["Why does Meowdoku need language pages?", "Language pages help players and search systems discover the right version of the game."],
       ["Are language pages useful for GEO?", "Yes. AI answer engines rely on clear entity-language relationships."],
       ["Can I switch language from any page?", "Yes. The header language selector appears on generated pages and the game homepage."]
     ]
   };
-  return pageShell(topic, "en").replace('<div class="content-grid three"></div>', `<div class="content-grid three">${cards}</div>`);
+  return pageShell(topic, "en");
 }
 
 async function writePage(route, html) {
