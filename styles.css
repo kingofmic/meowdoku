@@ -316,39 +316,39 @@ h2 {
   font-weight: 850;
 }
 
-.seo-hero {
+.guide-hero {
   padding: 68px max(18px, calc((100vw - 1120px) / 2)) 48px;
   background:
     linear-gradient(120deg, rgba(255, 250, 241, 0.94), rgba(225, 244, 239, 0.86)),
     url("assets/cozy-game-bg.png") center / cover;
 }
 
-.seo-hero-inner {
+.guide-hero-inner {
   max-width: 860px;
 }
 
-.seo-hero h1 {
+.guide-hero h1 {
   max-width: 760px;
   margin-bottom: 18px;
   font-size: clamp(2.4rem, 6vw, 4.8rem);
   line-height: 0.96;
 }
 
-.seo-lede {
+.guide-lede {
   max-width: 760px;
   color: var(--muted);
   font-size: 1.14rem;
   line-height: 1.7;
 }
 
-.seo-actions {
+.guide-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 24px;
 }
 
-.seo-button {
+.guide-button {
   display: inline-grid;
   min-height: 42px;
   place-items: center;
@@ -361,7 +361,7 @@ h2 {
   box-shadow: 0 12px 24px rgba(36, 52, 56, 0.2);
 }
 
-.seo-button.secondary {
+.guide-button.secondary {
   background: rgba(255, 255, 255, 0.78);
   color: var(--ink);
   box-shadow: inset 0 0 0 1px rgba(31, 42, 46, 0.12), 0 10px 20px rgba(68, 46, 28, 0.08);
@@ -669,12 +669,12 @@ h2 {
   100% { opacity: 0; transform: translateY(112vh) translateX(var(--drift)) rotate(calc(var(--turns) * 1deg)) scale(1); }
 }
 
-.seo-section {
+.guide-section {
   padding: 54px max(18px, calc((100vw - 1100px) / 2));
   background: rgba(255, 250, 241, 0.88);
 }
 
-.seo-section.alt {
+.guide-section.alt {
   background: rgba(225, 244, 239, 0.78);
 }
 
@@ -689,18 +689,18 @@ h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.seo-section h2 {
+.guide-section h2 {
   font-size: clamp(1.7rem, 3vw, 2.5rem);
 }
 
-.seo-section p,
-.seo-section li,
+.guide-section p,
+.guide-section li,
 .site-footer p {
   color: var(--muted);
   line-height: 1.65;
 }
 
-.seo-card,
+.guide-card,
 .content-grid.three article {
   border: 1px solid var(--line);
   border-radius: 18px;
@@ -709,8 +709,8 @@ h2 {
   box-shadow: 0 12px 28px rgba(68, 46, 28, 0.08);
 }
 
-.seo-card h2,
-.seo-card h3,
+.guide-card h2,
+.guide-card h3,
 .content-grid article h2,
 .content-grid article h3 {
   line-height: 1.12;
@@ -730,7 +730,7 @@ h2 {
 }
 
 .answer-card p:last-child,
-.seo-card p:last-child,
+.guide-card p:last-child,
 .content-grid article p:last-child {
   margin-bottom: 0;
 }
@@ -887,7 +887,7 @@ h2 {
     font-size: 1.05rem;
   }
 
-  .seo-section {
+  .guide-section {
     padding-block: 38px;
   }
 }
