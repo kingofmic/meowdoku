@@ -1029,7 +1029,16 @@ h2 {
     width: 100%;
     max-width: 100vw;
     overflow: hidden;
+    align-content: start;
+    justify-items: center;
     padding: 4px 8px 8px;
+  }
+
+  @media (display-mode: standalone) {
+    .app-shell {
+      min-height: calc(100vh - 52px);
+      padding-top: 0;
+    }
   }
 
   .game-stage {
