@@ -1034,9 +1034,17 @@ h2 {
     padding: 4px 8px 8px;
   }
 
+  body.has-pwa-top-bar .app-shell {
+    padding-top: 44px;
+  }
+
   @media (display-mode: standalone) {
     .app-shell {
       min-height: calc(100vh - 52px);
+      padding-top: 0;
+    }
+
+    body.has-pwa-top-bar .app-shell {
       padding-top: 0;
     }
   }
