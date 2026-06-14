@@ -829,41 +829,41 @@ function pageShell(topic, lang = "en") {
   <body>
     ${headerHtml(lang)}
     <main>
-      <section class="seo-hero">
-        <div class="seo-hero-inner">
+      <section class="guide-hero">
+        <div class="guide-hero-inner">
           <p class="eyebrow">Meowdoku ${escapeHtml(data.intent)}</p>
           <h1>${escapeHtml(data.h1)}</h1>
-          <p class="seo-lede">${escapeHtml(data.description)}</p>
-          <div class="seo-actions"><a class="seo-button" href="/#play">${escapeHtml(ui.play)}</a><a class="seo-button secondary" href="${routeFor("how-to-play", lang)}">${escapeHtml(ui.learn)}</a></div>
+          <p class="guide-lede">${escapeHtml(data.description)}</p>
+          <div class="guide-actions"><a class="guide-button" href="/#play">${escapeHtml(ui.play)}</a><a class="guide-button secondary" href="${routeFor("how-to-play", lang)}">${escapeHtml(ui.learn)}</a></div>
         </div>
       </section>
-      <section class="seo-section">
+      <section class="guide-section">
         <div class="content-grid">
           <div>
             <h2>${escapeHtml(ui.quick)}</h2>
             <p>${escapeHtml(data.summary.join(" "))}</p>
             <p>${escapeHtml(ui.note)}</p>
           </div>
-          <div class="seo-card">
+          <div class="guide-card">
             <h2>${escapeHtml(ui.signals)}</h2>
             <ul>${data.summary.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
           </div>
         </div>
       </section>
-      <section class="seo-section alt">
+      <section class="guide-section alt">
         <div class="content-grid three">${sections}</div>
       </section>
-      <section class="seo-section">
+      <section class="guide-section">
         <h2>${escapeHtml(ui.questions)}</h2>
         <div class="answer-grid">${faqs}</div>
       </section>
-      <section class="seo-section alt">
+      <section class="guide-section alt">
         <div class="content-grid">
           <div>
             <h2>${escapeHtml(ui.related)}</h2>
             <div class="keyword-cloud">${relatedLinks(topic.slug, lang)}</div>
           </div>
-          <div class="seo-card">
+          <div class="guide-card">
             <h2>${escapeHtml(ui.terms)}</h2>
             <div class="keyword-cloud">${keywordLinks(keywords, lang)}</div>
           </div>
