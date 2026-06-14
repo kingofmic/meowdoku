@@ -1513,5 +1513,36 @@ await fs.writeFile(
 );
 await fs.writeFile(path.join(out, "robots.txt"), `User-agent: *\nAllow: /\nSitemap: ${siteUrl}/sitemap.xml\n`, "utf8");
 await fs.writeFile(path.join(out, "site.webmanifest"), await fs.readFile(path.join(root, "site.webmanifest"), "utf8"), "utf8");
-await fs.writeFile(path.join(out, "_headers"), "/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n/sw.js\n  Cache-Control: no-cache\n/site.webmanifest\n  Content-Type: application/manifest+json; charset=utf-8\n", "utf8");
+await fs.writeFile(
+  path.join(out, "_headers"),
+  [
+    "/*",
+    "  X-Content-Type-Options: nosniff",
+    "  Referrer-Policy: strict-origin-when-cross-origin",
+    "/sw.js",
+    "  Content-Type: application/javascript; charset=utf-8",
+    "  Cache-Control: no-cache",
+    "/pwa.js",
+    "  Content-Type: application/javascript; charset=utf-8",
+    "  Cache-Control: no-cache",
+    "/site-language.js",
+    "  Content-Type: application/javascript; charset=utf-8",
+    "  Cache-Control: no-cache",
+    "/game.js",
+    "  Content-Type: application/javascript; charset=utf-8",
+    "  Cache-Control: no-cache",
+    "/analytics-config.js",
+    "  Content-Type: application/javascript; charset=utf-8",
+    "  Cache-Control: no-cache",
+    "/analytics.js",
+    "  Content-Type: application/javascript; charset=utf-8",
+    "  Cache-Control: no-cache",
+    "/styles.css",
+    "  Content-Type: text/css; charset=utf-8",
+    "/site.webmanifest",
+    "  Content-Type: application/manifest+json; charset=utf-8",
+    ""
+  ].join("\n"),
+  "utf8"
+);
 console.log(`Built ${urls.size} indexed routes to ${out}`);
