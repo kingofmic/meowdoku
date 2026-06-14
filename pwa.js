@@ -6,64 +6,70 @@
 
   const copy = {
     en: {
-      title: "Make Meowdoku one tap",
-      body: "Add the game shortcut so your next cat puzzle opens full-screen from your home screen.",
-      install: "Add Meowdoku",
-      later: "Not now",
-      stepsTitle: "Add it from your browser",
+      top: "Add to Home Screen. Open Meowdoku faster.",
+      title: "Come back to your cats in one tap",
+      reward: "Save your level and best times",
+      body: "Add Meowdoku to your home screen for a full-screen puzzle break.",
+      install: "Add",
+      stepsTitle: "Follow these steps",
       iosSteps: "Tap Share, then choose Add to Home Screen.",
       browserSteps: "Open the browser menu, then choose Add to Home screen.",
-      victoryTitle: "Want the next level one tap away?",
-      victoryBody: "Add Meowdoku to your home screen and come back to your saved level faster."
+      victoryTitle: "Next level, one tap away",
+      victoryBody: "Add Meowdoku to your home screen and return to your saved progress faster."
     },
     zh: {
-      title: "把 Meowdoku 变成一键打开",
-      body: "添加到手机桌面，下次直接全屏继续玩猫咪关卡。",
-      install: "添加 Meowdoku",
-      later: "暂时不要",
-      stepsTitle: "从浏览器添加",
+      top: "添加到主屏幕，下次更快打开 Meowdoku。",
+      title: "一键回到你的猫咪关卡",
+      reward: "保存关卡进度和最佳时间",
+      body: "把 Meowdoku 加到手机桌面，下次直接全屏玩。",
+      install: "添加",
+      stepsTitle: "按这一步添加",
       iosSteps: "点分享按钮，再选“添加到主屏幕”。",
       browserSteps: "打开浏览器菜单，再选择“添加到主屏幕”。",
-      victoryTitle: "下一关想一键打开吗？",
-      victoryBody: "把 Meowdoku 加到手机桌面，下次直接回到你的关卡进度。"
+      victoryTitle: "下一关，一键打开",
+      victoryBody: "把 Meowdoku 加到手机桌面，下次更快回到你的关卡进度。"
     },
     "zh-Hant": {
-      title: "把 Meowdoku 變成一鍵打開",
-      body: "加入手機主畫面，下次直接全螢幕繼續玩貓咪關卡。",
-      install: "加入 Meowdoku",
-      later: "暫時不要",
-      stepsTitle: "從瀏覽器加入",
+      top: "加入主畫面，下次更快打開 Meowdoku。",
+      title: "一鍵回到你的貓咪關卡",
+      reward: "保存關卡進度和最佳時間",
+      body: "把 Meowdoku 加到手機主畫面，下次直接全螢幕玩。",
+      install: "加入",
+      stepsTitle: "按這一步加入",
       iosSteps: "點分享按鈕，再選「加入主畫面」。",
       browserSteps: "打開瀏覽器選單，再選「加入主畫面」。",
-      victoryTitle: "下一關想一鍵打開嗎？",
-      victoryBody: "把 Meowdoku 加到手機主畫面，下次直接回到你的關卡進度。"
+      victoryTitle: "下一關，一鍵打開",
+      victoryBody: "把 Meowdoku 加到手機主畫面，下次更快回到你的關卡進度。"
     },
     ja: {
-      title: "Meowdoku をワンタップで",
-      body: "ホーム画面に追加すると、次の猫パズルを全画面ですぐ開けます。",
-      install: "Meowdoku を追加",
-      later: "あとで",
-      stepsTitle: "ブラウザから追加",
+      top: "ホーム画面に追加して、Meowdoku をすぐ開く。",
+      title: "猫パズルにワンタップで戻る",
+      reward: "レベル進行とベストタイムを保存",
+      body: "Meowdoku をホーム画面に追加して、全画面ですぐ遊べます。",
+      install: "追加",
+      stepsTitle: "この手順で追加",
       iosSteps: "共有ボタンから「ホーム画面に追加」を選んでください。",
       browserSteps: "ブラウザのメニューから「ホーム画面に追加」を選んでください。",
-      victoryTitle: "次のレベルをすぐ開きますか？",
+      victoryTitle: "次のレベルをすぐ開く",
       victoryBody: "Meowdoku をホーム画面に追加すると、保存した進行にすぐ戻れます。"
     },
     ko: {
-      title: "Meowdoku를 한 번에 열기",
-      body: "홈 화면에 추가하면 다음 고양이 퍼즐을 전체 화면으로 바로 열 수 있어요.",
-      install: "Meowdoku 추가",
-      later: "나중에",
-      stepsTitle: "브라우저에서 추가",
+      top: "홈 화면에 추가하고 Meowdoku를 더 빠르게 여세요.",
+      title: "고양이 퍼즐로 한 번에 돌아오기",
+      reward: "레벨 진행과 최고 기록 저장",
+      body: "Meowdoku를 홈 화면에 추가하면 전체 화면으로 바로 플레이할 수 있어요.",
+      install: "추가",
+      stepsTitle: "이 단계로 추가",
       iosSteps: "공유 버튼을 누른 뒤 홈 화면에 추가를 선택하세요.",
       browserSteps: "브라우저 메뉴를 열고 홈 화면에 추가를 선택하세요.",
-      victoryTitle: "다음 레벨을 바로 열까요?",
+      victoryTitle: "다음 레벨을 한 번에",
       victoryBody: "Meowdoku를 홈 화면에 추가하면 저장된 진행으로 더 빠르게 돌아올 수 있어요."
     }
   };
 
   let deferredPrompt = null;
-  let banner = null;
+  let overlay = null;
+  let topBar = null;
 
   function langKey() {
     const saved = localStorage.getItem("meowdoku-language");
@@ -107,12 +113,10 @@
     return !respectSnooze || !wasRecentlyDismissed();
   }
 
-  function dismiss() {
+  function dismissOverlay() {
     localStorage.setItem(DISMISS_KEY, String(Date.now()));
-    banner?.remove();
-    banner = null;
-    const inline = document.querySelector("#victoryInstallPrompt");
-    if (inline) inline.hidden = true;
+    overlay?.remove();
+    overlay = null;
   }
 
   function stepsText() {
@@ -126,45 +130,64 @@
       deferredPrompt = null;
       if (choice?.outcome === "accepted") {
         localStorage.setItem(INSTALLED_KEY, "1");
-        banner?.remove();
-        banner = null;
-        renderVictoryInstallPrompt({ force: true });
-        return;
+        overlay?.remove();
+        overlay = null;
+        topBar?.remove();
+        topBar = null;
+      } else {
+        localStorage.setItem(DISMISS_KEY, String(Date.now()));
       }
-      localStorage.setItem(DISMISS_KEY, String(Date.now()));
       return;
     }
 
-    const card = container || banner;
+    const card = container || overlay;
     if (!card) return;
     card.classList.add("is-expanded");
     const steps = card.querySelector(".pwa-install-steps");
     if (steps) steps.textContent = stepsText();
+    const primary = card.querySelector(".pwa-install-primary");
+    if (primary) primary.textContent = text("stepsTitle");
   }
 
-  function renderBanner() {
-    if (!canSuggestInstall() || banner) return;
+  function renderTopBar() {
+    if (!canSuggestInstall({ respectSnooze: false }) || topBar) return;
+    topBar = document.createElement("aside");
+    topBar.className = "pwa-top-bar";
+    topBar.innerHTML = `
+      <span>${text("top")}</span>
+      <button type="button" aria-label="${text("install")}">＋</button>
+    `;
+    document.body.appendChild(topBar);
+    topBar.addEventListener("click", () => renderOverlay({ ignoreSnooze: true }));
+  }
 
-    banner = document.createElement("aside");
-    banner.className = "pwa-install-card";
-    banner.setAttribute("role", "dialog");
-    banner.setAttribute("aria-live", "polite");
-    banner.innerHTML = `
-      <img src="/assets/cat-icon-192.png" alt="" class="pwa-install-icon">
-      <div class="pwa-install-copy">
-        <strong>${text("title")}</strong>
-        <p>${text("body")}</p>
-        <p class="pwa-install-steps" aria-live="polite"></p>
-      </div>
-      <div class="pwa-install-actions">
-        <button class="pwa-install-primary" type="button">${text("install")}</button>
-        <button class="pwa-install-later" type="button">${text("later")}</button>
+  function renderOverlay({ ignoreSnooze = false } = {}) {
+    if (!canSuggestInstall({ respectSnooze: !ignoreSnooze }) || overlay) return;
+
+    overlay = document.createElement("aside");
+    overlay.className = "pwa-install-overlay";
+    overlay.setAttribute("role", "dialog");
+    overlay.setAttribute("aria-live", "polite");
+    overlay.innerHTML = `
+      <div class="pwa-install-sheet">
+        <div class="pwa-install-art">
+          <img src="/assets/cat-icon-512.png" alt="">
+        </div>
+        <div class="pwa-install-copy">
+          <div class="pwa-install-reward">${text("reward")}</div>
+          <strong>${text("title")}</strong>
+          <p>${text("body")}</p>
+          <p class="pwa-install-steps" aria-live="polite"></p>
+        </div>
+        <button class="pwa-install-primary" type="button"><span>＋</span>${text("install")}</button>
       </div>
     `;
 
-    document.body.appendChild(banner);
-    banner.querySelector(".pwa-install-primary")?.addEventListener("click", () => requestInstall(banner));
-    banner.querySelector(".pwa-install-later")?.addEventListener("click", dismiss);
+    document.body.appendChild(overlay);
+    overlay.addEventListener("click", (event) => {
+      if (event.target === overlay) dismissOverlay();
+    });
+    overlay.querySelector(".pwa-install-primary")?.addEventListener("click", () => requestInstall(overlay));
   }
 
   function renderVictoryInstallPrompt() {
@@ -181,13 +204,9 @@
         <p>${text("victoryBody")}</p>
         <p class="pwa-install-steps" aria-live="polite"></p>
       </div>
-      <div class="victory-install-actions">
-        <button class="pwa-install-primary" type="button">${text("install")}</button>
-        <button class="pwa-install-later" type="button">${text("later")}</button>
-      </div>
+      <button class="pwa-install-primary" type="button"><span>＋</span>${text("install")}</button>
     `;
     slot.querySelector(".pwa-install-primary")?.addEventListener("click", () => requestInstall(slot));
-    slot.querySelector(".pwa-install-later")?.addEventListener("click", dismiss);
   }
 
   if ("serviceWorker" in navigator) {
@@ -199,18 +218,21 @@
   window.addEventListener("beforeinstallprompt", (event) => {
     event.preventDefault();
     deferredPrompt = event;
-    setTimeout(renderBanner, 1200);
+    setTimeout(() => renderOverlay(), 1200);
   });
 
   window.addEventListener("appinstalled", () => {
     localStorage.setItem(INSTALLED_KEY, "1");
-    banner?.remove();
-    banner = null;
+    overlay?.remove();
+    overlay = null;
+    topBar?.remove();
+    topBar = null;
     renderVictoryInstallPrompt();
   });
 
   window.addEventListener("load", () => {
-    setTimeout(renderBanner, 1800);
+    renderTopBar();
+    setTimeout(() => renderOverlay(), 1800);
   });
 
   window.addEventListener("meowdoku:victory", () => {
@@ -218,7 +240,7 @@
   });
 
   window.MeowdokuPWA = {
-    showInstallPrompt: () => renderBanner(),
+    showInstallPrompt: () => renderOverlay({ ignoreSnooze: true }),
     showVictoryInstallPrompt: () => renderVictoryInstallPrompt(),
     canSuggestInstall
   };
