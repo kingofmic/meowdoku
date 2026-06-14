@@ -4,7 +4,7 @@ import path from "node:path";
 const root = process.cwd();
 const out = path.join(root, "out");
 const siteUrl = "https://www.meowdoku.xyz";
-const entries = ["index.html", "styles.css", "game.js", "site-language.js", "analytics-config.js", "analytics.js", "assets", "_redirects"];
+const entries = ["index.html", "styles.css", "game.js", "site-language.js", "pwa.js", "sw.js", "analytics-config.js", "analytics.js", "assets", "_redirects"];
 
 const languages = [
   ["ar", "العربية", "العب Meowdoku على الويب"],
@@ -1241,10 +1241,15 @@ function pageShell(topic, lang = "en") {
     <title>${escapeHtml(data.title)}</title>
     <meta name="description" content="${escapeHtml(data.description)}">
     <meta name="keywords" content="${escapeHtml(keywords.join(", "))}">
+    <meta name="theme-color" content="#157f83">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Meowdoku">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <link rel="canonical" href="${canonical}">
     ${hreflangLinks(topic.slug)}
     <link rel="icon" type="image/png" href="/assets/cat-token.png">
-    <link rel="apple-touch-icon" href="/assets/cat-token.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/cat-icon-180.png">
     <link rel="manifest" href="/site.webmanifest">
     <meta property="og:type" content="article">
     <meta property="og:title" content="${escapeHtml(data.title)}">
@@ -1303,6 +1308,7 @@ function pageShell(topic, lang = "en") {
     <script src="/analytics-config.js"></script>
     <script src="/analytics.js"></script>
     <script src="/site-language.js"></script>
+    <script src="/pwa.js"></script>
   </body>
 </html>
 `;
@@ -1392,6 +1398,7 @@ function localizedGameHome(lang) {
     .replaceAll('src="analytics.js"', 'src="/analytics.js"')
     .replaceAll('src="game.js"', 'src="/game.js"')
     .replaceAll('src="site-language.js"', 'src="/site-language.js"')
+    .replaceAll('src="pwa.js"', 'src="/pwa.js"')
     .replace(/<header class="site-header">[\s\S]*?<\/header>/, headerHtml(lang))
     .replace(/<section class="guide-section"[\s\S]*?<\/section>\s*<\/main>/, `${localizedHomeSections(lang)}
     </main>`)
@@ -1505,19 +1512,6 @@ await fs.writeFile(
   "utf8"
 );
 await fs.writeFile(path.join(out, "robots.txt"), `User-agent: *\nAllow: /\nSitemap: ${siteUrl}/sitemap.xml\n`, "utf8");
-await fs.writeFile(
-  path.join(out, "site.webmanifest"),
-  JSON.stringify({
-    name: "Meowdoku Garden",
-    short_name: "Meowdoku",
-    description: "Play the cute cat sudoku and Queens-style logic puzzle online.",
-    start_url: "/",
-    display: "standalone",
-    background_color: "#fffaf1",
-    theme_color: "#157f83",
-    icons: [{ src: "/assets/cat-token.png", sizes: "256x256", type: "image/png" }]
-  }, null, 2),
-  "utf8"
-);
-await fs.writeFile(path.join(out, "_headers"), "/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n", "utf8");
+await fs.writeFile(path.join(out, "site.webmanifest"), await fs.readFile(path.join(root, "site.webmanifest"), "utf8"), "utf8");
+await fs.writeFile(path.join(out, "_headers"), "/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n/sw.js\n  Cache-Control: no-cache\n/site.webmanifest\n  Content-Type: application/manifest+json; charset=utf-8\n", "utf8");
 console.log(`Built ${urls.size} indexed routes to ${out}`);
