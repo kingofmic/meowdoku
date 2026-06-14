@@ -10,35 +10,40 @@
       body: "Add it to your home screen for a faster, full-screen cat puzzle break.",
       install: "Add to Home",
       later: "Later",
-      ios: "Tap Share, then Add to Home Screen."
+      ios: "Tap Share, then Add to Home Screen.",
+      browser: "Open the browser menu, then choose Add to Home screen."
     },
     zh: {
       title: "把 Meowdoku 加到手机桌面",
       body: "下次可以像 App 一样直接打开，玩猫咪逻辑关卡更快。",
       install: "添加到主屏幕",
       later: "稍后",
-      ios: "点浏览器分享按钮，再选“添加到主屏幕”。"
+      ios: "点浏览器分享按钮，再选“添加到主屏幕”。",
+      browser: "打开浏览器菜单，再选择“添加到主屏幕”。"
     },
     "zh-Hant": {
       title: "把 Meowdoku 加到手機主畫面",
       body: "下次可以像 App 一樣直接打開，玩貓咪邏輯關卡更快。",
       install: "加入主畫面",
       later: "稍後",
-      ios: "點瀏覽器分享按鈕，再選「加入主畫面」。"
+      ios: "點瀏覽器分享按鈕，再選「加入主畫面」。",
+      browser: "打開瀏覽器選單，再選「加入主畫面」。"
     },
     ja: {
       title: "Meowdoku をホーム画面へ",
       body: "アプリのようにすぐ開いて、猫パズルを全画面で遊べます。",
       install: "ホームに追加",
       later: "あとで",
-      ios: "共有ボタンから「ホーム画面に追加」を選んでください。"
+      ios: "共有ボタンから「ホーム画面に追加」を選んでください。",
+      browser: "ブラウザのメニューから「ホーム画面に追加」を選んでください。"
     },
     ko: {
       title: "Meowdoku를 홈 화면에 추가",
       body: "앱처럼 바로 열고 전체 화면으로 고양이 퍼즐을 즐겨보세요.",
       install: "홈에 추가",
       later: "나중에",
-      ios: "공유 버튼을 누른 뒤 홈 화면에 추가를 선택하세요."
+      ios: "공유 버튼을 누른 뒤 홈 화면에 추가를 선택하세요.",
+      browser: "브라우저 메뉴를 열고 홈 화면에 추가를 선택하세요."
     }
   };
 
@@ -49,8 +54,9 @@
     const saved = localStorage.getItem("meowdoku-language");
     const html = document.documentElement.lang;
     const raw = saved || html || navigator.language || "en";
-    if (raw.toLowerCase().startsWith("zh-hant") || raw.toLowerCase().includes("tw") || raw.toLowerCase().includes("hk")) return "zh-Hant";
-    const base = raw.toLowerCase().split("-")[0];
+    const lowered = raw.toLowerCase();
+    if (lowered.startsWith("zh-hant") || lowered.includes("tw") || lowered.includes("hk")) return "zh-Hant";
+    const base = lowered.split("-")[0];
     return copy[base] ? base : "en";
   }
 
@@ -66,22 +72,23 @@
     return window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true;
   }
 
-  function isIosSafari() {
-    const ua = navigator.userAgent;
-    const ios = /iPhone|iPad|iPod/i.test(ua);
-    const webkit = /WebKit/i.test(ua);
-    const excluded = /CriOS|FxiOS|EdgiOS|OPiOS/i.test(ua);
-    return ios && webkit && !excluded;
+  function isIos() {
+    return /iPhone|iPad|iPod/i.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  }
+
+  function forcePrompt() {
+    return new URLSearchParams(window.location.search).has("install");
   }
 
   function wasRecentlyDismissed() {
+    if (forcePrompt()) return false;
     const dismissedAt = Number(localStorage.getItem(DISMISS_KEY) || 0);
     return dismissedAt && Date.now() - dismissedAt < SNOOZE_DAYS * DAY;
   }
 
   function shouldShow() {
     if (!isMobile() || isStandalone()) return false;
-    if (localStorage.getItem(INSTALLED_KEY) === "1") return false;
+    if (!forcePrompt() && localStorage.getItem(INSTALLED_KEY) === "1") return false;
     return !wasRecentlyDismissed();
   }
 
@@ -89,6 +96,12 @@
     localStorage.setItem(DISMISS_KEY, String(Date.now()));
     banner?.remove();
     banner = null;
+  }
+
+  function messageFor(mode) {
+    if (mode === "ios") return text("ios");
+    if (mode === "browser") return text("browser");
+    return text("body");
   }
 
   function renderBanner(mode = "browser") {
@@ -102,7 +115,7 @@
       <img src="/assets/cat-icon-192.png" alt="" class="pwa-install-icon">
       <div class="pwa-install-copy">
         <strong>${text("title")}</strong>
-        <p>${mode === "ios" ? text("ios") : text("body")}</p>
+        <p>${messageFor(mode)}</p>
       </div>
       <div class="pwa-install-actions">
         ${mode === "prompt" ? `<button class="pwa-install-primary" type="button">${text("install")}</button>` : ""}
@@ -148,7 +161,7 @@
   window.addEventListener("load", () => {
     setTimeout(() => {
       if (deferredPrompt) return;
-      if (isIosSafari()) renderBanner("ios");
-    }, 1800);
+      renderBanner(isIos() ? "ios" : "browser");
+    }, 2200);
   });
 })();
