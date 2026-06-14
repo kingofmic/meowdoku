@@ -1,4 +1,4 @@
-const CACHE_NAME = "meowdoku-shell-v1";
+const CACHE_NAME = "meowdoku-shell-v2";
 const APP_SHELL = [
   "/",
   "/styles.css",
