@@ -9,5 +9,7 @@ out/
 *.log
 .local-server.pid
 .local-server*.log
+.tmp-edge-mobile*/
+mobile-*.png
 .DS_Store
 Thumbs.db
