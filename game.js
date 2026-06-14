@@ -417,6 +417,53 @@ const firstCatLabels = {
   fa: "برای شروع، اولین گربه را بگذارید.",
   he: "הנח את החתול הראשון כדי להתחיל."
 };
+const shareLocales = {
+  en: {
+    share: "Share score",
+    copy: "Copy",
+    copied: "Copied!",
+    summary: "Level {level} • {difficulty} • {time} • {hearts} hearts",
+    lines: [
+      "Every cat found a perfect room.",
+      "That was a clean little Meowdoku solve.",
+      "The board is calm, the cats are proud.",
+      "A tiny logic victory worth sharing."
+    ],
+    text: "I cleared Meowdoku Level {level} ({difficulty}) in {time} with {hearts} hearts left. Can you beat it?"
+  },
+  zh: {
+    share: "分享成绩",
+    copy: "复制",
+    copied: "已复制",
+    summary: "第 {level} 关 • {difficulty} • {time} • 剩 {hearts} 颗红心",
+    lines: ["每只猫都找到了完美房间。", "这一局推理很漂亮。", "棋盘安静了，猫咪也骄傲了。", "这是一场值得分享的小胜利。"],
+    text: "我通关了 Meowdoku 第 {level} 关（{difficulty}），用时 {time}，剩 {hearts} 颗红心。你能超过我吗？"
+  },
+  "zh-Hant": {
+    share: "分享成績",
+    copy: "複製",
+    copied: "已複製",
+    summary: "第 {level} 關 • {difficulty} • {time} • 剩 {hearts} 顆紅心",
+    lines: ["每隻貓都找到了完美房間。", "這一局推理很漂亮。", "棋盤安靜了，貓咪也驕傲了。", "這是一場值得分享的小勝利。"],
+    text: "我通關了 Meowdoku 第 {level} 關（{difficulty}），用時 {time}，剩 {hearts} 顆紅心。你能超過我嗎？"
+  },
+  ja: {
+    share: "スコアを共有",
+    copy: "コピー",
+    copied: "コピー済み",
+    summary: "レベル {level} • {difficulty} • {time} • ハート {hearts}",
+    lines: ["すべての猫が完璧な部屋を見つけました。", "きれいなMeowdokuクリアです。", "盤面は静かで、猫たちは誇らしげです。"],
+    text: "Meowdoku レベル {level}（{difficulty}）を {time} でクリア。ハート {hearts} 個残し。超えられる？"
+  },
+  ko: {
+    share: "점수 공유",
+    copy: "복사",
+    copied: "복사됨",
+    summary: "레벨 {level} • {difficulty} • {time} • 하트 {hearts}",
+    lines: ["모든 고양이가 완벽한 방을 찾았어요.", "깔끔한 Meowdoku 승리입니다.", "보드는 조용하고 고양이는 뿌듯해요."],
+    text: "Meowdoku 레벨 {level}({difficulty})을 {time} 만에 클리어했어요. 하트 {hearts}개 남김. 이길 수 있나요?"
+  }
+};
 const generatedPuzzleCache = new Map();
 const board = document.querySelector("#board");
 const levelTitle = document.querySelector("#levelTitle");
@@ -430,6 +477,13 @@ const assistToggle = document.querySelector("#assistMode");
 const resultModal = document.querySelector("#resultModal");
 const resultTitle = document.querySelector("#resultTitle");
 const resultCopy = document.querySelector("#resultCopy");
+const resultSummary = document.querySelector("#resultSummary");
+const nativeShareBtn = document.querySelector("#nativeShareBtn");
+const shareXBtn = document.querySelector("#shareXBtn");
+const shareFacebookBtn = document.querySelector("#shareFacebookBtn");
+const shareWhatsAppBtn = document.querySelector("#shareWhatsAppBtn");
+const shareTelegramBtn = document.querySelector("#shareTelegramBtn");
+const copyShareBtn = document.querySelector("#copyShareBtn");
 const difficultyTabs = document.querySelector("#difficultyTabs");
 const languageSelect = document.querySelector("#languageSelect");
 const celebrationLayer = document.querySelector("#celebrationLayer");
@@ -451,6 +505,7 @@ let errorCell = null;
 let audioContext = null;
 let statusKey = "statusStart";
 let statusValue = "";
+let latestShare = null;
 
 function t(keyName, params = {}) {
   let text = (i18n[lang] || i18n.en)[keyName] || i18n.en[keyName] || keyName;
@@ -458,6 +513,21 @@ function t(keyName, params = {}) {
     text = text.replaceAll(`{${key}}`, value);
   }
   return text;
+}
+
+function shareText(keyName, params = {}) {
+  const pack = shareLocales[lang] || shareLocales.en;
+  let text = pack[keyName] || shareLocales.en[keyName] || keyName;
+  for (const [key, value] of Object.entries(params)) {
+    text = text.replaceAll(`{${key}}`, value);
+  }
+  return text;
+}
+
+function achievementLine(levelNumber) {
+  const pack = shareLocales[lang] || shareLocales.en;
+  const lines = pack.lines || shareLocales.en.lines;
+  return lines[(levelNumber - 1) % lines.length];
 }
 
 function key(row, col) {
@@ -731,6 +801,8 @@ function applyLanguage() {
   statusText.textContent = statusValue || t(statusKey);
   resultTitle.textContent = t("resultTitle");
   timerEl.setAttribute("aria-label", timerStarted ? "Timer running" : "Timer paused");
+  nativeShareBtn.textContent = shareText("share");
+  copyShareBtn.textContent = shareText("copy");
 }
 
 function render() {
@@ -842,6 +914,83 @@ function placeCat(row, col) {
   checkWin();
 }
 
+function buildShareData(elapsed, heartsLeft) {
+  const level = currentLevelNumber();
+  const difficultyLabel = t(difficulty);
+  const time = formatTime(elapsed);
+  const params = { level, difficulty: difficultyLabel, time, hearts: heartsLeft };
+  const url = `${window.location.origin}${routeLanguagePrefix()}#play`;
+  const text = shareText("text", params);
+  return {
+    title: `Meowdoku Level ${level}`,
+    url,
+    text,
+    message: `${text} ${url}`,
+    summary: shareText("summary", params),
+    achievement: achievementLine(level)
+  };
+}
+
+function routeLanguagePrefix() {
+  const firstPathPart = window.location.pathname.split("/").filter(Boolean)[0];
+  const supported = new Set(languageCatalog.map(([code]) => code));
+  return supported.has(firstPathPart) && firstPathPart !== "en" ? `/${firstPathPart}/` : "/";
+}
+
+function shareUrl(channel) {
+  if (!latestShare) return "";
+  const url = encodeURIComponent(latestShare.url);
+  const text = encodeURIComponent(latestShare.text);
+  const message = encodeURIComponent(latestShare.message);
+  const urls = {
+    x: `https://twitter.com/intent/tweet?text=${message}`,
+    facebook: `https://www.facebook.com/sharer/sharer.php?u=${url}`,
+    whatsapp: `https://wa.me/?text=${message}`,
+    telegram: `https://t.me/share/url?url=${url}&text=${text}`
+  };
+  return urls[channel] || latestShare.url;
+}
+
+function openShare(channel) {
+  const target = shareUrl(channel);
+  if (!target) return;
+  window.open(target, "_blank", "noopener,noreferrer");
+}
+
+async function nativeShare() {
+  if (!latestShare) return;
+  if (navigator.share) {
+    try {
+      await navigator.share({ title: latestShare.title, text: latestShare.text, url: latestShare.url });
+      return;
+    } catch (error) {
+      if (error?.name === "AbortError") return;
+    }
+  }
+  await copyShareText();
+}
+
+async function copyShareText() {
+  if (!latestShare) return;
+  try {
+    await navigator.clipboard.writeText(latestShare.message);
+  } catch {
+    const textarea = document.createElement("textarea");
+    textarea.value = latestShare.message;
+    textarea.setAttribute("readonly", "");
+    textarea.style.position = "fixed";
+    textarea.style.opacity = "0";
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+  }
+  copyShareBtn.textContent = shareText("copied");
+  window.setTimeout(() => {
+    copyShareBtn.textContent = shareText("copy");
+  }, 1400);
+}
+
 function checkWin() {
   const puzzle = currentPuzzle();
   const cats = placedCats();
@@ -854,12 +1003,14 @@ function checkWin() {
   const elapsed = elapsedTime();
   saveBestTime(difficulty, currentLevelNumber(), elapsed);
   stopTimer();
+  latestShare = buildShareData(elapsed, mistakes);
   resultTitle.textContent = t("resultTitle");
+  resultSummary.textContent = latestShare.summary;
   resultCopy.textContent = t("resultCopy", {
     time: formatTime(elapsed),
     hearts: mistakes,
     plural: mistakes === 1 ? "" : "s"
-  });
+  }) + ` ${latestShare.achievement}`;
   playTone("win");
   launchCelebration();
   resultModal.classList.remove("hidden");
@@ -904,6 +1055,7 @@ function resetPuzzle(options = {}) {
   timerStarted = false;
   statusValue = "";
   statusKey = autoStart ? "statusStart" : "statusFirstCat";
+  latestShare = null;
   resultModal.classList.add("hidden");
   if (autoStart) startTimer();
   render();
@@ -951,6 +1103,12 @@ document.querySelector("#resetBtn").addEventListener("click", () => resetPuzzle(
 document.querySelector("#nextBtn").addEventListener("click", nextPuzzle);
 document.querySelector("#modalNext").addEventListener("click", nextPuzzle);
 document.querySelector("#modalClose").addEventListener("click", () => resultModal.classList.add("hidden"));
+nativeShareBtn.addEventListener("click", nativeShare);
+shareXBtn.addEventListener("click", () => openShare("x"));
+shareFacebookBtn.addEventListener("click", () => openShare("facebook"));
+shareWhatsAppBtn.addEventListener("click", () => openShare("whatsapp"));
+shareTelegramBtn.addEventListener("click", () => openShare("telegram"));
+copyShareBtn.addEventListener("click", copyShareText);
 difficultyTabs.addEventListener("click", (event) => {
   const button = event.target.closest("[data-difficulty]");
   if (!button || button.dataset.difficulty === difficulty) return;
