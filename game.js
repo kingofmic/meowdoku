@@ -1014,6 +1014,7 @@ function checkWin() {
   playTone("win");
   launchCelebration();
   resultModal.classList.remove("hidden");
+  window.dispatchEvent(new CustomEvent("meowdoku:victory"));
   setStatus("statusSolved");
   render();
 }
