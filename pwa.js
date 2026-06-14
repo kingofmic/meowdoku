@@ -13,6 +13,7 @@
       install: "Add",
       stepsTitle: "Follow these steps",
       iosSteps: "Tap Share, then choose Add to Home Screen.",
+      iosBrowserSteps: "Open this page in Safari, tap Share, then choose Add to Home Screen.",
       browserSteps: "Open the browser menu, then choose Add to Home screen.",
       victoryTitle: "Next level, one tap away",
       victoryBody: "Add Meowdoku to your home screen and return to your saved progress faster."
@@ -25,6 +26,7 @@
       install: "添加",
       stepsTitle: "按这一步添加",
       iosSteps: "点分享按钮，再选“添加到主屏幕”。",
+      iosBrowserSteps: "先用 Safari 打开本页，再点分享按钮，选择“添加到主屏幕”。",
       browserSteps: "打开浏览器菜单，再选择“添加到主屏幕”。",
       victoryTitle: "下一关，一键打开",
       victoryBody: "把 Meowdoku 加到手机桌面，下次更快回到你的关卡进度。"
@@ -37,6 +39,7 @@
       install: "加入",
       stepsTitle: "按這一步加入",
       iosSteps: "點分享按鈕，再選「加入主畫面」。",
+      iosBrowserSteps: "先用 Safari 打開本頁，再點分享按鈕，選擇「加入主畫面」。",
       browserSteps: "打開瀏覽器選單，再選「加入主畫面」。",
       victoryTitle: "下一關，一鍵打開",
       victoryBody: "把 Meowdoku 加到手機主畫面，下次更快回到你的關卡進度。"
@@ -49,6 +52,7 @@
       install: "追加",
       stepsTitle: "この手順で追加",
       iosSteps: "共有ボタンから「ホーム画面に追加」を選んでください。",
+      iosBrowserSteps: "Safari でこのページを開き、共有ボタンから「ホーム画面に追加」を選んでください。",
       browserSteps: "ブラウザのメニューから「ホーム画面に追加」を選んでください。",
       victoryTitle: "次のレベルをすぐ開く",
       victoryBody: "Meowdoku をホーム画面に追加すると、保存した進行にすぐ戻れます。"
@@ -61,6 +65,7 @@
       install: "추가",
       stepsTitle: "이 단계로 추가",
       iosSteps: "공유 버튼을 누른 뒤 홈 화면에 추가를 선택하세요.",
+      iosBrowserSteps: "이 페이지를 Safari에서 열고 공유 버튼을 누른 뒤 홈 화면에 추가를 선택하세요.",
       browserSteps: "브라우저 메뉴를 열고 홈 화면에 추가를 선택하세요.",
       victoryTitle: "다음 레벨을 한 번에",
       victoryBody: "Meowdoku를 홈 화면에 추가하면 저장된 진행으로 더 빠르게 돌아올 수 있어요."
@@ -97,6 +102,11 @@
     return /iPhone|iPad|iPod/i.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
   }
 
+  function isIosSafari() {
+    const ua = navigator.userAgent;
+    return isIos() && /Safari/i.test(ua) && !/CriOS|FxiOS|EdgiOS|OPiOS|DuckDuckGo/i.test(ua);
+  }
+
   function forcePrompt() {
     return new URLSearchParams(window.location.search).has("install");
   }
@@ -120,7 +130,8 @@
   }
 
   function stepsText() {
-    return isIos() ? text("iosSteps") : text("browserSteps");
+    if (!isIos()) return text("browserSteps");
+    return isIosSafari() ? text("iosSteps") : text("iosBrowserSteps");
   }
 
   async function requestInstall(container) {
