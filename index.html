@@ -6,6 +6,11 @@
     <title>Meowdoku Garden - Play the Cat Logic Puzzle Online</title>
     <meta name="description" content="Play Meowdoku Garden online: a cozy cat sudoku and Queens-style logic puzzle with daily boards, hints, multilingual rules, and no download.">
     <meta name="keywords" content="meowdoku, meow doku, meowdoku game, cat sudoku, cat queens puzzle, queens puzzle, logic puzzle, color region puzzle, 猫咪数独, 猫咪逻辑谜题">
+    <meta name="theme-color" content="#157f83">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Meowdoku">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <link rel="canonical" href="https://www.meowdoku.xyz/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Meowdoku Garden - Play the Cat Logic Puzzle Online">
@@ -14,7 +19,7 @@
     <meta property="og:image" content="https://www.meowdoku.xyz/assets/cat-token.png">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" type="image/png" href="/assets/cat-token.png">
-    <link rel="apple-touch-icon" href="/assets/cat-token.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/cat-icon-180.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="styles.css">
     <script type="application/ld+json">
@@ -214,7 +219,18 @@
         <img src="assets/victory-cats.png" alt="" class="victory-art">
         <p class="eyebrow" data-i18n="puzzleComplete">puzzle complete</p>
         <h2 id="resultTitle">Perfect little parade.</h2>
+        <p id="resultSummary" class="result-summary">Level cleared</p>
         <p id="resultCopy">Every cat found a cozy room.</p>
+        <div class="share-panel" aria-label="Share result">
+          <button id="nativeShareBtn" class="share-primary" type="button">Share</button>
+          <div class="share-grid">
+            <button id="shareXBtn" type="button" aria-label="Share on X">X</button>
+            <button id="shareFacebookBtn" type="button" aria-label="Share on Facebook">f</button>
+            <button id="shareWhatsAppBtn" type="button" aria-label="Share on WhatsApp">WA</button>
+            <button id="shareTelegramBtn" type="button" aria-label="Share on Telegram">TG</button>
+            <button id="copyShareBtn" type="button">Copy</button>
+          </div>
+        </div>
         <div class="modal-actions">
           <button id="modalNext" type="button" data-i18n="nextPuzzle">Next puzzle</button>
           <button id="modalClose" type="button" data-i18n="stayHere">Stay here</button>
@@ -228,5 +244,6 @@
     <script src="analytics.js"></script>
     <script src="game.js"></script>
     <script src="site-language.js"></script>
+    <script src="pwa.js"></script>
   </body>
 </html>
