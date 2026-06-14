@@ -1,16 +1,16 @@
 (function () {
   const languages = [
-    ["ar", "العربية"], ["bn", "বাংলা"], ["zh", "简体中文"], ["zh-Hant", "繁體中文"],
-    ["cs", "Čeština"], ["nl", "Nederlands"], ["en", "English"], ["fil", "Filipino"],
-    ["fr", "Français"], ["de", "Deutsch"], ["el", "Ελληνικά"], ["gu", "ગુજરાતી"],
-    ["ha", "Hausa"], ["he", "עברית"], ["hi", "हिन्दी"], ["hu", "Magyar"],
-    ["id", "Bahasa Indonesia"], ["it", "Italiano"], ["ja", "日本語"], ["jv", "Basa Jawa"],
-    ["ko", "한국어"], ["ms", "Bahasa Melayu"], ["mr", "मराठी"], ["pa", "ਪੰਜਾਬੀ"],
-    ["fa", "فارسی"], ["pl", "Polski"], ["pt", "Português"], ["ro", "Română"],
-    ["ru", "Русский"], ["es", "Español"], ["sw", "Kiswahili"], ["sv", "Svenska"],
-    ["ta", "தமிழ்"], ["te", "తెలుగు"], ["th", "ไทย"], ["tr", "Türkçe"],
-    ["uk", "Українська"], ["ur", "اردو"], ["vi", "Tiếng Việt"]
-  ];
+    ["ar", "العربية"], ["bn", "বাংলা"], ["cs", "Čeština"], ["de", "Deutsch"],
+    ["el", "Ελληνικά"], ["en", "English"], ["es", "Español"], ["fa", "فارسی"],
+    ["fil", "Filipino"], ["fr", "Français"], ["gu", "ગુજરાતી"], ["ha", "Hausa"],
+    ["he", "עברית"], ["hi", "हिन्दी"], ["hu", "Magyar"], ["id", "Bahasa Indonesia"],
+    ["it", "Italiano"], ["ja", "日本語"], ["jv", "Basa Jawa"], ["ko", "한국어"],
+    ["mr", "मराठी"], ["ms", "Bahasa Melayu"], ["nl", "Nederlands"], ["pa", "ਪੰਜਾਬੀ"],
+    ["pl", "Polski"], ["pt", "Português"], ["ro", "Română"], ["ru", "Русский"],
+    ["sv", "Svenska"], ["sw", "Kiswahili"], ["ta", "தமிழ்"], ["te", "తెలుగు"],
+    ["th", "ไทย"], ["tr", "Türkçe"], ["uk", "Українська"], ["ur", "اردو"],
+    ["vi", "Tiếng Việt"], ["zh", "简体中文"], ["zh-Hant", "繁體中文"]
+  ].sort((a, b) => a[1].localeCompare(b[1], "en"));
 
   const languageCodes = new Set(languages.map(([code]) => code));
   const select = document.querySelector("#languageSelect");
@@ -31,13 +31,12 @@
     return slug ? `/${nextLang}/${slug}/` : `/${nextLang}/`;
   }
 
-  if (!select.options.length) {
-    for (const [code, label] of languages) {
-      const option = document.createElement("option");
-      option.value = code;
-      option.textContent = label;
-      select.appendChild(option);
-    }
+  select.innerHTML = "";
+  for (const [code, label] of languages) {
+    const option = document.createElement("option");
+    option.value = code;
+    option.textContent = label;
+    select.appendChild(option);
   }
 
   select.value = currentLang();
