@@ -162,6 +162,7 @@
 
   function renderTopBar() {
     if (!canSuggestInstall({ respectSnooze: false }) || topBar) return;
+    document.body.classList.add("has-pwa-top-bar");
     topBar = document.createElement("aside");
     topBar.className = "pwa-top-bar";
     topBar.innerHTML = `
@@ -238,6 +239,7 @@
     overlay = null;
     topBar?.remove();
     topBar = null;
+    document.body.classList.remove("has-pwa-top-bar");
     renderVictoryInstallPrompt();
   });
 
