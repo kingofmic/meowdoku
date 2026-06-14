@@ -322,11 +322,102 @@ const shortUiTranslations = {
   nl: { language: "taal", catsLeft: "katten", place: "Kat", mark: "Markeer", assist: "Hulp", defaultMode: "Normaal", assistMode: "Hulp", easy: "Makkelijk", normal: "Normaal", hard: "Moeilijk" }
 };
 
+function makeGameUi(values) {
+  const [
+    eyebrow, todaysPuzzle, difficulty, language, catsLeft, defaultMode, assistMode, place, mark, undo, hint, reset, next,
+    rules, ruleOne, ruleTwo, ruleThree, board, puzzleComplete, nextPuzzle, stayHere, bestEmpty, bestLabel,
+    roomsWord, catsWord, statusStart, statusMarked, statusUnmarked, statusPicked, statusGood, statusNoHearts,
+    statusUndo, statusHint, statusSolved, rowViolation, colViolation, regionViolation, touchViolation,
+    resultTitle, resultCopy, easy, normal, hard
+  ] = values;
+  return {
+    eyebrow, todaysPuzzle, difficulty, language, catsLeft, assist: assistMode, defaultMode, assistMode, place, mark,
+    undo, hint, reset, next, rules, ruleOne, ruleTwo, ruleThree, board, puzzleComplete, nextPuzzle, stayHere,
+    bestEmpty, best: `${bestLabel} {time}`, roomsCats: `{rooms} ${roomsWord}, {cats} ${catsWord}`,
+    placeMode: place, markMode: mark, statusStart, statusMarked, statusUnmarked, statusPicked, statusGood,
+    statusNoHearts, statusUndo, statusHint, statusSolved, violationRow: rowViolation, violationCol: colViolation,
+    violationRegion: regionViolation, violationTouch: touchViolation, resultTitle, resultCopy, easy, normal, hard
+  };
+}
+
+const completeUiTranslations = {
+  ar: makeGameUi(["لغز منطقي", "لغز اليوم", "الصعوبة", "اللغة", "قطط متبقية", "الوضع العادي", "وضع المساعدة", "ضع قطة", "علّم", "تراجع", "تلميح", "إعادة", "التالي", "القواعد", "قطة واحدة في كل منطقة ملوّنة.", "لا تتشارك قطتان صفا أو عمودا.", "لا تلمس القطط بعضها، حتى قطريا.", "اللوحة", "اكتمل اللغز", "اللغز التالي", "ابق هنا", "الأفضل --", "الأفضل", "مناطق", "قطط", "اعثر على مكان كل قطة.", "تم وضع علامة كمستحيل.", "أزيلت العلامة.", "تم رفع القطة.", "موضع جيد.", "انتهت القلوب. لنبدأ من جديد.", "تم التراجع عن آخر حركة.", "ظهر تلميح صغير.", "تم الحل.", "هذا الصف فيه قطة بالفعل.", "هذا العمود فيه قطة بالفعل.", "هذه المنطقة فيها قطة بالفعل.", "لا يمكن للقطط أن تلمس بعضها.", "موكب قطط مثالي.", "تم الحل خلال {time} مع {hearts} قلوب متبقية.", "سهل", "عادي", "صعب"]),
+  bn: makeGameUi(["যুক্তির ধাঁধা", "আজকের ধাঁধা", "কঠিনতা", "ভাষা", "বাকি বিড়াল", "স্বাভাবিক মোড", "সহায়ক মোড", "বিড়াল বসান", "চিহ্ন দিন", "পূর্বাবস্থা", "ইঙ্গিত", "রিসেট", "পরেরটি", "নিয়ম", "প্রতিটি রঙিন ঘরে একটি বিড়াল।", "দুটি বিড়াল একই সারি বা কলামে নয়।", "বিড়াল পাশাপাশিও নয়, তির্যকভাবেও নয়।", "বোর্ড", "ধাঁধা শেষ", "পরের ধাঁধা", "এখানেই থাকুন", "সেরা --", "সেরা", "ঘর", "বিড়াল", "প্রতিটি বিড়ালের জায়গা খুঁজুন।", "অসম্ভব হিসেবে চিহ্নিত।", "চিহ্ন সরানো হয়েছে।", "বিড়াল তুলে নেওয়া হয়েছে।", "ভালো জায়গা।", "হৃদয় শেষ। নতুন বোর্ড শুরু।", "শেষ চাল ফিরিয়ে নেওয়া হয়েছে।", "একটি ইঙ্গিত দেখা গেল।", "সমাধান হয়েছে।", "এই সারিতে আগে থেকেই বিড়াল আছে।", "এই কলামে আগে থেকেই বিড়াল আছে।", "এই রঙিন ঘরে আগে থেকেই বিড়াল আছে।", "বিড়ালরা স্পর্শ করতে পারে না।", "দারুণ বিড়াল প্যারেড।", "{time} সময়ে সমাধান, {hearts} হৃদয় বাকি।", "সহজ", "সাধারণ", "কঠিন"]),
+  cs: makeGameUi(["logická hádanka", "dnešní hádanka", "obtížnost", "jazyk", "zbývá koček", "běžný režim", "režim nápovědy", "Položit kočku", "Označit", "Zpět", "Nápověda", "Restart", "Další", "pravidla", "V každé barevné oblasti je jedna kočka.", "Dvě kočky nesmí sdílet řádek ani sloupec.", "Kočky se nesmí dotýkat ani diagonálně.", "deska", "hádanka dokončena", "Další hádanka", "Zůstat zde", "Nejlepší --", "Nejlepší", "oblastí", "koček", "Najděte místo pro každou kočku.", "Označeno jako nemožné.", "Značka zrušena.", "Kočka byla zvednuta.", "Dobré místo.", "Srdce došla. Nový pokus.", "Poslední tah vrácen.", "Objevila se nápověda.", "Vyřešeno.", "Tento řádek už má kočku.", "Tento sloupec už má kočku.", "Tato oblast už má kočku.", "Kočky se nesmí dotýkat.", "Dokonalý kočičí průvod.", "Vyřešeno za {time}, zbývá {hearts} srdcí.", "Lehké", "Normální", "Těžké"]),
+  de: makeGameUi(["Logikrätsel", "heutiges Rätsel", "Schwierigkeit", "Sprache", "Katzen übrig", "Normalmodus", "Hilfemodus", "Katze setzen", "Markieren", "Rückgängig", "Hinweis", "Neu starten", "Weiter", "Regeln", "Eine Katze in jedem farbigen Raum.", "Keine zwei Katzen teilen Reihe oder Spalte.", "Katzen dürfen sich auch diagonal nicht berühren.", "Brett", "Rätsel gelöst", "Nächstes Rätsel", "Hier bleiben", "Bestzeit --", "Bestzeit", "Räume", "Katzen", "Finde jeden Katzenplatz.", "Als unmöglich markiert.", "Markierung entfernt.", "Katze wieder aufgenommen.", "Guter Platz.", "Keine Herzen mehr. Neuer Versuch.", "Letzter Zug rückgängig.", "Ein Hinweis erscheint.", "Gelöst.", "Diese Reihe hat schon eine Katze.", "Diese Spalte hat schon eine Katze.", "Dieser farbige Raum hat schon eine Katze.", "Katzen dürfen sich nicht berühren.", "Perfekte kleine Katzenparade.", "Gelöst in {time} mit {hearts} Herzen übrig.", "Leicht", "Normal", "Schwer"]),
+  el: makeGameUi(["λογικός γρίφος", "σημερινός γρίφος", "δυσκολία", "γλώσσα", "γάτες ακόμη", "κανονική λειτουργία", "λειτουργία βοήθειας", "Βάλε γάτα", "Σημείωση", "Αναίρεση", "Υπόδειξη", "Επανεκκίνηση", "Επόμενο", "κανόνες", "Μία γάτα σε κάθε χρωματιστή περιοχή.", "Καμία γάτα στην ίδια σειρά ή στήλη.", "Οι γάτες δεν αγγίζονται ούτε διαγώνια.", "πίνακας", "ο γρίφος ολοκληρώθηκε", "Επόμενος γρίφος", "Μείνε εδώ", "Καλύτερο --", "Καλύτερο", "περιοχές", "γάτες", "Βρες τη θέση κάθε γάτας.", "Σημειώθηκε ως αδύνατο.", "Η σημείωση αφαιρέθηκε.", "Η γάτα σηκώθηκε.", "Καλή θέση.", "Τέλος οι καρδιές. Νέα προσπάθεια.", "Η τελευταία κίνηση αναιρέθηκε.", "Εμφανίστηκε υπόδειξη.", "Λύθηκε.", "Αυτή η σειρά έχει ήδη γάτα.", "Αυτή η στήλη έχει ήδη γάτα.", "Αυτή η περιοχή έχει ήδη γάτα.", "Οι γάτες δεν μπορούν να αγγίζονται.", "Τέλεια παρέλαση γατών.", "Λύθηκε σε {time} με {hearts} καρδιές.", "Εύκολο", "Κανονικό", "Δύσκολο"]),
+  es: makeGameUi(["puzle lógico", "puzle de hoy", "dificultad", "idioma", "gatos restantes", "modo normal", "modo ayuda", "Poner gato", "Marcar", "Deshacer", "Pista", "Reiniciar", "Siguiente", "reglas", "Un gato en cada región de color.", "Dos gatos no comparten fila ni columna.", "Los gatos no pueden tocarse, ni en diagonal.", "tablero", "puzle completado", "Siguiente puzle", "Quedarse aquí", "Mejor --", "Mejor", "regiones", "gatos", "Encuentra el sitio de cada gato.", "Marcado como imposible.", "Marca quitada.", "Gato retirado.", "Buen lugar.", "Sin corazones. Nuevo intento.", "Último movimiento deshecho.", "Aparece una pista.", "Resuelto.", "Esta fila ya tiene un gato.", "Esta columna ya tiene un gato.", "Esta región ya tiene un gato.", "Los gatos no pueden tocarse.", "Desfile perfecto de gatos.", "Resuelto en {time} con {hearts} corazones.", "Fácil", "Normal", "Difícil"]),
+  fa: makeGameUi(["معمای منطقی", "معمای امروز", "سختی", "زبان", "گربه‌های باقی‌مانده", "حالت عادی", "حالت کمک", "گربه بگذار", "علامت بزن", "واگرد", "راهنمایی", "شروع دوباره", "بعدی", "قوانین", "در هر ناحیه رنگی یک گربه بگذارید.", "دو گربه نباید در یک ردیف یا ستون باشند.", "گربه‌ها حتی قطری هم نباید لمس شوند.", "صفحه", "معما کامل شد", "معمای بعدی", "همین‌جا بمان", "بهترین --", "بهترین", "ناحیه", "گربه", "جای هر گربه را پیدا کنید.", "به‌عنوان ناممکن علامت خورد.", "علامت برداشته شد.", "گربه برداشته شد.", "جای خوبی است.", "قلب‌ها تمام شد. دوباره شروع کنید.", "حرکت آخر برگشت.", "یک راهنمایی ظاهر شد.", "حل شد.", "این ردیف قبلا گربه دارد.", "این ستون قبلا گربه دارد.", "این ناحیه قبلا گربه دارد.", "گربه‌ها نباید همدیگر را لمس کنند.", "رژه کامل گربه‌ها.", "در {time} با {hearts} قلب باقی‌مانده حل شد.", "آسان", "معمولی", "سخت"]),
+  fil: makeGameUi(["logic puzzle", "puzzle ngayon", "hirap", "wika", "natitirang pusa", "normal mode", "assist mode", "Ilagay ang pusa", "Markahan", "I-undo", "Hint", "I-reset", "Susunod", "mga tuntunin", "Isang pusa sa bawat may kulay na silid.", "Walang dalawang pusa sa parehong hilera o kolum.", "Hindi maaaring magdikit ang mga pusa, kahit pahilis.", "board", "tapos ang puzzle", "Susunod na puzzle", "Manatili dito", "Best --", "Best", "silid", "pusa", "Hanapin ang puwesto ng bawat pusa.", "Minarkahan bilang imposible.", "Tinanggal ang marka.", "Inalis ang pusa.", "Magandang puwesto.", "Ubos na ang puso. Simula muli.", "Na-undo ang huling galaw.", "May lumitaw na hint.", "Nalutas.", "May pusa na sa hilera na ito.", "May pusa na sa kolum na ito.", "May pusa na sa silid na ito.", "Hindi maaaring magdikit ang mga pusa.", "Perpektong parada ng pusa.", "Nalutas sa {time} na may {hearts} puso.", "Madali", "Normal", "Mahirap"]),
+  fr: makeGameUi(["puzzle logique", "puzzle du jour", "difficulté", "langue", "chats restants", "mode normal", "mode aide", "Placer", "Marquer", "Annuler", "Indice", "Réinitialiser", "Suivant", "règles", "Un chat dans chaque région colorée.", "Deux chats ne partagent ni ligne ni colonne.", "Les chats ne peuvent pas se toucher, même en diagonale.", "grille", "puzzle terminé", "Puzzle suivant", "Rester ici", "Meilleur --", "Meilleur", "régions", "chats", "Trouvez la place de chaque chat.", "Marqué comme impossible.", "Marque retirée.", "Chat retiré.", "Bon emplacement.", "Plus de cœurs. Nouvelle tentative.", "Dernier coup annulé.", "Un indice apparaît.", "Résolu.", "Cette ligne a déjà un chat.", "Cette colonne a déjà un chat.", "Cette région a déjà un chat.", "Les chats ne peuvent pas se toucher.", "Parfaite petite parade de chats.", "Résolu en {time} avec {hearts} cœurs restants.", "Facile", "Normal", "Difficile"]),
+  gu: makeGameUi(["તર્ક કોયડો", "આજનો કોયડો", "મુશ્કેલી", "ભાષા", "બાકી બિલાડીઓ", "સામાન્ય મોડ", "મદદ મોડ", "બિલાડી મૂકો", "ચિહ્નિત કરો", "પાછું લો", "સૂચન", "રીસેટ", "આગલું", "નિયમો", "દરેક રંગીન વિસ્તારમાં એક બિલાડી.", "બે બિલાડીઓ એક જ પંક્તિ કે કૉલમમાં નહીં.", "બિલાડીઓ તિરછું પણ સ્પર્શી શકતી નથી.", "બોર્ડ", "કોયડો પૂર્ણ", "આગળનો કોયડો", "અહીં રહો", "શ્રેષ્ઠ --", "શ્રેષ્ઠ", "વિસ્તારો", "બિલાડીઓ", "દરેક બિલાડીનું સ્થાન શોધો.", "અશક્ય તરીકે ચિહ્નિત.", "ચિહ્ન દૂર થયું.", "બિલાડી ઉઠાવી.", "સારું સ્થાન.", "હૃદય ખૂટી ગયા. ફરી શરૂ કરો.", "છેલ્લી ચાલ પાછી લીધી.", "સૂચન દેખાયું.", "ઉકેલાઈ ગયું.", "આ પંક્તિમાં પહેલેથી બિલાડી છે.", "આ કૉલમમાં પહેલેથી બિલાડી છે.", "આ વિસ્તારમાં પહેલેથી બિલાડી છે.", "બિલાડીઓ સ્પર્શી શકતી નથી.", "સંપૂર્ણ બિલાડી પરેડ.", "{time} માં ઉકેલાયું, {hearts} હૃદય બાકી.", "સરળ", "સામાન્ય", "કઠિન"]),
+  ha: makeGameUi(["wasan tunani", "wasan yau", "wahala", "harshe", "kuliyoyi da suka rage", "yanayi na yau da kullum", "yanayin taimako", "Sanya kuliya", "Alama", "Soke", "Hint", "Sake farawa", "Na gaba", "ka'idoji", "Kuliya daya a kowane yanki mai launi.", "Kuliyoyi biyu ba su raba layi ko ginshiƙi.", "Kuliyoyi ba sa taɓawa, ko a karkace.", "allo", "an gama wasan", "Wasa na gaba", "Zauna nan", "Mafi kyau --", "Mafi kyau", "yankuna", "kuliyoyi", "Nemo wurin kowace kuliya.", "An yi alamar ba zai yiwu ba.", "An cire alama.", "An dauke kuliya.", "Wuri mai kyau.", "Zuciya ta kare. Sake gwadawa.", "An soke motsi na ƙarshe.", "An nuna hint.", "An warware.", "Wannan layi yana da kuliya.", "Wannan ginshiƙi yana da kuliya.", "Wannan yanki yana da kuliya.", "Kuliyoyi ba sa taɓawa.", "Cikakkiyar jerin kuliyoyi.", "An warware cikin {time} da zuciya {hearts}.", "Sauƙi", "Matsakaici", "Mai wahala"]),
+  he: makeGameUi(["חידת היגיון", "החידה של היום", "קושי", "שפה", "חתולים נותרו", "מצב רגיל", "מצב עזרה", "הנח חתול", "סמן", "בטל", "רמז", "איפוס", "הבא", "כללים", "חתול אחד בכל אזור צבעוני.", "שני חתולים לא באותה שורה או עמודה.", "חתולים לא נוגעים, גם לא באלכסון.", "לוח", "החידה הושלמה", "החידה הבאה", "להישאר כאן", "שיא --", "שיא", "אזורים", "חתולים", "מצא מקום לכל חתול.", "סומן כבלתי אפשרי.", "הסימון הוסר.", "החתול הוסר.", "מקום טוב.", "נגמרו הלבבות. ניסיון חדש.", "המהלך האחרון בוטל.", "רמז הופיע.", "נפתר.", "בשורה הזו כבר יש חתול.", "בעמודה הזו כבר יש חתול.", "באזור הזה כבר יש חתול.", "חתולים לא יכולים לגעת.", "מצעד חתולים מושלם.", "נפתר ב-{time} עם {hearts} לבבות.", "קל", "רגיל", "קשה"]),
+  hi: makeGameUi(["तर्क पहेली", "आज की पहेली", "कठिनाई", "भाषा", "बाकी बिल्लियां", "सामान्य मोड", "सहायता मोड", "बिल्ली रखें", "चिह्न लगाएं", "पूर्ववत", "संकेत", "रीसेट", "अगला", "नियम", "हर रंगीन क्षेत्र में एक बिल्ली।", "दो बिल्लियां एक ही पंक्ति या स्तंभ में नहीं।", "बिल्लियां तिरछे भी नहीं छू सकतीं।", "बोर्ड", "पहेली पूरी", "अगली पहेली", "यहीं रहें", "सर्वश्रेष्ठ --", "सर्वश्रेष्ठ", "क्षेत्र", "बिल्लियां", "हर बिल्ली की जगह खोजें।", "असंभव के रूप में चिह्नित।", "चिह्न हटाया गया।", "बिल्ली उठा ली गई।", "अच्छी जगह।", "दिल खत्म। फिर से शुरू करें।", "आखिरी चाल वापस ली।", "एक संकेत दिखा।", "हल हो गया।", "इस पंक्ति में पहले से बिल्ली है।", "इस स्तंभ में पहले से बिल्ली है।", "इस क्षेत्र में पहले से बिल्ली है।", "बिल्लियां छू नहीं सकतीं।", "बिल्लियों की शानदार परेड।", "{time} में हल, {hearts} दिल बचे।", "आसान", "सामान्य", "कठिन"]),
+  hu: makeGameUi(["logikai rejtvény", "mai rejtvény", "nehézség", "nyelv", "macskák hátra", "alap mód", "segéd mód", "Macska", "Jelölés", "Vissza", "Tipp", "Újrakezd", "Következő", "szabályok", "Egy macska minden színes régióban.", "Két macska nem lehet azonos sorban vagy oszlopban.", "A macskák átlósan sem érhetnek össze.", "tábla", "rejtvény kész", "Következő rejtvény", "Maradok", "Legjobb --", "Legjobb", "régió", "macska", "Találd meg minden macska helyét.", "Lehetetlenként jelölve.", "Jelölés törölve.", "Macska felvéve.", "Jó hely.", "Elfogytak a szívek. Újra.", "Utolsó lépés visszavonva.", "Megjelent egy tipp.", "Megoldva.", "Ebben a sorban már van macska.", "Ebben az oszlopban már van macska.", "Ebben a régióban már van macska.", "A macskák nem érhetnek össze.", "Tökéletes macskás menet.", "{time} alatt megoldva, {hearts} szív maradt.", "Könnyű", "Normál", "Nehéz"]),
+  id: makeGameUi(["teka-teki logika", "teka-teki hari ini", "tingkat sulit", "bahasa", "kucing tersisa", "mode normal", "mode bantu", "Letakkan kucing", "Tandai", "Urungkan", "Petunjuk", "Ulangi", "Berikutnya", "aturan", "Satu kucing di setiap wilayah berwarna.", "Tidak ada dua kucing pada baris atau kolom yang sama.", "Kucing tidak boleh bersentuhan, termasuk diagonal.", "papan", "teka-teki selesai", "Teka-teki berikutnya", "Tetap di sini", "Terbaik --", "Terbaik", "wilayah", "kucing", "Temukan tempat tidur setiap kucing.", "Ditandai sebagai mustahil.", "Tanda dihapus.", "Kucing diambil kembali.", "Tempat bagus.", "Hati habis. Coba lagi.", "Langkah terakhir dibatalkan.", "Petunjuk muncul.", "Selesai.", "Baris ini sudah punya kucing.", "Kolom ini sudah punya kucing.", "Wilayah ini sudah punya kucing.", "Kucing tidak boleh bersentuhan.", "Parade kucing sempurna.", "Selesai dalam {time} dengan {hearts} hati tersisa.", "Mudah", "Normal", "Sulit"]),
+  it: makeGameUi(["puzzle logico", "puzzle di oggi", "difficoltà", "lingua", "gatti rimasti", "modalità normale", "modalità aiuto", "Metti gatto", "Segna", "Annulla", "Indizio", "Ripristina", "Avanti", "regole", "Un gatto in ogni regione colorata.", "Due gatti non condividono riga o colonna.", "I gatti non possono toccarsi, nemmeno in diagonale.", "griglia", "puzzle completato", "Puzzle successivo", "Resta qui", "Migliore --", "Migliore", "regioni", "gatti", "Trova il posto di ogni gatto.", "Segnato come impossibile.", "Segno rimosso.", "Gatto rimosso.", "Bel posto.", "Cuori finiti. Nuovo tentativo.", "Ultima mossa annullata.", "Compare un indizio.", "Risolto.", "Questa riga ha già un gatto.", "Questa colonna ha già un gatto.", "Questa regione ha già un gatto.", "I gatti non possono toccarsi.", "Perfetta piccola parata di gatti.", "Risolto in {time} con {hearts} cuori rimasti.", "Facile", "Normale", "Difficile"]),
+  jv: makeGameUi(["teka-teki logika", "teka-teki dina iki", "kangelan", "basa", "kucing isih", "mode biasa", "mode pitulungan", "Pasang kucing", "Tandhani", "Batal", "Pituduh", "Reset", "Sabanjure", "aturan", "Siji kucing ing saben wilayah warna.", "Ora ana kucing loro ing baris utawa kolom padha.", "Kucing ora kena dempet, kalebu diagonal.", "papan", "teka-teki rampung", "Teka-teki sabanjure", "Tetep kene", "Paling apik --", "Paling apik", "wilayah", "kucing", "Goleki papan saben kucing.", "Ditandhani mokal.", "Tandha dibusak.", "Kucing dijupuk maneh.", "Papan apik.", "Ati entek. Miwiti maneh.", "Langkah pungkasan dibatalake.", "Pituduh katon.", "Rampung.", "Baris iki wis ana kucing.", "Kolom iki wis ana kucing.", "Wilayah iki wis ana kucing.", "Kucing ora kena dempet.", "Parade kucing sampurna.", "Rampung ing {time} karo {hearts} ati.", "Gampang", "Normal", "Angel"]),
+  ms: makeGameUi(["teka-teki logik", "teka-teki hari ini", "kesukaran", "bahasa", "kucing tinggal", "mod biasa", "mod bantuan", "Letak kucing", "Tanda", "Buat asal", "Petunjuk", "Tetap semula", "Seterusnya", "peraturan", "Satu kucing dalam setiap kawasan berwarna.", "Dua kucing tidak berkongsi baris atau lajur.", "Kucing tidak boleh bersentuhan, termasuk pepenjuru.", "papan", "teka-teki selesai", "Teka-teki seterusnya", "Kekal di sini", "Terbaik --", "Terbaik", "kawasan", "kucing", "Cari tempat setiap kucing.", "Ditanda sebagai mustahil.", "Tanda dibuang.", "Kucing diambil semula.", "Tempat yang baik.", "Hati habis. Cuba lagi.", "Langkah terakhir dibatalkan.", "Petunjuk muncul.", "Selesai.", "Baris ini sudah ada kucing.", "Lajur ini sudah ada kucing.", "Kawasan ini sudah ada kucing.", "Kucing tidak boleh bersentuhan.", "Perarakan kucing sempurna.", "Selesai dalam {time} dengan {hearts} hati.", "Mudah", "Biasa", "Sukar"]),
+  nl: makeGameUi(["logicapuzzel", "puzzel van vandaag", "moeilijkheid", "taal", "katten over", "normale modus", "hulpmodus", "Kat plaatsen", "Markeren", "Ongedaan", "Hint", "Reset", "Volgende", "regels", "Eén kat in elk kleurgebied.", "Geen twee katten delen rij of kolom.", "Katten mogen elkaar ook diagonaal niet raken.", "bord", "puzzel voltooid", "Volgende puzzel", "Hier blijven", "Beste --", "Beste", "gebieden", "katten", "Vind de plek van elke kat.", "Gemarkeerd als onmogelijk.", "Markering verwijderd.", "Kat opgepakt.", "Goede plek.", "Geen harten meer. Opnieuw.", "Laatste zet ongedaan.", "Er verschijnt een hint.", "Opgelost.", "Deze rij heeft al een kat.", "Deze kolom heeft al een kat.", "Dit gebied heeft al een kat.", "Katten mogen elkaar niet raken.", "Perfecte kattenparade.", "Opgelost in {time} met {hearts} harten over.", "Makkelijk", "Normaal", "Moeilijk"]),
+  pl: makeGameUi(["łamigłówka logiczna", "dzisiejsza łamigłówka", "trudność", "język", "koty zostały", "tryb zwykły", "tryb pomocy", "Postaw kota", "Oznacz", "Cofnij", "Podpowiedź", "Reset", "Dalej", "zasady", "Jeden kot w każdym kolorowym regionie.", "Dwa koty nie mogą być w tym samym rzędzie ani kolumnie.", "Koty nie mogą się stykać, także po przekątnej.", "plansza", "łamigłówka ukończona", "Następna łamigłówka", "Zostań tutaj", "Najlepszy --", "Najlepszy", "regiony", "koty", "Znajdź miejsce dla każdego kota.", "Oznaczono jako niemożliwe.", "Oznaczenie usunięte.", "Kot zabrany.", "Dobre miejsce.", "Serca się skończyły. Nowa próba.", "Cofnięto ostatni ruch.", "Pojawiła się podpowiedź.", "Rozwiązano.", "Ten rząd ma już kota.", "Ta kolumna ma już kota.", "Ten region ma już kota.", "Koty nie mogą się stykać.", "Idealna kocia parada.", "Rozwiązano w {time}, zostało {hearts} serc.", "Łatwy", "Normalny", "Trudny"]),
+  pt: makeGameUi(["puzzle lógico", "puzzle de hoje", "dificuldade", "idioma", "gatos restantes", "modo normal", "modo ajuda", "Colocar gato", "Marcar", "Desfazer", "Dica", "Reiniciar", "Próximo", "regras", "Um gato em cada região colorida.", "Dois gatos não compartilham linha nem coluna.", "Gatos não podem se tocar, nem na diagonal.", "tabuleiro", "puzzle concluído", "Próximo puzzle", "Ficar aqui", "Melhor --", "Melhor", "regiões", "gatos", "Encontre o lugar de cada gato.", "Marcado como impossível.", "Marca removida.", "Gato retirado.", "Bom lugar.", "Sem corações. Tente de novo.", "Última jogada desfeita.", "Uma dica apareceu.", "Resolvido.", "Esta linha já tem um gato.", "Esta coluna já tem um gato.", "Esta região já tem um gato.", "Gatos não podem se tocar.", "Perfeita parada de gatos.", "Resolvido em {time} com {hearts} corações.", "Fácil", "Normal", "Difícil"]),
+  ro: makeGameUi(["puzzle logic", "puzzle-ul zilei", "dificultate", "limbă", "pisici rămase", "mod normal", "mod asistență", "Pune pisica", "Marchează", "Anulează", "Indiciu", "Resetare", "Următorul", "reguli", "O pisică în fiecare regiune colorată.", "Două pisici nu împart același rând sau coloană.", "Pisicile nu se ating nici pe diagonală.", "tablă", "puzzle complet", "Puzzle următor", "Rămâi aici", "Cel mai bun --", "Cel mai bun", "regiuni", "pisici", "Găsește locul fiecărei pisici.", "Marcat ca imposibil.", "Marcaj eliminat.", "Pisica a fost ridicată.", "Loc bun.", "Nu mai sunt inimi. Încearcă din nou.", "Ultima mutare anulată.", "A apărut un indiciu.", "Rezolvat.", "Acest rând are deja o pisică.", "Această coloană are deja o pisică.", "Această regiune are deja o pisică.", "Pisicile nu se pot atinge.", "Paradă perfectă de pisici.", "Rezolvat în {time} cu {hearts} inimi rămase.", "Ușor", "Normal", "Greu"]),
+  ru: makeGameUi(["логическая головоломка", "головоломка дня", "сложность", "язык", "кошек осталось", "обычный режим", "режим помощи", "Поставить кошку", "Отметить", "Отменить", "Подсказка", "Сброс", "Далее", "правила", "Одна кошка в каждом цветном регионе.", "Две кошки не могут быть в одной строке или колонке.", "Кошки не могут касаться, даже по диагонали.", "поле", "головоломка решена", "Следующая головоломка", "Остаться здесь", "Лучшее --", "Лучшее", "регионов", "кошек", "Найдите место для каждой кошки.", "Отмечено как невозможное.", "Отметка снята.", "Кошка убрана.", "Хорошее место.", "Сердца закончились. Новая попытка.", "Последний ход отменен.", "Появилась подсказка.", "Решено.", "В этой строке уже есть кошка.", "В этой колонке уже есть кошка.", "В этом регионе уже есть кошка.", "Кошки не могут касаться.", "Идеальный кошачий парад.", "Решено за {time}, осталось сердец: {hearts}.", "Легко", "Нормально", "Сложно"]),
+  sv: makeGameUi(["logikpussel", "dagens pussel", "svårighet", "språk", "katter kvar", "standardläge", "hjälpläge", "Placera katt", "Markera", "Ångra", "Ledtråd", "Starta om", "Nästa", "regler", "En katt i varje färgat område.", "Två katter får inte dela rad eller kolumn.", "Katter får inte röra vid varandra, inte ens diagonalt.", "bräde", "pusslet klart", "Nästa pussel", "Stanna här", "Bästa --", "Bästa", "områden", "katter", "Hitta platsen för varje katt.", "Markerat som omöjligt.", "Markering borttagen.", "Katten lyftes bort.", "Bra plats.", "Inga hjärtan kvar. Försök igen.", "Senaste draget ångrades.", "En ledtråd visas.", "Löst.", "Den här raden har redan en katt.", "Den här kolumnen har redan en katt.", "Det här området har redan en katt.", "Katter får inte röra vid varandra.", "Perfekt liten kattparad.", "Löst på {time} med {hearts} hjärtan kvar.", "Lätt", "Normal", "Svår"]),
+  sw: makeGameUi(["fumbo la mantiki", "fumbo la leo", "ugumu", "lugha", "paka waliobaki", "hali ya kawaida", "hali ya msaada", "Weka paka", "Weka alama", "Tengua", "Dokezo", "Anza upya", "Inayofuata", "kanuni", "Paka mmoja katika kila eneo la rangi.", "Paka wawili hawashiriki mstari au safu.", "Paka hawapaswi kugusana, hata kwa mshazari.", "ubao", "fumbo limekamilika", "Fumbo linalofuata", "Baki hapa", "Bora --", "Bora", "maeneo", "paka", "Tafuta nafasi ya kila paka.", "Imewekwa alama kuwa haiwezekani.", "Alama imeondolewa.", "Paka ameondolewa.", "Nafasi nzuri.", "Mioyo imeisha. Jaribu tena.", "Hatua ya mwisho imetenguliwa.", "Dokezo limeonekana.", "Imetatuliwa.", "Mstari huu tayari una paka.", "Safu hii tayari ina paka.", "Eneo hili tayari lina paka.", "Paka hawapaswi kugusana.", "Parade kamili ya paka.", "Imetatuliwa kwa {time} na mioyo {hearts}.", "Rahisi", "Kawaida", "Ngumu"]),
+  tr: makeGameUi(["mantık bulmacası", "bugünün bulmacası", "zorluk", "dil", "kalan kediler", "normal mod", "yardım modu", "Kedi yerleştir", "İşaretle", "Geri al", "İpucu", "Sıfırla", "Sonraki", "kurallar", "Her renkli bölgede bir kedi.", "İki kedi aynı satır veya sütunda olamaz.", "Kediler çaprazda bile temas edemez.", "tahta", "bulmaca tamamlandı", "Sonraki bulmaca", "Burada kal", "En iyi --", "En iyi", "bölge", "kedi", "Her kedinin yerini bul.", "İmkansız olarak işaretlendi.", "İşaret kaldırıldı.", "Kedi geri alındı.", "Güzel yer.", "Kalp kalmadı. Yeniden dene.", "Son hamle geri alındı.", "Bir ipucu göründü.", "Çözüldü.", "Bu satırda zaten kedi var.", "Bu sütunda zaten kedi var.", "Bu bölgede zaten kedi var.", "Kediler temas edemez.", "Kusursuz küçük kedi geçidi.", "{time} içinde çözüldü, {hearts} kalp kaldı.", "Kolay", "Normal", "Zor"]),
+  ja: makeGameUi(["ロジックパズル", "今日のパズル", "難易度", "言語", "残りの猫", "通常モード", "アシストモード", "猫を置く", "マーク", "戻す", "ヒント", "リセット", "次へ", "ルール", "各色の部屋に猫を1匹置きます。", "同じ行または列に2匹は置けません。", "猫は斜めも含めて隣接できません。", "盤面", "パズル完了", "次のパズル", "ここに残る", "ベスト --", "ベスト", "部屋", "匹", "すべての猫の居場所を見つけましょう。", "置けない場所としてマークしました。", "マークを外しました。", "猫を戻しました。", "いい場所です。", "ハートがなくなりました。もう一度。", "直前の手を戻しました。", "ヒントが現れました。", "解けました。", "この行にはすでに猫がいます。", "この列にはすでに猫がいます。", "この色の部屋にはすでに猫がいます。", "猫は隣接できません。", "完璧な猫のパレード。", "{time} でクリア。残りハート {hearts}。", "かんたん", "ふつう", "むずかしい"]),
+  ko: makeGameUi(["논리 퍼즐", "오늘의 퍼즐", "난이도", "언어", "남은 고양이", "기본 모드", "도움 모드", "고양이 놓기", "표시", "되돌리기", "힌트", "초기화", "다음", "규칙", "각 색 영역에 고양이 한 마리.", "고양이 두 마리는 같은 행이나 열에 있을 수 없습니다.", "고양이는 대각선으로도 닿을 수 없습니다.", "보드", "퍼즐 완료", "다음 퍼즐", "여기 있기", "최고 --", "최고", "영역", "마리", "모든 고양이의 자리를 찾으세요.", "불가능한 칸으로 표시했습니다.", "표시를 지웠습니다.", "고양이를 다시 들었습니다.", "좋은 자리예요.", "하트가 없습니다. 다시 시작합니다.", "마지막 수를 되돌렸습니다.", "힌트가 나타났습니다.", "해결했습니다.", "이 행에는 이미 고양이가 있습니다.", "이 열에는 이미 고양이가 있습니다.", "이 색 영역에는 이미 고양이가 있습니다.", "고양이는 서로 닿을 수 없습니다.", "완벽한 고양이 행진.", "{time} 만에 해결, 하트 {hearts}개 남음.", "쉬움", "보통", "어려움"]),
+  mr: makeGameUi(["तर्क कोडे", "आजचे कोडे", "कठीणपणा", "भाषा", "उरलेल्या मांजरी", "सामान्य मोड", "मदत मोड", "मांजर ठेवा", "चिन्ह लावा", "मागे घ्या", "सूचना", "रीसेट", "पुढील", "नियम", "प्रत्येक रंगीत भागात एक मांजर.", "दोन मांजरी एकाच रांगेत किंवा स्तंभात नसाव्यात.", "मांजरी तिरक्याही स्पर्श करू शकत नाहीत.", "फळा", "कोडे पूर्ण", "पुढील कोडे", "इथेच रहा", "सर्वोत्तम --", "सर्वोत्तम", "भाग", "मांजरी", "प्रत्येक मांजरीची जागा शोधा.", "अशक्य म्हणून चिन्हांकित.", "चिन्ह काढले.", "मांजर उचलली.", "छान जागा.", "हृदये संपली. पुन्हा सुरू.", "शेवटची चाल मागे घेतली.", "सूचना दिसली.", "सुटले.", "या रांगेत आधीच मांजर आहे.", "या स्तंभात आधीच मांजर आहे.", "या भागात आधीच मांजर आहे.", "मांजरी स्पर्श करू शकत नाहीत.", "परिपूर्ण मांजर परेड.", "{time} मध्ये सुटले, {hearts} हृदये बाकी.", "सोपे", "सामान्य", "कठीण"]),
+  pa: makeGameUi(["ਤਰਕ ਪਹੇਲੀ", "ਅੱਜ ਦੀ ਪਹੇਲੀ", "ਮੁਸ਼ਕਲ", "ਭਾਸ਼ਾ", "ਬਾਕੀ ਬਿੱਲੀਆਂ", "ਆਮ ਮੋਡ", "ਮਦਦ ਮੋਡ", "ਬਿੱਲੀ ਰੱਖੋ", "ਨਿਸ਼ਾਨ ਲਗਾਓ", "ਵਾਪਸ", "ਸੰਕੇਤ", "ਰੀਸੈਟ", "ਅਗਲਾ", "ਨਿਯਮ", "ਹਰ ਰੰਗੀਨ ਖੇਤਰ ਵਿੱਚ ਇੱਕ ਬਿੱਲੀ।", "ਦੋ ਬਿੱਲੀਆਂ ਇੱਕੋ ਕਤਾਰ ਜਾਂ ਕਾਲਮ ਵਿੱਚ ਨਹੀਂ।", "ਬਿੱਲੀਆਂ ਤਿਰਛੇ ਵੀ ਨਹੀਂ ਛੂਹ ਸਕਦੀਆਂ।", "ਬੋਰਡ", "ਪਹੇਲੀ ਪੂਰੀ", "ਅਗਲੀ ਪਹੇਲੀ", "ਇੱਥੇ ਰਹੋ", "ਸਭ ਤੋਂ ਵਧੀਆ --", "ਸਭ ਤੋਂ ਵਧੀਆ", "ਖੇਤਰ", "ਬਿੱਲੀਆਂ", "ਹਰ ਬਿੱਲੀ ਦੀ ਜਗ੍ਹਾ ਲੱਭੋ।", "ਅਸੰਭਵ ਵਜੋਂ ਨਿਸ਼ਾਨ ਲਾਇਆ।", "ਨਿਸ਼ਾਨ ਹਟਾਇਆ।", "ਬਿੱਲੀ ਚੁੱਕ ਲਈ।", "ਚੰਗੀ ਜਗ੍ਹਾ।", "ਦਿਲ ਖਤਮ। ਮੁੜ ਕੋਸ਼ਿਸ਼।", "ਆਖਰੀ ਚਾਲ ਵਾਪਸ।", "ਸੰਕੇਤ ਆਇਆ।", "ਹੱਲ ਹੋ ਗਿਆ।", "ਇਸ ਕਤਾਰ ਵਿੱਚ ਪਹਿਲਾਂ ਹੀ ਬਿੱਲੀ ਹੈ।", "ਇਸ ਕਾਲਮ ਵਿੱਚ ਪਹਿਲਾਂ ਹੀ ਬਿੱਲੀ ਹੈ।", "ਇਸ ਖੇਤਰ ਵਿੱਚ ਪਹਿਲਾਂ ਹੀ ਬਿੱਲੀ ਹੈ।", "ਬਿੱਲੀਆਂ ਛੂਹ ਨਹੀਂ ਸਕਦੀਆਂ।", "ਸ਼ਾਨਦਾਰ ਬਿੱਲੀ ਪਰੇਡ।", "{time} ਵਿੱਚ ਹੱਲ, {hearts} ਦਿਲ ਬਾਕੀ।", "ਆਸਾਨ", "ਆਮ", "ਔਖਾ"]),
+  ta: makeGameUi(["தர்க்க புதிர்", "இன்றைய புதிர்", "கடினம்", "மொழி", "மீதமுள்ள பூனைகள்", "இயல்பு முறை", "உதவி முறை", "பூனை வை", "குறி", "மீளமை", "குறிப்பு", "மீண்டும்", "அடுத்து", "விதிகள்", "ஒவ்வொரு நிறப் பகுதியில் ஒரு பூனை.", "இரண்டு பூனைகள் ஒரே வரி அல்லது நெடுவரிசையில் இருக்கக்கூடாது.", "பூனைகள் சாய்வாகவும் தொடக்கூடாது.", "பலகை", "புதிர் முடிந்தது", "அடுத்த புதிர்", "இங்கே இரு", "சிறந்தது --", "சிறந்தது", "பகுதிகள்", "பூனைகள்", "ஒவ்வொரு பூனைக்கும் இடம் கண்டுபிடி.", "சாத்தியமில்லை என குறிக்கப்பட்டது.", "குறி நீக்கப்பட்டது.", "பூனை எடுக்கப்பட்டது.", "நல்ல இடம்.", "இதயங்கள் முடிந்தன. மீண்டும் தொடங்கு.", "கடைசி அசைவு மீளப்பட்டது.", "ஒரு குறிப்பு தோன்றியது.", "தீர்ந்தது.", "இந்த வரியில் ஏற்கனவே பூனை உள்ளது.", "இந்த நெடுவரிசையில் ஏற்கனவே பூனை உள்ளது.", "இந்த பகுதியில் ஏற்கனவே பூனை உள்ளது.", "பூனைகள் தொடக்கூடாது.", "சரியான பூனை அணிவகுப்பு.", "{time} நேரத்தில் தீர்ந்தது, {hearts} இதயங்கள் மீதம்.", "எளிது", "சாதாரணம்", "கடினம்"]),
+  te: makeGameUi(["లాజిక్ పజిల్", "ఈరోజు పజిల్", "కష్టం", "భాష", "మిగిలిన పిల్లులు", "సాధారణ మోడ్", "సహాయ మోడ్", "పిల్లి పెట్టు", "మార్క్", "రద్దు", "సూచన", "రీసెట్", "తదుపరి", "నియమాలు", "ప్రతి రంగు ప్రాంతంలో ఒక పిల్లి.", "రెండు పిల్లులు ఒకే వరుస లేదా నిలువు వరుసలో ఉండకూడదు.", "పిల్లులు అడ్డంగా కూడా తాకకూడదు.", "బోర్డు", "పజిల్ పూర్తయింది", "తదుపరి పజిల్", "ఇక్కడే ఉండండి", "ఉత్తమం --", "ఉత్తమం", "ప్రాంతాలు", "పిల్లులు", "ప్రతి పిల్లి స్థానం కనుగొనండి.", "అసాధ్యంగా గుర్తించబడింది.", "మార్క్ తీసివేయబడింది.", "పిల్లి తీసివేయబడింది.", "మంచి స్థానం.", "హృదయాలు అయిపోయాయి. మళ్లీ ప్రయత్నించండి.", "చివరి అడుగు రద్దైంది.", "ఒక సూచన వచ్చింది.", "పూర్తయింది.", "ఈ వరుసలో ఇప్పటికే పిల్లి ఉంది.", "ఈ నిలువు వరుసలో ఇప్పటికే పిల్లి ఉంది.", "ఈ ప్రాంతంలో ఇప్పటికే పిల్లి ఉంది.", "పిల్లులు తాకకూడదు.", "అద్భుతమైన పిల్లుల పరేడ్.", "{time} లో పూర్తయింది, {hearts} హృదయాలు మిగిలాయి.", "సులువు", "సాధారణం", "కష్టం"]),
+  th: makeGameUi(["ปริศนาตรรกะ", "ปริศนาวันนี้", "ระดับ", "ภาษา", "แมวที่เหลือ", "โหมดปกติ", "โหมดช่วย", "วางแมว", "ทำเครื่องหมาย", "ย้อนกลับ", "คำใบ้", "เริ่มใหม่", "ถัดไป", "กติกา", "มีแมวหนึ่งตัวในแต่ละพื้นที่สี.", "แมวสองตัวห้ามอยู่แถวหรือคอลัมน์เดียวกัน.", "แมวห้ามแตะกัน รวมถึงแนวทแยง.", "กระดาน", "ผ่านปริศนาแล้ว", "ปริศนาถัดไป", "อยู่ที่นี่", "ดีที่สุด --", "ดีที่สุด", "พื้นที่", "แมว", "หาที่นอนให้แมวทุกตัว.", "ทำเครื่องหมายว่าเป็นไปไม่ได้.", "ลบเครื่องหมายแล้ว.", "ยกแมวออกแล้ว.", "ตำแหน่งดี.", "หัวใจหมดแล้ว ลองใหม่.", "ย้อนกลับตาล่าสุดแล้ว.", "มีคำใบ้ปรากฏ.", "แก้สำเร็จ.", "แถวนี้มีแมวแล้ว.", "คอลัมน์นี้มีแมวแล้ว.", "พื้นที่นี้มีแมวแล้ว.", "แมวห้ามแตะกัน.", "ขบวนแมวสมบูรณ์แบบ.", "แก้ได้ใน {time} เหลือหัวใจ {hearts}.", "ง่าย", "ปกติ", "ยาก"]),
+  uk: makeGameUi(["логічна головоломка", "головоломка дня", "складність", "мова", "котів лишилось", "звичайний режим", "режим допомоги", "Поставити кота", "Позначити", "Скасувати", "Підказка", "Скинути", "Далі", "правила", "Один кіт у кожній кольоровій області.", "Два коти не можуть бути в одному рядку чи стовпці.", "Коти не можуть торкатися навіть по діагоналі.", "поле", "головоломку завершено", "Наступна головоломка", "Залишитись тут", "Найкраще --", "Найкраще", "областей", "котів", "Знайдіть місце для кожного кота.", "Позначено як неможливе.", "Позначку знято.", "Кота прибрано.", "Гарне місце.", "Серця закінчилися. Спробуйте знову.", "Останній хід скасовано.", "З'явилася підказка.", "Розв'язано.", "У цьому рядку вже є кіт.", "У цьому стовпці вже є кіт.", "У цій області вже є кіт.", "Коти не можуть торкатися.", "Ідеальний котячий парад.", "Розв'язано за {time}, сердець лишилось: {hearts}.", "Легко", "Звичайно", "Складно"]),
+  ur: makeGameUi(["منطقی پہیلی", "آج کی پہیلی", "مشکل", "زبان", "باقی بلیاں", "عام موڈ", "مدد موڈ", "بلی رکھیں", "نشان لگائیں", "واپس", "اشارہ", "ری سیٹ", "اگلا", "قواعد", "ہر رنگین حصے میں ایک بلی۔", "دو بلیاں ایک ہی قطار یا کالم میں نہیں۔", "بلیاں ترچھی بھی نہیں چھو سکتیں۔", "بورڈ", "پہیلی مکمل", "اگلی پہیلی", "یہیں رہیں", "بہترین --", "بہترین", "حصے", "بلیاں", "ہر بلی کی جگہ تلاش کریں۔", "ناممکن کے طور پر نشان لگایا۔", "نشان ہٹا دیا گیا۔", "بلی اٹھا لی گئی۔", "اچھی جگہ۔", "دل ختم۔ دوبارہ کوشش کریں۔", "آخری چال واپس لی گئی۔", "ایک اشارہ ظاہر ہوا۔", "حل ہوگئی۔", "اس قطار میں پہلے ہی بلی ہے۔", "اس کالم میں پہلے ہی بلی ہے۔", "اس حصے میں پہلے ہی بلی ہے۔", "بلیاں چھو نہیں سکتیں۔", "کامل بلی پریڈ۔", "{time} میں حل، {hearts} دل باقی۔", "آسان", "عام", "مشکل"]),
+  vi: makeGameUi(["câu đố logic", "câu đố hôm nay", "độ khó", "ngôn ngữ", "mèo còn lại", "chế độ thường", "chế độ hỗ trợ", "Đặt mèo", "Đánh dấu", "Hoàn tác", "Gợi ý", "Đặt lại", "Tiếp", "luật chơi", "Mỗi vùng màu có đúng một mèo.", "Hai mèo không cùng hàng hoặc cột.", "Mèo không được chạm nhau, kể cả chéo.", "bàn chơi", "hoàn thành", "Câu đố tiếp theo", "Ở lại", "Tốt nhất --", "Tốt nhất", "vùng", "mèo", "Tìm chỗ nằm cho mỗi mèo.", "Đã đánh dấu là không thể.", "Đã bỏ đánh dấu.", "Đã nhấc mèo lên.", "Vị trí tốt.", "Hết tim. Thử lại.", "Đã hoàn tác bước cuối.", "Một gợi ý xuất hiện.", "Đã giải xong.", "Hàng này đã có mèo.", "Cột này đã có mèo.", "Vùng này đã có mèo.", "Mèo không được chạm nhau.", "Cuộc diễu hành mèo hoàn hảo.", "Giải xong trong {time}, còn {hearts} tim.", "Dễ", "Thường", "Khó"]),
+  zh: makeGameUi(["逻辑谜题", "今日关卡", "难度", "语言", "剩余猫咪", "默认模式", "辅助模式", "放猫", "标记", "撤销", "提示", "重开", "下一关", "规则", "每个彩色房间放一只猫。", "任意两只猫不能同一行或同一列。", "猫不能相邻，斜角也不行。", "棋盘", "通关完成", "下一关", "留在这里", "最佳 --", "最佳", "个房间", "只猫", "找到每只猫的午睡位置。", "已标记为不可能。", "标记已取消。", "把猫抱回来了。", "好位置，房间安静下来了。", "红心用完，重新来一局。", "已撤销上一步。", "一枚温暖的爪印出现了。", "通关，优雅。", "这一行已经有猫了。", "这一列已经有猫了。", "这个彩色房间已经有猫了。", "猫不能相邻，斜角也不行。", "猫咪巡游，完美收工。", "用时 {time}，剩余 {hearts} 颗红心。", "简单", "普通", "困难"]),
+  "zh-Hant": makeGameUi(["邏輯謎題", "今日關卡", "難度", "語言", "剩餘貓咪", "預設模式", "輔助模式", "放貓", "標記", "復原", "提示", "重開", "下一關", "規則", "每個彩色房間放一隻貓。", "任意兩隻貓不能同一行或同一列。", "貓不能相鄰，斜角也不行。", "棋盤", "通關完成", "下一關", "留在這裡", "最佳 --", "最佳", "個房間", "隻貓", "找到每隻貓的午睡位置。", "已標記為不可能。", "標記已取消。", "把貓抱回來了。", "好位置，房間安靜下來了。", "紅心用完，重新來一局。", "已復原上一步。", "一枚溫暖的爪印出現了。", "通關，優雅。", "這一行已經有貓了。", "這一列已經有貓了。", "這個彩色房間已經有貓了。", "貓不能相鄰，斜角也不行。", "貓咪巡遊，完美收工。", "用時 {time}，剩餘 {hearts} 顆紅心。", "簡單", "普通", "困難"])
+};
+
 for (const [code] of languageCatalog) {
-  if (!i18n[code]) i18n[code] = { ...i18n.en, ...(shortUiTranslations[code] || {}) };
+  i18n[code] = { ...i18n.en, ...(i18n[code] || {}), ...(shortUiTranslations[code] || {}), ...(completeUiTranslations[code] || {}) };
 }
 
 const palette = ["#ffd6b8", "#f7c9d4", "#c9e8df", "#f7e39a", "#c7d9ff", "#d9c8f7", "#bfe3a7", "#f0c2a8"];
+const saveProfileKey = "meowdoku-local-profile-v1";
+const levelLabels = {
+  en: "Level", zh: "关卡", "zh-Hant": "關卡", ja: "レベル", ko: "레벨", es: "Nivel", fr: "Niveau", de: "Level",
+  pt: "Nível", ru: "Уровень", ar: "المستوى", hi: "स्तर", id: "Level", vi: "Cấp", tr: "Seviye", it: "Livello",
+  th: "เลเวล", pl: "Poziom", nl: "Level", sv: "Nivå", ur: "لیول", fa: "مرحله", he: "רמה"
+};
+const firstCatLabels = {
+  en: "Place the first cat to begin.",
+  zh: "放下第一只猫开始计时。",
+  "zh-Hant": "放下第一隻貓開始計時。",
+  ja: "最初の猫を置くとタイマーが始まります。",
+  ko: "첫 고양이를 놓으면 타이머가 시작됩니다.",
+  es: "Coloca el primer gato para empezar.",
+  fr: "Placez le premier chat pour commencer.",
+  de: "Setze die erste Katze, um zu starten.",
+  pt: "Coloque o primeiro gato para começar.",
+  ru: "Поставьте первую кошку, чтобы начать.",
+  ar: "ضع أول قطة للبدء.",
+  hi: "शुरू करने के लिए पहली बिल्ली रखें।",
+  id: "Letakkan kucing pertama untuk mulai.",
+  vi: "Đặt mèo đầu tiên để bắt đầu.",
+  tr: "Başlamak için ilk kediyi yerleştir.",
+  it: "Posiziona il primo gatto per iniziare.",
+  th: "วางแมวตัวแรกเพื่อเริ่มจับเวลา",
+  pl: "Postaw pierwszego kota, aby zacząć.",
+  nl: "Plaats de eerste kat om te beginnen.",
+  sv: "Placera den första katten för att börja.",
+  ur: "شروع کرنے کے لیے پہلی بلی رکھیں۔",
+  fa: "برای شروع، اولین گربه را بگذارید.",
+  he: "הנח את החתול הראשון כדי להתחיל."
+};
+const generatedPuzzleCache = new Map();
 const board = document.querySelector("#board");
 const levelTitle = document.querySelector("#levelTitle");
 const levelMeta = document.querySelector("#levelMeta");
@@ -345,8 +436,8 @@ const celebrationLayer = document.querySelector("#celebrationLayer");
 const catCounter = document.querySelector("#catCounter");
 
 let difficulty = localStorage.getItem("meowdoku-difficulty") || "normal";
-let lang = localStorage.getItem("meowdoku-language") || detectLanguage();
-let puzzleIndex = 0;
+let lang = detectPageLanguage() || localStorage.getItem("meowdoku-language") || detectLanguage();
+let puzzleIndex = loadLevelProgress(difficulty);
 let mode = "place";
 let assistMode = localStorage.getItem("meowdoku-assist") === "on";
 let cells = new Map();
@@ -354,6 +445,7 @@ let history = [];
 let mistakes = currentPack().hearts;
 let startedAt = Date.now();
 let timer = 0;
+let timerStarted = false;
 let hintCell = null;
 let errorCell = null;
 let audioContext = null;
@@ -376,6 +468,60 @@ function currentPack() {
   return puzzlePacks[difficulty] || puzzlePacks.normal;
 }
 
+function readSaveProfile() {
+  try {
+    return JSON.parse(localStorage.getItem(saveProfileKey) || "{}");
+  } catch {
+    return {};
+  }
+}
+
+function writeSaveProfile(profile) {
+  localStorage.setItem(saveProfileKey, JSON.stringify({
+    version: 1,
+    levels: {},
+    bestTimes: {},
+    ...profile,
+    updatedAt: new Date().toISOString()
+  }));
+}
+
+function loadLevelProgress(levelDifficulty) {
+  const profile = readSaveProfile();
+  const profileLevel = Number(profile.levels?.[levelDifficulty]);
+  if (Number.isFinite(profileLevel) && profileLevel >= 0) return profileLevel;
+  const legacy = Number(localStorage.getItem(`meowdoku-level-${levelDifficulty}`) || 0);
+  return Number.isFinite(legacy) && legacy >= 0 ? legacy : 0;
+}
+
+function saveLevelProgress(levelDifficulty = difficulty, levelIndex = puzzleIndex) {
+  const profile = readSaveProfile();
+  profile.levels = { ...(profile.levels || {}), [levelDifficulty]: levelIndex };
+  profile.currentDifficulty = levelDifficulty;
+  localStorage.setItem(`meowdoku-level-${levelDifficulty}`, String(levelIndex));
+  writeSaveProfile(profile);
+}
+
+function saveBestTime(levelDifficulty, levelNumber, elapsed) {
+  const profile = readSaveProfile();
+  const byDifficulty = profile.bestTimes?.[levelDifficulty] || {};
+  const previous = Number(byDifficulty[levelNumber] || 0);
+  if (previous && elapsed >= previous) return;
+  profile.bestTimes = {
+    ...(profile.bestTimes || {}),
+    [levelDifficulty]: { ...byDifficulty, [levelNumber]: elapsed }
+  };
+  localStorage.setItem(bestKey(levelDifficulty, levelNumber), String(elapsed));
+  writeSaveProfile(profile);
+}
+
+function loadBestTime(levelDifficulty = difficulty, levelNumber = currentLevelNumber()) {
+  const profile = readSaveProfile();
+  const profileBest = Number(profile.bestTimes?.[levelDifficulty]?.[levelNumber] || 0);
+  if (profileBest) return profileBest;
+  return Number(localStorage.getItem(bestKey(levelDifficulty, levelNumber)) || 0);
+}
+
 function detectLanguage() {
   const supported = new Set(languageCatalog.map(([code]) => code));
   const browserLanguages = navigator.languages?.length ? navigator.languages : [navigator.language || "en"];
@@ -388,11 +534,61 @@ function detectLanguage() {
   return "en";
 }
 
+function detectPageLanguage() {
+  const supported = new Set(languageCatalog.map(([code]) => code));
+  const firstPathPart = window.location.pathname.split("/").filter(Boolean)[0];
+  return supported.has(firstPathPart) ? firstPathPart : "";
+}
+
 function currentPuzzle() {
   const pack = currentPack();
-  const puzzle = pack.puzzles[puzzleIndex % pack.puzzles.length];
-  puzzle.regions ||= buildRegions(puzzle);
+  const cacheKey = `${difficulty}-${puzzleIndex}`;
+  if (generatedPuzzleCache.has(cacheKey)) return generatedPuzzleCache.get(cacheKey);
+  const base = pack.puzzles[puzzleIndex % pack.puzzles.length];
+  const variant = Math.floor(puzzleIndex / pack.puzzles.length);
+  const puzzle = {
+    title: base.title,
+    size: base.size,
+    solution: transformSolution(base.solution, base.size, variant)
+  };
+  puzzle.regions = buildRegions(puzzle);
+  generatedPuzzleCache.set(cacheKey, puzzle);
   return puzzle;
+}
+
+function transformSolution(solution, size, variant) {
+  const transform = variant % 8;
+  return solution.map(([row, col]) => {
+    switch (transform) {
+      case 1: return [row, size - 1 - col];
+      case 2: return [size - 1 - row, col];
+      case 3: return [size - 1 - row, size - 1 - col];
+      case 4: return [col, row];
+      case 5: return [size - 1 - col, size - 1 - row];
+      case 6: return [col, size - 1 - row];
+      case 7: return [size - 1 - col, row];
+      default: return [row, col];
+    }
+  });
+}
+
+function currentLevelNumber() {
+  return puzzleIndex + 1;
+}
+
+function startTimer() {
+  if (timerStarted) return;
+  timerStarted = true;
+  startedAt = Date.now() - timer;
+}
+
+function stopTimer() {
+  if (timerStarted) timer = Date.now() - startedAt;
+  timerStarted = false;
+}
+
+function elapsedTime() {
+  return timerStarted ? Date.now() - startedAt : timer;
 }
 
 function buildRegions(puzzle) {
@@ -474,8 +670,8 @@ function formatTime(ms) {
   return `${mins}:${secs}`;
 }
 
-function bestKey() {
-  return `meowdoku-best-${difficulty}-${currentPuzzle().title.en}`;
+function bestKey(levelDifficulty = difficulty, levelNumber = currentLevelNumber()) {
+  return `meowdoku-best-${levelDifficulty}-level-${levelNumber}`;
 }
 
 function playTone(type) {
@@ -534,20 +730,21 @@ function applyLanguage() {
   languageSelect.value = lang;
   statusText.textContent = statusValue || t(statusKey);
   resultTitle.textContent = t("resultTitle");
+  timerEl.setAttribute("aria-label", timerStarted ? "Timer running" : "Timer paused");
 }
 
 function render() {
   const puzzle = currentPuzzle();
   const placed = [...cells.values()].filter((value) => value === "cat").length;
   const total = puzzle.solution.length;
-  const best = localStorage.getItem(bestKey());
+  const best = loadBestTime();
 
   applyLanguage();
-  levelTitle.textContent = puzzle.title[lang] || (lang === "zh-Hant" ? puzzle.title.zh : "") || puzzle.title.en;
+  levelTitle.textContent = `${t("level")} ${currentLevelNumber()}`;
   levelMeta.textContent = t("roomsCats", { rooms: total, cats: total });
   renderHearts();
   renderCatCounter(placed, total);
-  bestTimeEl.textContent = best ? t("best", { time: formatTime(Number(best)) }) : t("bestEmpty");
+  bestTimeEl.textContent = best ? t("best", { time: formatTime(best) }) : t("bestEmpty");
   progressBar.style.width = `${Math.round((placed / total) * 100)}%`;
   assistToggle.textContent = assistMode ? t("assistMode") : t("defaultMode");
   assistToggle.setAttribute("aria-pressed", String(assistMode));
@@ -636,6 +833,7 @@ function placeCat(row, col) {
     return;
   }
 
+  startTimer();
   history.push(new Map(cells));
   setState(row, col, "cat");
   setStatus("statusGood");
@@ -653,9 +851,9 @@ function checkWin() {
   if (rooms.size !== puzzle.solution.length) return;
   if (cats.some((cat) => placementViolation(cat.row, cat.col))) return;
 
-  const elapsed = Date.now() - startedAt;
-  const best = Number(localStorage.getItem(bestKey()) || 0);
-  if (!best || elapsed < best) localStorage.setItem(bestKey(), String(elapsed));
+  const elapsed = elapsedTime();
+  saveBestTime(difficulty, currentLevelNumber(), elapsed);
+  stopTimer();
   resultTitle.textContent = t("resultTitle");
   resultCopy.textContent = t("resultCopy", {
     time: formatTime(elapsed),
@@ -694,22 +892,27 @@ function launchCelebration() {
   }, 3600);
 }
 
-function resetPuzzle() {
+function resetPuzzle(options = {}) {
+  const { autoStart = false } = options;
   cells = new Map();
   history = [];
   mistakes = currentPack().hearts;
   hintCell = null;
   errorCell = null;
   startedAt = Date.now();
+  timer = 0;
+  timerStarted = false;
   statusValue = "";
-  statusKey = "statusStart";
+  statusKey = autoStart ? "statusStart" : "statusFirstCat";
   resultModal.classList.add("hidden");
+  if (autoStart) startTimer();
   render();
 }
 
 function nextPuzzle() {
-  puzzleIndex = (puzzleIndex + 1) % currentPack().puzzles.length;
-  resetPuzzle();
+  puzzleIndex += 1;
+  saveLevelProgress();
+  resetPuzzle({ autoStart: true });
 }
 
 function giveHint() {
@@ -744,7 +947,7 @@ document.querySelector("#undoBtn").addEventListener("click", () => {
   render();
 });
 document.querySelector("#hintBtn").addEventListener("click", giveHint);
-document.querySelector("#resetBtn").addEventListener("click", resetPuzzle);
+document.querySelector("#resetBtn").addEventListener("click", () => resetPuzzle({ autoStart: currentLevelNumber() > 1 }));
 document.querySelector("#nextBtn").addEventListener("click", nextPuzzle);
 document.querySelector("#modalNext").addEventListener("click", nextPuzzle);
 document.querySelector("#modalClose").addEventListener("click", () => resultModal.classList.add("hidden"));
@@ -753,7 +956,7 @@ difficultyTabs.addEventListener("click", (event) => {
   if (!button || button.dataset.difficulty === difficulty) return;
   difficulty = button.dataset.difficulty;
   localStorage.setItem("meowdoku-difficulty", difficulty);
-  puzzleIndex = 0;
+  puzzleIndex = loadLevelProgress(difficulty);
   resetPuzzle();
 });
 languageSelect.addEventListener("change", () => {
@@ -764,15 +967,29 @@ languageSelect.addEventListener("change", () => {
 });
 
 window.setInterval(() => {
-  timer = Date.now() - startedAt;
-  timerEl.textContent = formatTime(timer);
+  timerEl.textContent = formatTime(elapsedTime());
 }, 250);
 
-for (const [code, label] of languageCatalog) {
+for (const [code] of languageCatalog) {
+  i18n[code].level = levelLabels[code] || levelLabels.en;
+  i18n[code].statusFirstCat = firstCatLabels[code] || firstCatLabels.en;
+}
+
+function orderedLanguageCatalog() {
+  const preferred = detectLanguage();
+  return [...languageCatalog].sort(([aCode, aLabel], [bCode, bLabel]) => {
+    if (aCode === preferred) return -1;
+    if (bCode === preferred) return 1;
+    return aLabel.localeCompare(bLabel, "en");
+  });
+}
+
+for (const [code, label] of orderedLanguageCatalog()) {
   const option = document.createElement("option");
   option.value = code;
   option.textContent = label;
   languageSelect.appendChild(option);
 }
 
+saveLevelProgress();
 resetPuzzle();
