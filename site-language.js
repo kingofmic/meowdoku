@@ -10,29 +10,59 @@
     ["sv", "Svenska"], ["sw", "Kiswahili"], ["ta", "தமிழ்"], ["te", "తెలుగు"],
     ["th", "ไทย"], ["tr", "Türkçe"], ["uk", "Українська"], ["ur", "اردو"],
     ["vi", "Tiếng Việt"], ["zh", "简体中文"], ["zh-Hant", "繁體中文"]
-  ].sort((a, b) => a[1].localeCompare(b[1], "en"));
+  ];
 
   const languageCodes = new Set(languages.map(([code]) => code));
   const select = document.querySelector("#languageSelect");
   if (!select) return;
 
+  function pathParts() {
+    return window.location.pathname.split("/").filter(Boolean);
+  }
+
+  function pathLanguage() {
+    const [first] = pathParts();
+    return languageCodes.has(first) ? first : "";
+  }
+
+  function browserLang() {
+    const browserLanguages = navigator.languages?.length ? navigator.languages : [navigator.language || "en"];
+    for (const candidate of browserLanguages) {
+      const normalized = candidate.toLowerCase();
+      if (normalized === "zh-hant" || normalized.includes("zh-tw") || normalized.includes("zh-hk") || normalized.includes("zh-mo")) return "zh-Hant";
+      const code = normalized.split("-")[0];
+      if (languageCodes.has(code)) return code;
+    }
+    return "en";
+  }
+
   function currentLang() {
-    const pathPart = window.location.pathname.split("/").filter(Boolean)[0];
-    if (languageCodes.has(pathPart)) return pathPart;
-    return localStorage.getItem("meowdoku-language") || "en";
+    return pathLanguage() || localStorage.getItem("meowdoku-language") || browserLang();
+  }
+
+  function orderedLanguages() {
+    const preferred = browserLang();
+    return [...languages].sort(([aCode, aLabel], [bCode, bLabel]) => {
+      if (aCode === preferred) return -1;
+      if (bCode === preferred) return 1;
+      return aLabel.localeCompare(bLabel, "en");
+    });
+  }
+
+  function normalizedSlug() {
+    const parts = pathParts();
+    if (languageCodes.has(parts[0])) parts.shift();
+    return parts.join("/");
   }
 
   function targetPath(nextLang) {
-    const parts = window.location.pathname.split("/").filter(Boolean);
-    if (languageCodes.has(parts[0])) parts.shift();
-    const slug = parts.join("/");
-    if (slug === "languages") return nextLang === "en" ? "/languages/" : `/${nextLang}/`;
+    const slug = normalizedSlug();
     if (nextLang === "en") return slug ? `/${slug}/` : "/";
     return slug ? `/${nextLang}/${slug}/` : `/${nextLang}/`;
   }
 
   select.innerHTML = "";
-  for (const [code, label] of languages) {
+  for (const [code, label] of orderedLanguages()) {
     const option = document.createElement("option");
     option.value = code;
     option.textContent = label;
@@ -41,7 +71,9 @@
 
   select.value = currentLang();
   select.addEventListener("change", () => {
-    localStorage.setItem("meowdoku-language", select.value);
-    window.location.href = targetPath(select.value);
+    const nextLang = select.value;
+    localStorage.setItem("meowdoku-language", nextLang);
+    const nextPath = targetPath(nextLang);
+    if (nextPath !== window.location.pathname) window.location.href = nextPath;
   });
 })();
