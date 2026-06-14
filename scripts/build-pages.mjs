@@ -476,6 +476,128 @@ const topicNames = {
   glossary: { zh: "Meowdoku 术语表", "zh-Hant": "Meowdoku 術語表", ja: "Meowdoku 用語集", ko: "Meowdoku 용어집", es: "Glosario Meowdoku", fr: "Glossaire Meowdoku", de: "Meowdoku-Glossar", pt: "Glossário Meowdoku", ru: "Глоссарий Meowdoku" }
 };
 
+Object.assign(topicNames, {
+  "what-is-meowdoku": {
+    zh: "Meowdoku 是什么？",
+    "zh-Hant": "Meowdoku 是什麼？",
+    ja: "Meowdoku とは？",
+    ko: "Meowdoku란 무엇인가요?",
+    es: "¿Qué es Meowdoku?",
+    fr: "Qu'est-ce que Meowdoku ?",
+    de: "Was ist Meowdoku?",
+    pt: "O que é Meowdoku?",
+    ru: "Что такое Meowdoku?",
+    vi: "Meowdoku là gì?",
+    id: "Apa itu Meowdoku?",
+    it: "Che cos'è Meowdoku?",
+    nl: "Wat is Meowdoku?",
+    pl: "Czym jest Meowdoku?",
+    tr: "Meowdoku nedir?"
+  },
+  "is-meowdoku-cat-sudoku": {
+    zh: "Meowdoku 和猫咪数独一样吗？",
+    "zh-Hant": "Meowdoku 和貓咪數獨一樣嗎？",
+    ja: "Meowdoku は猫数独ですか？",
+    ko: "Meowdoku는 고양이 스도쿠인가요?",
+    es: "¿Meowdoku es sudoku de gatos?",
+    fr: "Meowdoku est-il un sudoku de chats ?",
+    de: "Ist Meowdoku Katzen-Sudoku?",
+    pt: "Meowdoku é sudoku de gatos?",
+    ru: "Meowdoku похоже на судоку с кошками?",
+    vi: "Meowdoku có giống sudoku mèo không?",
+    id: "Apakah Meowdoku seperti sudoku kucing?",
+    it: "Meowdoku è un sudoku con gatti?",
+    nl: "Is Meowdoku katten-sudoku?",
+    pl: "Czy Meowdoku to sudoku z kotami?",
+    tr: "Meowdoku kedi sudoku mu?"
+  },
+  "can-cats-touch-diagonally": {
+    zh: "Meowdoku 里的猫可以斜着相邻吗？",
+    "zh-Hant": "Meowdoku 裡的貓可以斜角相鄰嗎？",
+    ja: "Meowdoku で猫は斜めに隣接できますか？",
+    ko: "Meowdoku에서 고양이는 대각선으로 닿을 수 있나요?",
+    es: "¿Los gatos pueden tocarse en diagonal?",
+    fr: "Les chats peuvent-ils se toucher en diagonale ?",
+    de: "Dürfen Katzen diagonal berühren?",
+    pt: "Gatos podem tocar na diagonal?",
+    ru: "Могут ли кошки касаться по диагонали?",
+    vi: "Mèo có được chạm chéo không?",
+    id: "Bolehkah kucing bersentuhan diagonal?",
+    it: "I gatti possono toccarsi in diagonale?",
+    nl: "Mogen katten elkaar diagonaal raken?",
+    pl: "Czy koty mogą stykać się po przekątnej?",
+    tr: "Kediler çapraz temas edebilir mi?"
+  },
+  "best-beginner-strategy": {
+    zh: "Meowdoku 新手最佳策略",
+    "zh-Hant": "Meowdoku 新手最佳策略",
+    ja: "Meowdoku 初心者向け戦略",
+    ko: "Meowdoku 초보자 전략",
+    es: "Mejor estrategia para principiantes",
+    fr: "Meilleure stratégie débutant",
+    de: "Beste Strategie für Anfänger",
+    pt: "Melhor estratégia para iniciantes",
+    ru: "Лучшая стратегия для новичков",
+    vi: "Chiến lược cho người mới",
+    id: "Strategi pemula terbaik",
+    it: "Strategia migliore per principianti",
+    nl: "Beste beginnersstrategie",
+    pl: "Najlepsza strategia dla początkujących",
+    tr: "Yeni başlayanlar için strateji"
+  },
+  "how-assist-mode-works": {
+    zh: "Meowdoku 辅助模式怎么用？",
+    "zh-Hant": "Meowdoku 輔助模式怎麼用？",
+    ja: "Meowdoku のアシストモード",
+    ko: "Meowdoku 도움 모드",
+    es: "Cómo funciona el modo ayuda",
+    fr: "Comment fonctionne le mode aide",
+    de: "So funktioniert der Hilfemodus",
+    pt: "Como funciona o modo de ajuda",
+    ru: "Как работает режим помощи",
+    vi: "Chế độ trợ giúp hoạt động thế nào?",
+    id: "Cara kerja mode bantu",
+    it: "Come funziona la modalità aiuto",
+    nl: "Hoe werkt de hulpmodus?",
+    pl: "Jak działa tryb pomocy?",
+    tr: "Yardım modu nasıl çalışır?"
+  },
+  "which-difficulty": {
+    zh: "Meowdoku 应该选哪个难度？",
+    "zh-Hant": "Meowdoku 應該選哪個難度？",
+    ja: "Meowdoku の難易度の選び方",
+    ko: "Meowdoku 난이도 선택",
+    es: "Qué dificultad elegir",
+    fr: "Quelle difficulté choisir",
+    de: "Welche Schwierigkeit wählen?",
+    pt: "Qual dificuldade escolher",
+    ru: "Какую сложность выбрать?",
+    vi: "Nên chọn độ khó nào?",
+    id: "Tingkat kesulitan mana yang cocok?",
+    it: "Quale difficoltà scegliere?",
+    nl: "Welke moeilijkheid kies je?",
+    pl: "Jaki poziom trudności wybrać?",
+    tr: "Hangi zorluk seçilmeli?"
+  },
+  "play-without-download": {
+    zh: "Meowdoku 可以不用下载直接玩吗？",
+    "zh-Hant": "Meowdoku 可以不用下載直接玩嗎？",
+    ja: "Meowdoku はダウンロードなしで遊べますか？",
+    ko: "Meowdoku는 다운로드 없이 플레이할 수 있나요?",
+    es: "Jugar sin descargar",
+    fr: "Jouer sans téléchargement",
+    de: "Ohne Download spielen",
+    pt: "Jogar sem baixar",
+    ru: "Играть без скачивания",
+    vi: "Chơi không cần tải xuống",
+    id: "Main tanpa mengunduh",
+    it: "Gioca senza scaricare",
+    nl: "Spelen zonder download",
+    pl: "Graj bez pobierania",
+    tr: "İndirmeden oyna"
+  }
+});
+
 const localePacks = {
   zh: {
     titleSuffix: "在线猫咪逻辑谜题指南",
@@ -565,8 +687,36 @@ const genericLocalePacks = {
   uk: ["Гід з котячої логічної головоломки", "Грати в Meowdoku", "Правила", "Коротка відповідь", "Ключові моменти Meowdoku", "Питання про Meowdoku", "Пов'язані гайди", "Охоплені пошукові запити", "Meowdoku — логічна головоломка з кольоровими регіонами та котами. У кожному регіоні, рядку й стовпці має бути один кіт. Коти не можуть торкатися навіть по діагоналі."]
 };
 
+const genericSections = {
+  en: [["Rules", "Use rows, columns, colored regions and the no-touch rule to remove impossible cells."], ["Strategy", "Start with constrained regions, mark impossible cells, and place a cat only when the logic is certain."], ["Other names", "This page connects Meowdoku with cat sudoku, Queens puzzle, daily puzzle and common spelling variants."], ["Next step", "Open the game, start with Easy mode, then read the related guides."]],
+  es: [["Reglas", "Usa filas, columnas, regiones de color y la regla de no tocarse para eliminar casillas imposibles."], ["Estrategia", "Empieza por las regiones más limitadas, marca casillas imposibles y coloca un gato solo cuando la lógica sea clara."], ["Nombres relacionados", "Esta página conecta Meowdoku con sudoku de gatos, puzzle Queens, puzzle diario y variantes comunes del nombre."], ["Siguiente paso", "Abre el juego, empieza en modo Fácil y sigue con las guías relacionadas."]],
+  fr: [["Règles", "Utilisez les lignes, les colonnes, les régions colorées et la règle sans contact pour éliminer les cases impossibles."], ["Stratégie", "Commencez par les régions les plus contraintes, marquez les cases impossibles et placez un chat seulement quand la logique est certaine."], ["Noms liés", "Cette page relie Meowdoku au sudoku chat, au puzzle Queens, aux puzzles quotidiens et aux variantes du nom."], ["Étape suivante", "Ouvrez le jeu, commencez en mode facile, puis lisez les guides liés."]],
+  de: [["Regeln", "Nutze Reihen, Spalten, Farbbereiche und die Nicht-berühren-Regel, um unmögliche Felder auszuschließen."], ["Strategie", "Beginne mit stark eingeschränkten Bereichen, markiere unmögliche Felder und setze eine Katze erst bei sicherer Logik."], ["Ähnliche Namen", "Diese Seite verbindet Meowdoku mit Katzen-Sudoku, Queens-Rätseln, täglichen Puzzles und häufigen Namensvarianten."], ["Nächster Schritt", "Öffne das Spiel, starte mit Leicht und lies danach die passenden Guides."]],
+  pt: [["Regras", "Use linhas, colunas, regiões coloridas e a regra sem toque para eliminar casas impossíveis."], ["Estratégia", "Comece pelas regiões mais restritas, marque casas impossíveis e coloque um gato só quando a lógica for certa."], ["Nomes relacionados", "Esta página conecta Meowdoku com sudoku de gatos, puzzle Queens, puzzle diário e variações comuns do nome."], ["Próximo passo", "Abra o jogo, comece no modo fácil e depois leia os guias relacionados."]],
+  id: [["Aturan", "Gunakan baris, kolom, wilayah warna, dan aturan tidak bersentuhan untuk menghapus sel yang mustahil."], ["Strategi", "Mulai dari wilayah yang paling terbatas, tandai sel mustahil, lalu pasang kucing hanya saat logikanya pasti."], ["Nama terkait", "Halaman ini menghubungkan Meowdoku dengan sudoku kucing, puzzle Queens, puzzle harian, dan variasi nama umum."], ["Langkah berikutnya", "Buka permainan, mulai dari mode mudah, lalu baca panduan terkait."]],
+  it: [["Regole", "Usa righe, colonne, regioni colorate e la regola senza contatto per eliminare le celle impossibili."], ["Strategia", "Inizia dalle regioni più vincolate, segna le celle impossibili e piazza un gatto solo quando la logica è sicura."], ["Nomi correlati", "Questa pagina collega Meowdoku a sudoku con gatti, puzzle Queens, puzzle giornalieri e varianti comuni del nome."], ["Prossimo passo", "Apri il gioco, inizia con facile e poi leggi le guide correlate."]],
+  nl: [["Regels", "Gebruik rijen, kolommen, kleurgebieden en de niet-aanraken-regel om onmogelijke vakjes weg te strepen."], ["Strategie", "Begin met de meest beperkte gebieden, markeer onmogelijke vakjes en plaats pas een kat als de logica zeker is."], ["Verwante namen", "Deze pagina verbindt Meowdoku met katten-sudoku, Queens-puzzels, dagelijkse puzzels en veelvoorkomende naamvarianten."], ["Volgende stap", "Open het spel, begin met makkelijk en lees daarna de verwante gidsen."]],
+  pl: [["Zasady", "Używaj rzędów, kolumn, kolorowych regionów i zasady braku styku, aby eliminować niemożliwe pola."], ["Strategia", "Zacznij od najbardziej ograniczonych regionów, oznaczaj pola niemożliwe i stawiaj kota tylko wtedy, gdy logika jest pewna."], ["Powiązane nazwy", "Ta strona łączy Meowdoku z sudoku z kotami, Queens puzzle, codziennymi łamigłówkami i częstymi wariantami nazwy."], ["Następny krok", "Otwórz grę, zacznij od łatwego poziomu, a potem przeczytaj powiązane poradniki."]],
+  tr: [["Kurallar", "İmkansız kareleri elemek için satırları, sütunları, renkli bölgeleri ve temas etmeme kuralını kullan."], ["Strateji", "En kısıtlı bölgelerden başla, imkansız kareleri işaretle ve kediyi yalnızca mantık kesinleşince yerleştir."], ["İlgili adlar", "Bu sayfa Meowdoku'yu kedi sudoku, Queens bulmacası, günlük bulmaca ve yaygın ad varyasyonlarıyla bağlar."], ["Sonraki adım", "Oyunu aç, kolay modla başla ve ilgili rehberleri oku."]],
+  vi: [["Luật chơi", "Dùng hàng, cột, vùng màu và quy tắc không chạm để loại bỏ các ô không thể đặt mèo."], ["Chiến lược", "Bắt đầu từ vùng bị giới hạn nhiều nhất, đánh dấu ô không thể và chỉ đặt mèo khi logic đã chắc chắn."], ["Tên liên quan", "Trang này liên kết Meowdoku với sudoku mèo, puzzle Queens, câu đố hằng ngày và các biến thể tên thường gặp."], ["Bước tiếp theo", "Mở trò chơi, bắt đầu với chế độ dễ rồi đọc các hướng dẫn liên quan."]]
+};
+
+const genericTermsLabel = {
+  es: "Nombres relacionados",
+  fr: "Noms liés",
+  de: "Ähnliche Namen",
+  pt: "Nomes relacionados",
+  id: "Nama terkait",
+  it: "Nomi correlati",
+  nl: "Verwante namen",
+  pl: "Powiązane nazwy",
+  tr: "İlgili adlar",
+  vi: "Tên liên quan"
+};
+
 for (const [code, values] of Object.entries(genericLocalePacks)) {
   if (localePacks[code]) continue;
+  const sections = genericSections[code] || genericSections.en;
   localePacks[code] = {
     titleSuffix: values[0],
     play: values[1],
@@ -575,12 +725,105 @@ for (const [code, values] of Object.entries(genericLocalePacks)) {
     signals: values[4],
     questions: values[5],
     related: values[6],
-    terms: values[7],
+    terms: genericTermsLabel[code] || values[7],
     note: values[8],
     summary: [values[8], "Meowdoku / Meow Doku / cat sudoku.", "Rules, strategy, hints and variants are connected here."],
-    sections: [["Meowdoku", values[8]], ["Rules", "Use rows, columns, colored regions and the no-touch rule to remove impossible cells."], ["Strategy", "Start with constrained regions, mark impossible cells, and place a cat only when the logic is certain."], ["Other names", "This page connects Meowdoku with cat sudoku, Queens puzzle, daily puzzle and common spelling variants."], ["Next step", "Open the game, start with Easy mode, then read the related guides."]],
+    sections: [["Meowdoku", values[8]], ...sections],
     faqs: [["What is Meowdoku?", values[8]], ["Do I need to guess?", "No. Meowdoku can be solved with elimination and placement logic."], ["Where should I start?", "Start with the rules page, then play Easy mode."]]
   };
+}
+
+let keywordResearch = { globalKeywordClusters: [], questionClusters: [], languageClusters: {} };
+try {
+  keywordResearch = JSON.parse(await fs.readFile(path.join(root, "data", "keyword-research.json"), "utf8"));
+} catch {
+  keywordResearch = { globalKeywordClusters: [], questionClusters: [], languageClusters: {} };
+}
+
+const answerTopicSpecs = [
+  {
+    slug: "what-is-meowdoku",
+    question: "What is Meowdoku?",
+    title: "What Is Meowdoku? Cat Sudoku and Queens Puzzle Explained",
+    intent: "question answer",
+    answer: "Meowdoku is a cat-themed logic puzzle where each colored room, row, and column needs exactly one cat, and cats cannot touch, even diagonally.",
+    focus: "definition"
+  },
+  {
+    slug: "is-meowdoku-cat-sudoku",
+    question: "Is Meowdoku the same as cat sudoku?",
+    title: "Is Meowdoku Cat Sudoku? Similarities and Differences",
+    intent: "question answer",
+    answer: "Meowdoku feels Sudoku-like because rows and columns matter, but it uses cats, colored rooms, and no-touch placement instead of numbers.",
+    focus: "comparison"
+  },
+  {
+    slug: "can-cats-touch-diagonally",
+    question: "Can cats touch diagonally in Meowdoku?",
+    title: "Can Cats Touch Diagonally in Meowdoku?",
+    intent: "question answer",
+    answer: "No. Cats cannot touch horizontally, vertically, or diagonally. The diagonal rule is one of the easiest mistakes to miss.",
+    focus: "rule"
+  },
+  {
+    slug: "best-beginner-strategy",
+    question: "What is the best beginner strategy for Meowdoku?",
+    title: "Best Beginner Meowdoku Strategy: Mark Before You Place",
+    intent: "question answer",
+    answer: "The best beginner strategy is to mark impossible cells first, then place a cat only when a room, row, or column has one legal cell left.",
+    focus: "strategy"
+  },
+  {
+    slug: "how-assist-mode-works",
+    question: "How does assist mode work in Meowdoku?",
+    title: "How Meowdoku Assist Mode Works",
+    intent: "question answer",
+    answer: "Assist mode shows blocked cells around placed cats so players can learn the no-touch rule without changing the puzzle solution.",
+    focus: "assist"
+  },
+  {
+    slug: "which-difficulty",
+    question: "Which Meowdoku difficulty should I choose?",
+    title: "Which Meowdoku Difficulty Should You Choose?",
+    intent: "question answer",
+    answer: "Choose Easy for 6x6 learning, Normal for a daily balance, and Hard for deeper 8x8 deduction. Every level keeps three hearts.",
+    focus: "difficulty"
+  },
+  {
+    slug: "play-without-download",
+    question: "Can I play Meowdoku online without downloading an app?",
+    title: "Play Meowdoku Online Without Downloading an App",
+    intent: "question answer",
+    answer: "Yes. Meowdoku Garden runs in the browser, so you can play instantly on mobile, tablet, or desktop.",
+    focus: "web play"
+  }
+];
+
+function makeAnswerTopic(spec) {
+  return {
+    slug: spec.slug,
+    title: spec.title,
+    h1: spec.question,
+    description: `${spec.answer} This guide also links related Meowdoku rules, strategies, and puzzle names.`,
+    intent: spec.intent,
+    keywords: ["meowdoku", "meow doku", "cat sudoku", spec.focus, spec.question.toLowerCase()],
+    summary: [spec.answer, "Use the related guides to continue from the question into rules, strategy, hints, or daily play.", "The page is written for players who want a direct answer before they start solving."],
+    sections: [
+      ["Short Answer", spec.answer],
+      ["Why It Matters", "This question comes up because Meowdoku looks simple at first, but the colored rooms, rows, columns, and no-touch rule combine into a real deduction puzzle."],
+      ["What to Try Next", "Open the board, start on Easy if you are learning, and use marks before placing cats. If you get stuck, check hints, rules, and strategy pages instead of guessing."],
+      ["Related Names", "Players may describe the same puzzle as Meowdoku, Meow Doku, cat sudoku, cat queens puzzle, no-touch puzzle, or color-region logic puzzle."]
+    ],
+    faqs: [
+      [spec.question, spec.answer],
+      ["Where should I continue?", "Read the rules page, then try a Normal board when the basic no-touch pattern feels clear."],
+      ["Is this answer enough to solve a board?", "It gives the starting idea. The related strategy and hints pages explain the deductions in more detail."]
+    ]
+  };
+}
+
+for (const spec of answerTopicSpecs) {
+  if (!topics.some((topic) => topic.slug === spec.slug)) topics.push(makeAnswerTopic(spec));
 }
 
 function loadEnv(text) {
@@ -658,7 +901,8 @@ function titleCase(slug) {
 }
 
 function localTopicName(slug, lang) {
-  return topicNames[slug]?.[lang] || (lang === "en" ? (topics.find((item) => item.slug === slug)?.h1 || titleCase(slug)) : `Meowdoku ${languageLabel(lang)}`);
+  const topic = topics.find((item) => item.slug === slug);
+  return topicNames[slug]?.[lang] || topic?.h1 || titleCase(slug);
 }
 
 function navLabels(lang) {
@@ -674,27 +918,68 @@ function navLabels(lang) {
     pt: { play: "Jogar", how: "Como jogar", rules: "Regras", strategy: "Estratégia", daily: "Diário", languages: "Idiomas", language: "idioma", open: "Abrir" },
     ru: { play: "Играть", how: "Как играть", rules: "Правила", strategy: "Стратегия", daily: "Ежедневно", languages: "Языки", language: "язык", open: "Открыть" }
   };
-  return labels[lang] || { play: "Meowdoku", how: "Meowdoku", rules: "Meowdoku", strategy: "Meowdoku", daily: "Meowdoku", languages: languageLabel(lang), language: languageLabel(lang), open: "Meowdoku" };
+  if (labels[lang]) return labels[lang];
+  const pack = localePacks[lang] || fallbackPack(lang);
+  return {
+    play: pack.play || "Play",
+    how: pack.learn || "Guide",
+    rules: pack.learn || "Rules",
+    strategy: pack.related || "Strategy",
+    daily: pack.quick || "Daily",
+    languages: languageLabel(lang),
+    language: pack.language || languageLabel(lang),
+    open: navLabels("en").open
+  };
 }
 
 function enrichForLanguage(topic, lang) {
-  if (lang === "en") return topic;
+  if (lang === "en") {
+    const research = keywordResearch.languageClusters?.en || {};
+    const researchTerms = Array.isArray(research.terms) ? research.terms : [];
+    const researchQuestions = Array.isArray(research.questions) ? research.questions : [];
+    const researchSection = researchTerms.length
+      ? [["Related Meowdoku names players use", `${researchTerms.slice(0, 10).join(", ")}.`]]
+      : [];
+    const researchFaqs = researchQuestions.slice(0, 3).map((question) => [
+      question,
+      topic.summary?.[0] || "Meowdoku is a cat-themed logic puzzle with colored rooms, rows, columns, and no-touch placement."
+    ]);
+    return {
+      ...topic,
+      sections: [...topic.sections, ...researchSection],
+      faqs: [...researchFaqs, ...topic.faqs].slice(0, 6),
+      keywords: [...topic.keywords, ...researchTerms]
+    };
+  }
   const label = languageLabel(lang);
   const introLine = languages.find(([code]) => code === lang)?.[2] || `Play Meowdoku in ${label}`;
   const pack = localePacks[lang] || fallbackPack(lang);
+  const research = keywordResearch.languageClusters?.[lang] || {};
+  const researchTerms = Array.isArray(research.terms) ? research.terms : [];
+  const researchQuestions = Array.isArray(research.questions) ? research.questions : [];
   const localName = topicNames[topic.slug]?.[lang] || `${topic.h1} - ${label}`;
+  const researchSection = researchTerms.length
+    ? [[`${localName} - ${pack.terms || "Related names"}`, `${researchTerms.slice(0, 8).join(", ")}.`]]
+    : [];
+  const researchFaqs = researchQuestions.slice(0, 3).map((question) => [
+    question,
+    `${introLine}. ${pack.summary?.[0] || "Meowdoku is a cat logic puzzle."}`
+  ]);
   return {
     ...topic,
     title: `${localName} - ${pack.titleSuffix}`,
     h1: localName,
     description: `${introLine}. ${pack.summary[0]} ${pack.summary[1]}`,
     summary: pack.summary,
-    sections: pack.sections.map(([heading, copy]) => [
+    sections: [
+      ...pack.sections.map(([heading, copy]) => [
       heading.includes("Meowdoku") ? heading : `${heading} - ${localName}`,
       copy.replaceAll("Meowdoku", "Meowdoku")
-    ]),
-    faqs: pack.faqs,
-    keywords: [...topic.keywords, `meowdoku ${label}`, `cat sudoku ${label}`]
+      ]),
+      ...researchSection
+    ],
+    faqs: [...researchFaqs, ...pack.faqs].slice(0, 6),
+    keywords: [...topic.keywords, ...researchTerms, `meowdoku ${label}`, `cat sudoku ${label}`]
   };
 }
 
@@ -767,7 +1052,7 @@ function keywordLinks(keywords, lang) {
 }
 
 function relatedLinks(currentSlug, lang) {
-  const priority = ["how-to-play", "rules", "tips", "strategy", "levels", "daily", "queens-puzzle", "cat-sudoku", "meow-doku", "variants", "faq", "glossary"];
+  const priority = ["how-to-play", "what-is-meowdoku", "is-meowdoku-cat-sudoku", "can-cats-touch-diagonally", "best-beginner-strategy", "how-assist-mode-works", "which-difficulty", "play-without-download", "rules", "tips", "strategy", "levels", "daily", "queens-puzzle", "cat-sudoku", "meow-doku", "variants", "faq", "glossary"];
   return priority.filter((slug) => slug !== currentSlug).slice(0, 7).map((slug) => {
     return `<a href="${routeFor(slug, lang)}">${escapeHtml(localTopicName(slug, lang))}</a>`;
   }).join("");
