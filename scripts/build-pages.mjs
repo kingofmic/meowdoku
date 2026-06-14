@@ -154,7 +154,7 @@ const topics = [
     ],
     faqs: [
       ["Does hard mode have fewer hearts?", "No. All Meowdoku levels use three hearts."],
-      ["Which level is best for SEO visitors learning the game?", "Easy 6x6 is the clearest first experience."],
+      ["Which level is best for learning the game?", "Easy 6x6 is the clearest first experience."],
       ["Can I switch levels anytime?", "Yes. Use the level tabs above the board."]
     ]
   },
@@ -171,7 +171,7 @@ const topics = [
       ["A Three-Minute Routine", "Start with the smallest room, mark obvious no-touch cells, place the first forced cat, then rescan rows and columns."],
       ["Track Improvement", "The timer and best time make progress visible without turning the puzzle into a race."],
       ["Play Without Downloading", "Because Meowdoku Garden is web-based, the daily puzzle habit works on desktop, tablet, and phone."],
-      ["Shareable Search Terms", "Friends may search Meowdoku, Meow Doku, cat sudoku, daily cat puzzle, or Queens puzzle. The site covers those paths."]
+      ["How Friends May Find It", "Friends may look for Meowdoku, Meow Doku, cat sudoku, daily cat puzzle, or Queens puzzle. Those names all point back to the same kind of cat logic challenge."]
     ],
     faqs: [
       ["Is Meowdoku good for a daily puzzle routine?", "Yes. Boards are short, visual, and logic-driven."],
@@ -255,10 +255,10 @@ const topics = [
       ["What Makes It Different", "Sudoku uses boxes and digits. Meowdoku uses colored rooms, no-touch adjacency, and visual placement."],
       ["A Friendlier First Impression", "Cat Sudoku is easy to explain: every room needs a cat, but cats cannot share rows, columns, or touch."],
       ["Good for Visual Solvers", "Because the board uses color and shape, Meowdoku can be easier to scan than number-heavy puzzles."],
-      ["Search Variations", "Players may search cat sudoku, meow sudoku, meow doku, cat queens puzzle, or Meowdoku online."]
+      ["Other Names", "Players may call it cat sudoku, meow sudoku, meow doku, cat queens puzzle, or Meowdoku online."]
     ],
     faqs: [
-      ["Is Cat Sudoku the same as Meowdoku?", "Cat Sudoku is a useful search phrase for Meowdoku-style cat placement logic."],
+      ["Is Cat Sudoku the same as Meowdoku?", "Cat Sudoku is a natural way to describe Meowdoku-style cat placement logic."],
       ["Are there numbers in Meowdoku?", "No. The puzzle uses cats and colored rooms instead of numbers."],
       ["Is it free online?", "Yes. Meowdoku Garden is free to play in the browser."]
     ]
@@ -276,7 +276,7 @@ const topics = [
       ["Shape Beats Size", "A large room can be easy if it is squeezed into one row. A small room can be hard if its few cells interact with many neighbors."],
       ["Color Helps Memory", "Color lets players remember which cells belong together without reading coordinates."],
       ["Room Locks", "When a room's legal cells all sit in one row or column, that line becomes locked for the room."],
-      ["Design Value", "Color-region logic gives Meowdoku its identity and creates SEO overlap with region puzzle, Queens puzzle, and Star Battle searches."]
+      ["Why Region Shapes Matter", "Color-region logic gives Meowdoku its identity. The rooms create the same satisfying placement pressure that players enjoy in region puzzles, Queens puzzles, and Star Battle."]
     ],
     faqs: [
       ["Why does Meowdoku use colored rooms?", "Colored rooms define the one-cat-per-region rule."],
@@ -318,7 +318,7 @@ const topics = [
       ["When to Ask for a Hint", "Use a hint after you have checked every unsolved room, unused row, and unused column at least once."],
       ["Learn from the Hint", "Do not just place the hinted cat. Ask which rule made that cell useful: room pressure, row pressure, column pressure, or no-touch logic."],
       ["Keep Momentum", "A single hint can restart a board without spoiling the whole solve."],
-      ["SEO Search Intent", "Many players search Meowdoku hints when they are stuck. A useful hints page should teach the next deduction, not only reveal answers."]
+      ["Better Hints", "When players get stuck, the best help teaches the next deduction instead of simply revealing an answer."]
     ],
     faqs: [
       ["Does a hint solve the whole board?", "No. A hint gives direction for the next useful move."],
@@ -349,44 +349,44 @@ const topics = [
   },
   {
     slug: "meow-doku",
-    title: "Meow Doku Online - Meowdoku for Players Searching With a Space",
+    title: "Meow Doku Online - Meowdoku With a Space",
     h1: "Meow Doku Online",
     description: "Looking for Meow Doku, Meowdokou, Meow Sudoku, or Meowdoku? Play the free cat logic puzzle online and learn the rules.",
     intent: "variant keyword",
     keywords: ["meow doku", "meow dokou", "meow sudoku", "meowdoku online"],
     summary: ["Same puzzle idea.", "Common spelling variation.", "Instant browser play."],
     sections: [
-      ["Meowdoku or Meow Doku", "Search engines see both versions. Players often add a space because the name sounds like a playful version of Sudoku."],
-      ["Other Searches", "Meowdokou, meow sudoku, cat sudoku, cat queens, and color region puzzle are all natural ways people may look for this game."],
-      ["Why This Page Exists", "A useful SEO page should help the misspelled or variant searcher find the real game quickly."],
+      ["Meowdoku or Meow Doku", "Both versions point to the same idea. Players often add a space because the name sounds like a playful version of Sudoku."],
+      ["Other Names", "Meowdokou, meow sudoku, cat sudoku, cat queens, and color region puzzle are all natural ways people may describe this game."],
+      ["Finding the Right Game", "If you used a spaced name, a misspelling, or a similar puzzle phrase, this page points you back to the playable Meowdoku board quickly."],
       ["Start Playing", "The homepage has the playable board at the top, with Easy, Normal, and Hard modes."],
       ["Learn the Rules", "If the name brought you here, the core rule is simple: one cat per room, row, and column, with no touching."]
     ],
     faqs: [
       ["Is Meow Doku the same as Meowdoku?", "For this site, yes. Meow Doku is a spacing variation of Meowdoku."],
       ["Is there a download?", "No download is needed for the web version."],
-      ["Why target misspellings?", "Because players often discover new games through imperfect searches."]
+      ["What if I misspelled the name?", "You are still in the right place. Meow Doku, Meowdokou, and Meow Sudoku are easy ways to arrive at Meowdoku."]
     ]
   },
   {
     slug: "variants",
-    title: "Meowdoku Search Variants - Meow Doku, Cat Sudoku, and Puzzle Names",
-    h1: "Meowdoku Search Variants",
-    description: "A guide to Meowdoku search variants including Meow Doku, cat sudoku, meow sudoku, cat queens puzzle, and region logic puzzle.",
-    intent: "keyword variants",
-    keywords: ["meowdoku variants", "meow doku", "cat sudoku", "meow sudoku", "cat queens puzzle"],
-    summary: ["Brand term.", "Spacing variants.", "Related puzzle categories."],
+    title: "Meowdoku Names - Meow Doku, Miaodoku, Catdoku, Kittydoku, and Cat Sudoku",
+    h1: "Meowdoku Names and Similar Puzzle Terms",
+    description: "Find Meowdoku even if you know it as Meow Doku, Miaodoku, Catdoku, Kittydoku, meow sudoku, cat sudoku, cat queens puzzle, or region logic puzzle.",
+    intent: "names and puzzle terms",
+    keywords: ["meowdoku", "meow doku", "miaodoku", "catdoku", "kittydoku", "meow sudoku", "cat sudoku", "cat queens puzzle"],
+    summary: ["Meowdoku is the main name for this cat logic puzzle.", "Meow Doku, Miaodoku, Catdoku, Kittydoku, and Meow Sudoku are common ways people may describe it.", "The rules connect it to cat sudoku, Queens puzzles, no-touch puzzles, and color-region logic games."],
     sections: [
-      ["Primary Term: Meowdoku", "Meowdoku is the most important search term and the brand anchor for this site."],
-      ["Spacing Term: Meow Doku", "Meow Doku catches players who hear the word before seeing it written."],
-      ["Category Term: Cat Sudoku", "Cat Sudoku explains the experience to players who understand row and column logic."],
-      ["Related Term: Queens Puzzle", "Queens puzzle connects Meowdoku to established placement logic games."],
-      ["Long-Tail Terms", "Daily cat logic puzzle, no-touch puzzle, colored room puzzle, and 8x8 cat puzzle help specific search intents land on useful pages."]
+      ["Meowdoku", "Meowdoku is the main name used on this site: a cat-themed logic puzzle with colored rooms, row and column rules, and no-touch placement."],
+      ["Meow Doku", "Some players add a space because the name sounds like a playful twist on Sudoku. The rules and playable board are the same."],
+      ["Miaodoku and Misspellings", "Miaodoku, meowdokou, and similar spellings usually mean players are trying to find the same cat puzzle from memory."],
+      ["Kittydoku and Catdoku", "Kittydoku and Catdoku are natural descriptions for a cute cat placement puzzle, especially for people who have not seen the official name yet."],
+      ["Related Puzzle Names", "Cat sudoku, cat queens puzzle, no-touch puzzle, colored room puzzle, and region logic puzzle all describe parts of the Meowdoku experience."]
     ],
     faqs: [
-      ["What is the top keyword?", "Meowdoku is the top keyword."],
-      ["Should pages mention variants?", "Yes, but naturally and with useful explanations."],
-      ["Do variants help GEO?", "Yes. AI answers often connect synonyms and categories when pages explain them clearly."]
+      ["Is Meow Doku the same as Meowdoku?", "Yes. Meow Doku is a common spaced version of the same name."],
+      ["Are Miaodoku, Catdoku, and Kittydoku official names?", "They are not the main name here, but they are understandable ways people describe a cat logic puzzle."],
+      ["What puzzle category is Meowdoku closest to?", "It feels like a mix of cat sudoku, Queens puzzle placement, no-touch logic, and colored-region deduction."]
     ]
   },
   {
@@ -401,7 +401,7 @@ const topics = [
       ["Designed for Touch", "Cells are large enough to tap, and the board scales for phone screens without hiding the game controls."],
       ["Long-Press Marking", "On touch devices, long-pressing a cell can mark it as impossible, keeping mobile solving fast."],
       ["Header Language Picker", "The global language picker stays in the header so mobile visitors can reach the right language entry from every page."],
-      ["No App Store Required", "The browser version makes Meowdoku accessible to search visitors immediately."],
+      ["No App Store Required", "The browser version makes Meowdoku easy to open immediately."],
       ["Best Mobile Habit", "Use Easy or Normal mode on the phone, then use Hard mode on larger screens when you want slower analysis."]
     ],
     faqs: [
@@ -423,7 +423,7 @@ const topics = [
       ["Is Meowdoku Sudoku?", "It is Sudoku-like because rows and columns matter, but the colored rooms and no-touch rule make it closer to Queens or Star Battle."],
       ["Is Meowdoku Free?", "Meowdoku Garden is free to play online in the browser."],
       ["What Are Hearts?", "Hearts show how many mistakes you can make before the board resets."],
-      ["Which Keywords Matter?", "Meowdoku matters most, followed by Meow Doku, cat sudoku, meow sudoku, cat queens puzzle, and color region puzzle."]
+      ["What Other Names Do Players Use?", "Players may call it Meow Doku, cat sudoku, meow sudoku, cat queens puzzle, or a color region puzzle."]
     ],
     faqs: [
       ["What does Meowdoku mean?", "It combines a cat theme with Sudoku-like logic."],
@@ -438,7 +438,7 @@ const topics = [
     description: "A Meowdoku glossary explaining colored rooms, marks, assist mode, hearts, no-touch logic, row locks, and cat sudoku terms.",
     intent: "glossary",
     keywords: ["meowdoku glossary", "meowdoku terms", "cat sudoku glossary", "queens puzzle terms"],
-    summary: ["Puzzle vocabulary.", "Beginner-friendly definitions.", "Useful for AI answers."],
+    summary: ["Puzzle vocabulary.", "Beginner-friendly definitions.", "Clear names for every rule."],
     sections: [
       ["Colored Room", "A connected region of cells with the same room identity. Each colored room needs exactly one cat."],
       ["Mark", "A mark is a dot placed on a cell that cannot contain a cat. Marks help track deductions."],
@@ -447,7 +447,7 @@ const topics = [
       ["Room Lock", "A room lock happens when all legal cells for a room sit in a single row or column."]
     ],
     faqs: [
-      ["Why have a glossary?", "Glossaries help beginners and give search engines clear entity definitions."],
+      ["Why have a glossary?", "Glossaries help beginners learn the names of rules, marks, rooms, hearts, and no-touch patterns."],
       ["Is a mark the same as a cat?", "No. A mark means a cat cannot go there."],
       ["What is a row lock?", "A row lock reserves a row for one room's cat."]
     ]
@@ -470,7 +470,7 @@ const topicNames = {
   hints: { zh: "Meowdoku 提示", "zh-Hant": "Meowdoku 提示", ja: "Meowdoku ヒント", ko: "Meowdoku 힌트", es: "Pistas de Meowdoku", fr: "Indices Meowdoku", de: "Meowdoku-Hinweise", pt: "Dicas de ajuda", ru: "Подсказки Meowdoku" },
   mistakes: { zh: "Meowdoku 常见错误", "zh-Hant": "Meowdoku 常見錯誤", ja: "Meowdoku よくあるミス", ko: "Meowdoku 흔한 실수", es: "Errores comunes", fr: "Erreurs fréquentes", de: "Häufige Fehler", pt: "Erros comuns", ru: "Частые ошибки" },
   "meow-doku": { zh: "Meow Doku 在线", "zh-Hant": "Meow Doku 線上版", ja: "Meow Doku オンライン", ko: "Meow Doku 온라인", es: "Meow Doku online", fr: "Meow Doku en ligne", de: "Meow Doku online", pt: "Meow Doku online", ru: "Meow Doku онлайн" },
-  variants: { zh: "Meowdoku 搜索变体", "zh-Hant": "Meowdoku 搜尋變體", ja: "Meowdoku 検索バリエーション", ko: "Meowdoku 검색 변형", es: "Variantes de búsqueda", fr: "Variantes de recherche", de: "Suchvarianten", pt: "Variações de busca", ru: "Варианты поиска" },
+  variants: { zh: "Meowdoku 常见名称", "zh-Hant": "Meowdoku 常見名稱", ja: "Meowdoku のよくある名前", ko: "Meowdoku 자주 쓰는 이름", es: "Nombres comunes", fr: "Noms courants", de: "Haeufige Namen", pt: "Nomes comuns", ru: "Другие названия" },
   mobile: { zh: "Meowdoku 手机版", "zh-Hant": "Meowdoku 手機版", ja: "Meowdoku モバイル", ko: "Meowdoku 모바일", es: "Meowdoku móvil", fr: "Meowdoku mobile", de: "Meowdoku mobil", pt: "Meowdoku mobile", ru: "Meowdoku на телефоне" },
   faq: { zh: "Meowdoku 常见问题", "zh-Hant": "Meowdoku 常見問題", ja: "Meowdoku FAQ", ko: "Meowdoku FAQ", es: "Preguntas frecuentes", fr: "FAQ Meowdoku", de: "Meowdoku FAQ", pt: "FAQ Meowdoku", ru: "FAQ Meowdoku" },
   glossary: { zh: "Meowdoku 术语表", "zh-Hant": "Meowdoku 術語表", ja: "Meowdoku 用語集", ko: "Meowdoku 용어집", es: "Glosario Meowdoku", fr: "Glossaire Meowdoku", de: "Meowdoku-Glossar", pt: "Glossário Meowdoku", ru: "Глоссарий Meowdoku" }
@@ -485,15 +485,15 @@ const localePacks = {
     signals: "Meowdoku 重点",
     questions: "玩家常问的 Meowdoku 问题",
     related: "相关 Meowdoku 指南",
-    terms: "覆盖的搜索词",
-    note: "这个页面围绕 Meowdoku 的真实搜索意图组织内容：玩法、规则、策略、难度、变体关键词和每日游玩入口都互相连接。",
+    terms: "相关名称",
+    note: "这个页面把 Meowdoku 的玩法、规则、策略、难度、常见别名和每日游玩入口整理在一起，方便你快速找到适合自己的下一步。",
     summary: ["Meowdoku 是一个猫咪主题的区域放置逻辑谜题。", "每个彩色房间、每一行、每一列都只能有一只猫。", "猫不能相邻，斜角也不可以。"],
     sections: [
       ["核心规则", "先观察彩色区域，再结合行、列和不相邻规则排除不可能的格子。不要靠猜，先标记，再放猫。"],
       ["解题思路", "优先找被限制最多的房间。一个房间如果只剩一行或一列可用，就会形成很强的 Meowdoku 锁定。"],
-      ["为什么这个页面有价值", "搜索 Meowdoku 的人可能想知道怎么玩、是否像数独、困难题怎么解、或者 Meow Doku 是否是同一个游戏。本页直接回答这些意图。"],
+      ["为什么这个页面有价值", "有些玩家想知道 Meowdoku 怎么玩、是否像数独、困难题怎么解，或者 Meow Doku 是否是同一个游戏。本页把这些常见问题集中说明。"],
       ["适合谁玩", "如果你喜欢 Sudoku、Queens、Star Battle、Nonogram 或每日逻辑题，Meowdoku 会很容易上手。"],
-      ["下一步", "读完本页后可以回到首页从简单模式开始，也可以继续查看规则、策略、困难题和搜索变体页面。"]
+      ["下一步", "读完本页后可以回到首页从简单模式开始，也可以继续查看规则、策略、困难题和常见名称页面。"]
     ],
     faqs: [["Meowdoku 是什么？", "Meowdoku 是一个猫咪主题的逻辑谜题，需要在每个彩色区域放一只猫。"], ["需要猜吗？", "不需要。好的 Meowdoku 题目可以通过排除和锁定推理完成。"], ["和数独一样吗？", "它有行列限制，像数独；但彩色区域和不相邻规则更接近 Queens 类谜题。"]]
   },
@@ -505,15 +505,15 @@ const localePacks = {
     signals: "Meowdoku 重點",
     questions: "玩家常問的 Meowdoku 問題",
     related: "相關 Meowdoku 指南",
-    terms: "涵蓋的搜尋詞",
-    note: "這個頁面圍繞 Meowdoku 的真實搜尋意圖整理內容：玩法、規則、策略、難度、變體關鍵字和每日遊玩入口都彼此連結。",
+    terms: "相關名稱",
+    note: "這個頁面把 Meowdoku 的玩法、規則、策略、難度、常見別名和每日遊玩入口整理在一起，方便你快速找到適合自己的下一步。",
     summary: ["Meowdoku 是一個貓咪主題的區域放置邏輯謎題。", "每個彩色房間、每一行、每一列都只能有一隻貓。", "貓不能相鄰，斜角也不可以。"],
     sections: [
       ["核心規則", "先觀察彩色區域，再結合行、列和不相鄰規則排除不可能的格子。不要靠猜，先標記，再放貓。"],
       ["解題思路", "優先找被限制最多的房間。房間如果只剩一行或一列可用，就會形成很強的 Meowdoku 鎖定。"],
-      ["為什麼這個頁面有價值", "搜尋 Meowdoku 的人可能想知道怎麼玩、是否像數獨、困難題怎麼解，或 Meow Doku 是否是同一個遊戲。本頁直接回答這些意圖。"],
+      ["為什麼這個頁面有價值", "有些玩家想知道 Meowdoku 怎麼玩、是否像數獨、困難題怎麼解，或 Meow Doku 是否是同一個遊戲。本頁把這些常見問題集中說明。"],
       ["適合誰玩", "如果你喜歡 Sudoku、Queens、Star Battle、Nonogram 或每日邏輯題，Meowdoku 會很容易上手。"],
-      ["下一步", "讀完本頁後可以回到首頁從簡單模式開始，也可以繼續查看規則、策略、困難題和搜尋變體頁面。"]
+      ["下一步", "讀完本頁後可以回到首頁從簡單模式開始，也可以繼續查看規則、策略、困難題和常見名稱頁面。"]
     ],
     faqs: [["Meowdoku 是什麼？", "Meowdoku 是一個貓咪主題的邏輯謎題，需要在每個彩色區域放一隻貓。"], ["需要猜嗎？", "不需要。好的 Meowdoku 題目可以透過排除和鎖定推理完成。"], ["和數獨一樣嗎？", "它有行列限制，像數獨；但彩色區域和不相鄰規則更接近 Queens 類謎題。"]]
   },
@@ -526,9 +526,9 @@ const localePacks = {
     questions: "Meowdoku のよくある質問",
     related: "関連 Meowdoku ガイド",
     terms: "対応する検索語",
-    note: "このページは Meowdoku の検索意図に合わせて、遊び方、ルール、戦略、難易度、別名検索、毎日のプレイ入口を整理しています。",
+    note: "このページは Meowdoku のよくある名前に合わせて、遊び方、ルール、戦略、難易度、別名検索、毎日のプレイ入口を整理しています。",
     summary: ["Meowdoku は猫を置く色分け領域ロジックパズルです。", "各色の部屋、各行、各列に猫は一匹だけ置けます。", "猫は上下左右だけでなく斜めにも隣接できません。"],
-    sections: [["基本ルール", "色の部屋を見て、行・列・隣接禁止の条件で置けないマスを消していきます。"], ["解き方", "制約が強い部屋から始めると、行や列のロックが見つかります。"], ["検索意図", "Meowdoku、Meow Doku、猫数独、Queens パズルを探す人に役立つ説明をまとめています。"], ["向いている人", "Sudoku、Queens、Star Battle、毎日のロジックパズルが好きな人に向いています。"], ["次の一手", "ホームで簡単モードを遊ぶか、戦略や難問ガイドへ進んでください。"]],
+    sections: [["基本ルール", "色の部屋を見て、行・列・隣接禁止の条件で置けないマスを消していきます。"], ["解き方", "制約が強い部屋から始めると、行や列のロックが見つかります。"], ["よくある名前", "Meowdoku、Meow Doku、猫数独、Queens パズルなど、似た呼び方から来た人にも分かるように説明しています。"], ["向いている人", "Sudoku、Queens、Star Battle、毎日のロジックパズルが好きな人に向いています。"], ["次の一手", "ホームで簡単モードを遊ぶか、戦略や難問ガイドへ進んでください。"]],
     faqs: [["Meowdoku とは？", "猫を色の部屋に置くロジックパズルです。"], ["推測は必要？", "いいえ。排除とロックで解けます。"], ["数独と同じ？", "行と列は似ていますが、色の部屋と隣接禁止が特徴です。"]]
   },
   ko: {
@@ -539,23 +539,23 @@ const localePacks = {
     signals: "Meowdoku 핵심",
     questions: "Meowdoku 자주 묻는 질문",
     related: "관련 Meowdoku 가이드",
-    terms: "포함된 검색어",
-    note: "이 페이지는 Meowdoku 검색 의도에 맞춰 규칙, 전략, 난이도, 검색 변형, 매일 플레이入口를 연결합니다.",
+    terms: "관련 이름",
+    note: "이 페이지는 Meowdoku 자주 쓰는 이름에 맞춰 규칙, 전략, 난이도, 자주 쓰는 이름, 매일 플레이入口를 연결합니다.",
     summary: ["Meowdoku는 고양이를 배치하는 색 영역 논리 퍼즐입니다.", "각 색 방, 각 행, 각 열에는 고양이 한 마리만 놓을 수 있습니다.", "고양이는 대각선을 포함해 서로 닿을 수 없습니다."],
-    sections: [["기본 규칙", "색 영역을 먼저 보고 행, 열, 인접 금지 규칙으로 불가능한 칸을 지웁니다."], ["풀이 방법", "제약이 강한 방부터 보면 행 또는 열 잠금이 생깁니다."], ["검색 의도", "Meowdoku, Meow Doku, 고양이 스도쿠, Queens 퍼즐을 찾는 사람에게 필요한 설명을 제공합니다."], ["추천 대상", "Sudoku, Queens, Star Battle, 매일 논리 퍼즐을 좋아한다면 잘 맞습니다."], ["다음 단계", "홈에서 쉬운 모드로 시작하거나 전략/어려운 퍼즐 가이드를 보세요."]],
+    sections: [["기본 규칙", "색 영역을 먼저 보고 행, 열, 인접 금지 규칙으로 불가능한 칸을 지웁니다."], ["풀이 방법", "제약이 강한 방부터 보면 행 또는 열 잠금이 생깁니다."], ["자주 쓰는 이름", "Meowdoku, Meow Doku, 고양이 스도쿠, Queens 퍼즐처럼 비슷한 이름으로 찾아온 사람도 규칙을 바로 이해할 수 있습니다."], ["추천 대상", "Sudoku, Queens, Star Battle, 매일 논리 퍼즐을 좋아한다면 잘 맞습니다."], ["다음 단계", "홈에서 쉬운 모드로 시작하거나 전략/어려운 퍼즐 가이드를 보세요."]],
     faqs: [["Meowdoku란 무엇인가요?", "고양이를 색 영역에 배치하는 논리 퍼즐입니다."], ["추측이 필요한가요?", "아니요. 제거와 잠금 추론으로 풀 수 있습니다."], ["스도쿠와 같은가요?", "행과 열 제약은 비슷하지만 색 영역과 인접 금지 규칙이 다릅니다."]]
   }
 };
 
 const genericLocalePacks = {
-  es: ["Guía de rompecabezas lógico de gatos", "Jugar Meowdoku", "Ver reglas", "Respuesta rápida", "Puntos clave de Meowdoku", "Preguntas frecuentes sobre Meowdoku", "Guías relacionadas", "Términos de búsqueda cubiertos", "Meowdoku es un rompecabezas lógico de regiones con gatos. Cada región de color, fila y columna necesita un solo gato. Los gatos no pueden tocarse, ni siquiera en diagonal."],
-  fr: ["Guide du puzzle logique de chats", "Jouer à Meowdoku", "Voir les règles", "Réponse rapide", "Points clés de Meowdoku", "Questions fréquentes sur Meowdoku", "Guides liés", "Termes de recherche couverts", "Meowdoku est un puzzle logique à régions avec des chats. Chaque région colorée, ligne et colonne doit contenir un seul chat. Les chats ne peuvent pas se toucher, même en diagonale."],
-  de: ["Leitfaden für Katzen-Logikrätsel", "Meowdoku spielen", "Regeln ansehen", "Kurzantwort", "Meowdoku-Kernpunkte", "Häufige Fragen zu Meowdoku", "Verwandte Leitfäden", "Abgedeckte Suchbegriffe", "Meowdoku ist ein Logikrätsel mit farbigen Regionen und Katzen. Jede Region, Reihe und Spalte braucht genau eine Katze. Katzen dürfen sich auch diagonal nicht berühren."],
-  pt: ["Guia do puzzle lógico de gatos", "Jogar Meowdoku", "Ver regras", "Resposta rápida", "Pontos-chave de Meowdoku", "Perguntas frequentes sobre Meowdoku", "Guias relacionados", "Termos de busca cobertos", "Meowdoku é um puzzle lógico de regiões com gatos. Cada região colorida, linha e coluna precisa de um gato. Gatos não podem se tocar, nem na diagonal."],
-  ru: ["Гид по кошачьей логической головоломке", "Играть в Meowdoku", "Правила", "Краткий ответ", "Ключевые идеи Meowdoku", "Вопросы о Meowdoku", "Похожие руководства", "Охваченные поисковые запросы", "Meowdoku — логическая головоломка с цветными регионами и кошками. В каждом регионе, строке и столбце должна быть одна кошка. Кошки не могут соприкасаться, даже по диагонали."],
+  es: ["Guía de rompecabezas lógico de gatos", "Jugar Meowdoku", "Ver reglas", "Respuesta rápida", "Puntos clave de Meowdoku", "Preguntas frecuentes sobre Meowdoku", "Guías relacionadas", "Nombres relacionados", "Meowdoku es un rompecabezas lógico de regiones con gatos. Cada región de color, fila y columna necesita un solo gato. Los gatos no pueden tocarse, ni siquiera en diagonal."],
+  fr: ["Guide du puzzle logique de chats", "Jouer à Meowdoku", "Voir les règles", "Réponse rapide", "Points clés de Meowdoku", "Questions fréquentes sur Meowdoku", "Guides liés", "Noms lies", "Meowdoku est un puzzle logique à régions avec des chats. Chaque région colorée, ligne et colonne doit contenir un seul chat. Les chats ne peuvent pas se toucher, même en diagonale."],
+  de: ["Leitfaden für Katzen-Logikrätsel", "Meowdoku spielen", "Regeln ansehen", "Kurzantwort", "Meowdoku-Kernpunkte", "Häufige Fragen zu Meowdoku", "Verwandte Leitfäden", "Verwandte Namen", "Meowdoku ist ein Logikrätsel mit farbigen Regionen und Katzen. Jede Region, Reihe und Spalte braucht genau eine Katze. Katzen dürfen sich auch diagonal nicht berühren."],
+  pt: ["Guia do puzzle lógico de gatos", "Jogar Meowdoku", "Ver regras", "Resposta rápida", "Pontos-chave de Meowdoku", "Perguntas frequentes sobre Meowdoku", "Guias relacionados", "Nomes relacionados", "Meowdoku é um puzzle lógico de regiões com gatos. Cada região colorida, linha e coluna precisa de um gato. Gatos não podem se tocar, nem na diagonal."],
+  ru: ["Гид по кошачьей логической головоломке", "Играть в Meowdoku", "Правила", "Краткий ответ", "Ключевые идеи Meowdoku", "Вопросы о Meowdoku", "Похожие руководства", "Похожие названия", "Meowdoku — логическая головоломка с цветными регионами и кошками. В каждом регионе, строке и столбце должна быть одна кошка. Кошки не могут соприкасаться, даже по диагонали."],
   ar: ["دليل لغز القطط المنطقي", "العب Meowdoku", "اعرض القواعد", "إجابة سريعة", "نقاط Meowdoku الأساسية", "أسئلة شائعة عن Meowdoku", "أدلة مرتبطة", "مصطلحات البحث المغطاة", "Meowdoku لغز منطقي بمناطق ملوّنة وقطط. كل منطقة وصف وعمود يحتاج إلى قط واحد فقط. لا يمكن للقطط أن تتلامس حتى قطرياً."],
   hi: ["बिल्ली लॉजिक पज़ल गाइड", "Meowdoku खेलें", "नियम देखें", "त्वरित उत्तर", "Meowdoku के मुख्य संकेत", "Meowdoku प्रश्न", "संबंधित गाइड", "कवर किए गए खोज शब्द", "Meowdoku रंगीन क्षेत्रों और बिल्लियों वाला लॉजिक पज़ल है। हर रंगीन क्षेत्र, पंक्ति और स्तंभ में केवल एक बिल्ली होनी चाहिए। बिल्लियाँ तिरछे भी नहीं छू सकतीं।"],
-  id: ["Panduan puzzle logika kucing", "Main Meowdoku", "Lihat aturan", "Jawaban cepat", "Poin penting Meowdoku", "Pertanyaan tentang Meowdoku", "Panduan terkait", "Istilah pencarian tercakup", "Meowdoku adalah puzzle logika wilayah berwarna dengan kucing. Setiap wilayah, baris, dan kolom membutuhkan satu kucing. Kucing tidak boleh bersentuhan, termasuk diagonal."],
+  id: ["Panduan puzzle logika kucing", "Main Meowdoku", "Lihat aturan", "Jawaban cepat", "Poin penting Meowdoku", "Pertanyaan tentang Meowdoku", "Panduan terkait", "Nama terkait", "Meowdoku adalah puzzle logika wilayah berwarna dengan kucing. Setiap wilayah, baris, dan kolom membutuhkan satu kucing. Kucing tidak boleh bersentuhan, termasuk diagonal."],
   vi: ["Hướng dẫn câu đố logic mèo", "Chơi Meowdoku", "Xem luật", "Trả lời nhanh", "Điểm chính của Meowdoku", "Câu hỏi về Meowdoku", "Hướng dẫn liên quan", "Từ khóa đã bao phủ", "Meowdoku là câu đố logic theo vùng màu với mèo. Mỗi vùng màu, hàng và cột chỉ có một mèo. Mèo không được chạm nhau, kể cả đường chéo."],
   tr: ["Kedi mantık bulmacası rehberi", "Meowdoku oyna", "Kuralları gör", "Kısa cevap", "Meowdoku temel noktaları", "Meowdoku soruları", "İlgili rehberler", "Kapsanan arama terimleri", "Meowdoku renkli bölgeler ve kedilerle oynanan bir mantık bulmacasıdır. Her bölge, satır ve sütunda bir kedi olmalıdır. Kediler çaprazda bile temas edemez."],
   it: ["Guida al puzzle logico con gatti", "Gioca a Meowdoku", "Vedi le regole", "Risposta rapida", "Punti chiave di Meowdoku", "Domande su Meowdoku", "Guide correlate", "Termini di ricerca coperti", "Meowdoku è un puzzle logico a regioni colorate con gatti. Ogni regione, riga e colonna richiede un solo gatto. I gatti non possono toccarsi, nemmeno in diagonale."],
@@ -578,7 +578,7 @@ for (const [code, values] of Object.entries(genericLocalePacks)) {
     terms: values[7],
     note: values[8],
     summary: [values[8], "Meowdoku / Meow Doku / cat sudoku.", "Rules, strategy, hints and variants are connected here."],
-    sections: [["Meowdoku", values[8]], ["Rules", "Use rows, columns, colored regions and the no-touch rule to remove impossible cells."], ["Strategy", "Start with constrained regions, mark impossible cells, and place a cat only when the logic is certain."], ["Search intent", "This page connects Meowdoku with cat sudoku, Queens puzzle, daily puzzle and spelling variants."], ["Next step", "Open the game, start with Easy mode, then read the related guides."]],
+    sections: [["Meowdoku", values[8]], ["Rules", "Use rows, columns, colored regions and the no-touch rule to remove impossible cells."], ["Strategy", "Start with constrained regions, mark impossible cells, and place a cat only when the logic is certain."], ["Other names", "This page connects Meowdoku with cat sudoku, Queens puzzle, daily puzzle and common spelling variants."], ["Next step", "Open the game, start with Easy mode, then read the related guides."]],
     faqs: [["What is Meowdoku?", values[8]], ["Do I need to guess?", "No. Meowdoku can be solved with elimination and placement logic."], ["Where should I start?", "Start with the rules page, then play Easy mode."]]
   };
 }
@@ -699,16 +699,28 @@ function enrichForLanguage(topic, lang) {
 }
 
 function uiText(lang) {
+  if (lang === "en") {
+    return {
+      play: "Play Meowdoku",
+      learn: "Learn the rules",
+      quick: "Quick answer",
+      signals: "Puzzle essentials",
+      questions: "Questions players ask about Meowdoku",
+      related: "Related Meowdoku guides",
+      terms: "Related names",
+      note: "Meowdoku is a quick cat logic puzzle with clear rules, friendly visuals, and enough deduction depth for players who enjoy Sudoku, Queens, Star Battle, and daily puzzle games."
+    };
+  }
   const pack = localePacks[lang] || fallbackPack(lang);
   return {
     play: pack.play || "Play Meowdoku",
     learn: pack.learn || "Learn the rules",
     quick: pack.quick || "Quick Answer",
-    signals: pack.signals || "Meowdoku Signals",
+    signals: pack.signals || "Puzzle essentials",
     questions: pack.questions || "Questions People Ask About Meowdoku",
     related: pack.related || "Related Meowdoku Guides",
-    terms: pack.terms || "Search Terms Covered",
-    note: pack.note || "Meowdoku is strongest as a search and GEO topic when pages answer both the exact query and the adjacent intent: rules, strategy, puzzle category, spelling variants, and daily play."
+    terms: pack.terms || "Related names",
+    note: pack.note || "Meowdoku is a quick cat logic puzzle with clear rules, friendly visuals, and enough deduction depth for players who enjoy Sudoku, Queens, Star Battle, and daily puzzle games."
   };
 }
 
@@ -726,7 +738,7 @@ function fallbackPack(lang) {
     terms: `Meowdoku`,
     note: introLine,
     summary: [introLine, `Meowdoku ${label}`, "Meowdoku"],
-    sections: [[`Meowdoku ${label}`, introLine], [`Meowdoku`, introLine], [`Meowdoku FAQ`, introLine], [`Meowdoku SEO`, introLine], [`Meowdoku GEO`, introLine]],
+    sections: [[`Meowdoku ${label}`, introLine], [`Meowdoku rules`, introLine], [`Meowdoku FAQ`, introLine], [`Meowdoku strategy`, introLine], [`Meowdoku daily puzzle`, introLine]],
     faqs: [[`Meowdoku ${label}?`, introLine], [`Meowdoku?`, introLine], [`Meow Doku?`, introLine]]
   };
 }
@@ -880,11 +892,11 @@ function languageHome(lang) {
     description: `${introLine}: choose a Meowdoku guide, learn the rules, study strategy, and play the cat sudoku puzzle online.`,
     intent: "language hub",
     keywords: [`meowdoku ${label}`, `cat sudoku ${label}`, "meowdoku languages"],
-    summary: [introLine, "All major Meowdoku guides are linked from this language hub.", "Use the header language selector to move between languages."],
+    summary: [introLine, "Rules, tips, strategy, levels, and puzzle names are linked from this language page.", "Use the header language selector to move between languages."],
     sections: [],
     customSectionsHtml: topicCards,
     faqs: [
-      [`Is Meowdoku available for ${label} players?`, "Yes. This language hub connects the game, rules, strategy pages, and SEO entry points."],
+      [`Is Meowdoku available for ${label} players?`, "Yes. This language page connects the game, rules, tips, strategy, levels, and related puzzle names."],
       ["Where do I start?", "Open How to Play, then return to the homepage and start Easy mode."],
       ["Does the game detect language automatically?", "Yes. The browser language is used when no saved language preference exists."]
     ]
@@ -900,17 +912,17 @@ function languagesPage() {
   }).join("\n");
   const topic = {
     slug: "languages",
-    title: "Meowdoku Languages - Global Cat Sudoku and GEO Entry Pages",
+    title: "Meowdoku Languages - Play Cat Sudoku and Logic Puzzle Guides Worldwide",
     h1: "Meowdoku Languages",
     description: "Choose a Meowdoku language entry for major world languages and reach localized cat sudoku, rules, tips, and strategy pages.",
-    intent: "language SEO",
+    intent: "languages",
     keywords: ["meowdoku languages", "global meowdoku", "cat sudoku languages", "multilingual puzzle"],
-    summary: ["Meowdoku supports global discovery.", "Every major language has an entry path.", "Language pages help search engines and AI answers map the game."],
+    summary: ["Meowdoku is available for players around the world.", "Every major language has a clear starting page.", "Each language page links the game, rules, tips, strategy, and related puzzle names."],
     sections: [],
     customSectionsHtml: cards,
     faqs: [
-      ["Why does Meowdoku need language pages?", "Language pages help players and search systems discover the right version of the game."],
-      ["Are language pages useful for GEO?", "Yes. AI answer engines rely on clear entity-language relationships."],
+      ["Why does Meowdoku need language pages?", "Language pages help players reach rules, tips, strategy, and puzzle names in a language they can use."],
+      ["Do all language pages link back to the game?", "Yes. Every language page includes a direct path to play Meowdoku and continue reading related guides."],
       ["Can I switch language from any page?", "Yes. The header language selector appears on generated pages and the game homepage."]
     ]
   };
